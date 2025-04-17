@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">Contacto</h1>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">Información de Contacto</h2>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-envelope"></i> Correo Electrónico</h5>
+                            <p><a href="mailto:contacto@marketdigital.com">contacto@marketdigital.com</a></p>
+                            
+                            <h5><i class="bi bi-telephone"></i> Teléfono</h5>
+                            <p>(+52) 55 1234 5678</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-geo-alt"></i> Dirección</h5>
+                            <p>
+                                Av. Principal #123<br>
+                                Col. Centro<br>
+                                Ciudad de México, 06000<br>
+                                México
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h5><i class="bi bi-clock"></i> Horario de Atención</h5>
+                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+                    Sábado: 10:00 AM - 2:00 PM<br>
+                    Domingo: Cerrado</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Envíanos un Mensaje</h2>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu nombre.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa un correo electrónico válido.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="asunto" placeholder="Asunto del mensaje" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa el asunto de tu mensaje.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu mensaje.
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+// Validación del formulario de contacto
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            event.preventDefault();
+            // Aquí normalmente enviaríamos los datos, pero como es simulado:
+            Swal.fire({
+                title: '¡Mensaje enviado!',
+                text: 'Gracias por contactarnos. Te responderemos a la brevedad.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+            form.reset();
+        }
+        
+        form.classList.add('was-validated');
+    });
+});
+</script>
+{% endblock %}
+{% endblock %}

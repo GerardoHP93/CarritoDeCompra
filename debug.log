@@ -1,0 +1,36 @@
+INFO 2025-04-17 14:54:49,901 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 14:59:24,431 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\core\apps.py changed, reloading.
+INFO 2025-04-17 14:59:26,046 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 14:59:50,498 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\apps.py changed, reloading.
+INFO 2025-04-17 14:59:52,278 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 14:59:53,863 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\apps.py changed, reloading.
+INFO 2025-04-17 14:59:55,662 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:00:03,833 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\apps.py changed, reloading.
+INFO 2025-04-17 15:00:05,747 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:00:11,169 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\apps.py changed, reloading.
+INFO 2025-04-17 15:00:12,955 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:00:23,106 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\apps.py changed, reloading.
+INFO 2025-04-17 15:00:25,896 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:00:43,477 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\carritoCompras_project\settings.py changed, reloading.
+INFO 2025-04-17 15:00:45,393 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:00:52,177 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\core\apps.py changed, reloading.
+INFO 2025-04-17 15:00:54,224 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:00:57,348 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\core\urls.py changed, reloading.
+INFO 2025-04-17 15:00:59,239 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:01:04,740 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\carritoCompras_project\urls.py changed, reloading.
+INFO 2025-04-17 15:01:06,859 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 15:01:09,052 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\core\apps.py changed, reloading.
+INFO 2025-04-17 15:01:10,957 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-17 15:01:19,347 views Acceso a la página de inicio
+INFO 2025-04-17 15:01:19,497 basehttp "GET / HTTP/1.1" 200 8389
+WARNING 2025-04-17 15:01:19,669 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 15:01:19,760 basehttp "GET /static/css/main.css HTTP/1.1" 200 1499
+WARNING 2025-04-17 15:01:20,406 log Not Found: /favicon.ico
+WARNING 2025-04-17 15:01:20,408 basehttp "GET /favicon.ico HTTP/1.1" 404 3319
+INFO 2025-04-17 15:02:19,559 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-17 15:02:22,854 views Acceso a la página de inicio
+INFO 2025-04-17 15:02:22,882 basehttp "GET / HTTP/1.1" 200 8389
+WARNING 2025-04-17 15:02:23,076 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 15:02:26,716 views Acceso a la página de inicio
+INFO 2025-04-17 15:02:26,721 basehttp "GET / HTTP/1.1" 200 8389
+WARNING 2025-04-17 15:02:26,903 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="jumbotron bg-light p-5 rounded">
+                <h1 class="display-4">¡Bienvenido a Market Digital!</h1>
+                <p class="lead">Tu destino para compras de supermercado en línea con las mejores ofertas y productos de calidad.</p>
+                <hr class="my-4">
+                <p>Navega por nuestras categorías o busca tus productos favoritos.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Ver productos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Categorías Destacadas</h2>
+            <div class="row">
+                <!-- Esto se llenará dinámicamente con categorías en fases posteriores -->
+                {% for i in '12345'|make_list %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Categoría #{{ i }}</h5>
+                            <p class="card-text">Descripción breve de la categoría.</p>
+                            <a href="#" class="btn btn-outline-primary">Ver productos</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Productos Destacados</h2>
+            <div class="row">
+                <!-- Esto se llenará dinámicamente con productos en fases posteriores -->
+                {% for i in '123456'|make_list %}
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card product-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto #{{ i }}</h5>
+                            <p class="card-text">Descripción breve del producto.</p>
+                            <p class="card-text text-primary fw-bold">$XX.XX</p>
+                            <button class="btn btn-sm btn-primary add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
