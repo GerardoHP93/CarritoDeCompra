@@ -1,0 +1,50 @@
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Información de la tienda -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Market Digital</h5>
+                <p class="text-muted">
+                    Tu destino para compras de supermercado en línea con las mejores ofertas y productos de calidad.
+                </p>
+                <div class="d-flex mt-3">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter-x fs-4"></i></a>
+                </div>
+            </div>
+            
+            <!-- Enlaces rápidos -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Enlaces rápidos</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="{% url 'core:home' %}" class="text-muted text-decoration-none">Inicio</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Categorías</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Ofertas</a></li>
+                    <li class="mb-2"><a href="{% url 'core:about' %}" class="text-muted text-decoration-none">Quiénes somos</a></li>
+                    <li><a href="{% url 'core:contact' %}" class="text-muted text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <!-- Categorías -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Categorías</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Embutidos y Lácteos</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Snacks y Dulces</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Congelados</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Bebidas Alcohólicas</a></li>
+                    <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Higiene</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Electrodomésticos</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr class="my-4 bg-secondary">
+        
+        <!-- Copyright -->
+        <div class="text-center text-muted">
+            <small>&copy; {% now "Y" %} Market Digital. Todos los derechos reservados.</small>
+        </div>
+    </div>
+</footer>

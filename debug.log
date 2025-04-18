@@ -34,3 +34,862 @@ WARNING 2025-04-17 15:02:23,076 basehttp "GET /static/js/main.js HTTP/1.1" 404 1
 DEBUG 2025-04-17 15:02:26,716 views Acceso a la página de inicio
 INFO 2025-04-17 15:02:26,721 basehttp "GET / HTTP/1.1" 200 8389
 WARNING 2025-04-17 15:02:26,903 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:36:41,833 models Nuevo cliente creado para el usuario Gerardo
+ERROR 2025-04-17 17:36:41,834 signals Error al crear perfil de cliente para Gerardo: UNIQUE constraint failed: users_cliente.user_id
+ERROR 2025-04-17 17:36:41,835 signals Error al guardar perfil de cliente para Gerardo: UNIQUE constraint failed: users_cliente.user_id
+INFO 2025-04-17 17:36:50,205 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-17 17:36:51,951 views Acceso a la página de inicio
+ERROR 2025-04-17 17:36:52,297 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/header.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\core\views.py", line 12, in home
+    return render(request, 'core/home.html')
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/header.html
+ERROR 2025-04-17 17:36:52,313 basehttp "GET / HTTP/1.1" 500 147668
+DEBUG 2025-04-17 17:38:09,969 views Acceso a la página de inicio
+ERROR 2025-04-17 17:38:10,139 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 214, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: includes/header.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\core\views.py", line 12, in home
+    return render(request, 'core/home.html')
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 109, in render
+    reraise(exc, self.backend)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 130, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/header.html
+ERROR 2025-04-17 17:38:10,149 basehttp "GET / HTTP/1.1" 500 147519
+INFO 2025-04-17 17:39:28,982 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-17 17:39:33,760 views Acceso a la página de inicio
+INFO 2025-04-17 17:39:33,845 basehttp "GET / HTTP/1.1" 200 13174
+WARNING 2025-04-17 17:39:33,929 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:39:34,030 basehttp "GET /static/css/main.css HTTP/1.1" 200 2084
+DEBUG 2025-04-17 17:39:38,048 views Acceso a la página de inicio
+INFO 2025-04-17 17:39:38,051 basehttp "HEAD / HTTP/1.1" 200 0
+DEBUG 2025-04-17 17:39:39,633 views Acceso a la página de inicio
+INFO 2025-04-17 17:39:39,637 basehttp "GET / HTTP/1.1" 200 13174
+WARNING 2025-04-17 17:39:39,734 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 17:39:42,075 views Acceso a la página de inicio
+INFO 2025-04-17 17:39:42,078 basehttp "GET /? HTTP/1.1" 200 13174
+WARNING 2025-04-17 17:39:42,168 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:39:43,818 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 17:39:43,912 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:39:43,928 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 200 40342
+INFO 2025-04-17 17:39:47,711 basehttp "HEAD /users/login/ HTTP/1.1" 200 0
+ERROR 2025-04-17 17:39:52,826 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+ERROR 2025-04-17 17:39:52,846 basehttp "GET /users/password-reset/ HTTP/1.1" 500 203737
+INFO 2025-04-17 17:39:58,866 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+WARNING 2025-04-17 17:39:58,983 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:40:08,554 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+INFO 2025-04-17 17:40:08,633 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 17:40:08,642 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:40:09,416 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 17:40:09,516 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:40:10,356 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+WARNING 2025-04-17 17:40:10,482 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 17:40:13,989 views Acceso a la página de inicio
+INFO 2025-04-17 17:40:13,992 basehttp "GET / HTTP/1.1" 200 13174
+WARNING 2025-04-17 17:40:14,096 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:40:25,026 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+WARNING 2025-04-17 17:40:25,162 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:40:47,078 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-04-17 17:40:47,336 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4248
+INFO 2025-04-17 17:40:47,498 basehttp "GET /static/admin/css/base.css HTTP/1.1" 200 22154
+INFO 2025-04-17 17:40:47,509 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-04-17 17:40:47,533 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 200 16632
+INFO 2025-04-17 17:40:47,552 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-04-17 17:40:47,558 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-04-17 17:40:47,570 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-04-17 17:40:47,647 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+DEBUG 2025-04-17 17:40:53,630 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-04-17 17:40:53,650 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-04-17 17:40:53,782 basehttp "GET /admin/ HTTP/1.1" 200 7911
+INFO 2025-04-17 17:40:53,905 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-04-17 17:40:53,969 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-04-17 17:40:53,976 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-04-17 17:40:57,403 basehttp "GET /admin/users/cliente/ HTTP/1.1" 200 13160
+INFO 2025-04-17 17:40:57,603 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-04-17 17:40:57,605 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-04-17 17:40:57,622 basehttp "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-04-17 17:40:57,660 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2025-04-17 17:40:57,692 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-04-17 17:40:57,723 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-04-17 17:40:57,739 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-04-17 17:40:57,774 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-04-17 17:40:57,789 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-04-17 17:40:57,802 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-04-17 17:40:57,829 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-17 17:40:57,879 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-04-17 17:40:58,253 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-04-17 17:40:58,319 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-04-17 17:40:58,320 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-04-17 17:40:58,373 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+DEBUG 2025-04-17 17:41:14,814 views Acceso a la página de inicio
+INFO 2025-04-17 17:41:14,821 basehttp "GET / HTTP/1.1" 200 13174
+INFO 2025-04-17 17:41:14,962 basehttp "GET /static/css/main.css HTTP/1.1" 200 2084
+WARNING 2025-04-17 17:41:15,008 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+WARNING 2025-04-17 17:41:16,389 log Not Found: /favicon.ico
+WARNING 2025-04-17 17:41:16,393 basehttp "GET /favicon.ico HTTP/1.1" 404 3468
+INFO 2025-04-17 17:41:17,501 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 17:41:17,583 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:41:17,609 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 200 40342
+INFO 2025-04-17 17:41:21,808 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+WARNING 2025-04-17 17:41:21,883 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:41:42,761 basehttp "POST /users/register/ HTTP/1.1" 200 10920
+WARNING 2025-04-17 17:41:42,926 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:06,084 models Nuevo cliente creado para el usuario Gerry
+ERROR 2025-04-17 17:42:06,086 signals Error al crear perfil de cliente para Gerry: UNIQUE constraint failed: users_cliente.user_id
+ERROR 2025-04-17 17:42:06,088 signals Error al guardar perfil de cliente para Gerry: UNIQUE constraint failed: users_cliente.user_id
+INFO 2025-04-17 17:42:06,088 forms Usuario Gerry creado exitosamente
+INFO 2025-04-17 17:42:06,089 views Usuario Gerry registrado exitosamente
+DEBUG 2025-04-17 17:42:06,728 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 17:42:06,739 basehttp "POST /users/register/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 17:42:06,754 views Acceso a la página de inicio
+INFO 2025-04-17 17:42:06,775 basehttp "GET / HTTP/1.1" 200 14158
+INFO 2025-04-17 17:42:06,878 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 17:42:06,890 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 17:42:42,063 views Acceso a la página de inicio
+INFO 2025-04-17 17:42:42,074 basehttp "GET / HTTP/1.1" 200 13759
+WARNING 2025-04-17 17:42:42,147 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:44,790 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+WARNING 2025-04-17 17:42:44,876 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 17:42:45,039 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:48,112 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+INFO 2025-04-17 17:42:48,174 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 17:42:48,208 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 17:42:48,408 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:51,274 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+WARNING 2025-04-17 17:42:51,392 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 17:42:51,587 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:52,906 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 17:42:53,047 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:54,889 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+WARNING 2025-04-17 17:42:54,988 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 17:42:55,189 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:55,855 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 17:42:56,004 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:42:58,970 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 17:42:59,038 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+ERROR 2025-04-17 17:43:00,120 log Internal Server Error: /users/profile/addresses/add/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 166, in add_address
+    return render(request, 'users/address_form.html', {'form': form, 'title': 'Agregar Dirección'})
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/address_form.html
+ERROR 2025-04-17 17:43:00,132 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 500 98946
+INFO 2025-04-17 17:43:08,868 views Usuario  cerró sesión
+INFO 2025-04-17 17:43:08,870 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 17:43:08,881 views Acceso a la página de inicio
+INFO 2025-04-17 17:43:08,886 basehttp "GET / HTTP/1.1" 200 13410
+WARNING 2025-04-17 17:43:08,964 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:43:29,913 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 17:43:29,996 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:43:34,453 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+INFO 2025-04-17 17:43:34,527 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 17:43:34,544 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:43:38,128 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 17:43:38,234 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 17:43:49,557 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 17:43:49,558 views Usuario Gerry inició sesión
+INFO 2025-04-17 17:43:49,568 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 17:43:49,581 views Acceso a la página de inicio
+INFO 2025-04-17 17:43:49,601 basehttp "GET / HTTP/1.1" 200 13993
+WARNING 2025-04-17 17:43:49,709 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:43:53,227 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+WARNING 2025-04-17 17:43:53,306 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 17:43:53,531 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:43:56,130 basehttp "GET /users/profile/edit/ HTTP/1.1" 200 13092
+WARNING 2025-04-17 17:43:56,288 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 17:43:56,289 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 17:43:59,864 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 17:43:59,955 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+ERROR 2025-04-17 17:44:01,596 log Internal Server Error: /users/profile/addresses/add/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 166, in add_address
+    return render(request, 'users/address_form.html', {'form': form, 'title': 'Agregar Dirección'})
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/address_form.html
+ERROR 2025-04-17 17:44:01,601 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 500 98946
+ERROR 2025-04-17 17:44:05,656 log Internal Server Error: /users/profile/addresses/add/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 166, in add_address
+    return render(request, 'users/address_form.html', {'form': form, 'title': 'Agregar Dirección'})
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/address_form.html
+ERROR 2025-04-17 17:44:05,664 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 500 98946
+DEBUG 2025-04-17 17:44:11,864 views Acceso a la página de inicio
+INFO 2025-04-17 17:44:11,871 basehttp "GET / HTTP/1.1" 200 13759
+WARNING 2025-04-17 17:44:11,951 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:19:42,501 basehttp "GET /admin/users/cliente/ HTTP/1.1" 200 13642
+INFO 2025-04-17 18:19:42,538 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,568 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,570 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,571 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,572 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,572 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,582 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,582 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,583 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,585 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,592 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,595 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,596 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,600 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,600 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-17 18:19:42,606 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,615 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,628 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,628 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,640 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,641 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,648 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:42,648 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-04-17 18:19:46,950 basehttp "GET /admin/users/direccionenvio/ HTTP/1.1" 200 10276
+INFO 2025-04-17 18:19:47,014 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-17 18:20:03,833 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+INFO 2025-04-17 18:20:03,900 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 18:20:03,915 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 18:20:04,113 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:20:05,108 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 18:20:05,198 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:20:05,996 basehttp "GET /users/profile/ HTTP/1.1" 200 11092
+WARNING 2025-04-17 18:20:06,051 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 18:20:06,305 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:20:10,241 basehttp "GET /users/profile/edit/ HTTP/1.1" 200 13092
+WARNING 2025-04-17 18:20:10,294 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 18:20:10,383 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 18:20:43,033 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 18:20:43,046 views Usuario Gerry actualizó su perfil
+INFO 2025-04-17 18:20:43,052 basehttp "POST /users/profile/edit/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:20:43,078 basehttp "GET /users/profile/ HTTP/1.1" 200 11328
+WARNING 2025-04-17 18:20:43,228 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 18:20:43,259 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:20:45,322 basehttp "GET /users/profile/edit/ HTTP/1.1" 200 13163
+WARNING 2025-04-17 18:20:45,446 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+WARNING 2025-04-17 18:20:45,460 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 18:21:01,297 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 18:21:01,312 views Usuario Gerry actualizó su perfil
+INFO 2025-04-17 18:21:01,315 basehttp "POST /users/profile/edit/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:21:01,364 basehttp "GET /users/profile/ HTTP/1.1" 200 11320
+INFO 2025-04-17 18:21:01,446 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 200 111959
+WARNING 2025-04-17 18:21:01,489 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:21:07,353 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 18:21:07,433 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:21:11,993 views Usuario  cerró sesión
+INFO 2025-04-17 18:21:11,995 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 18:21:12,002 views Acceso a la página de inicio
+INFO 2025-04-17 18:21:12,006 basehttp "GET / HTTP/1.1" 200 13410
+WARNING 2025-04-17 18:21:12,062 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:21:15,256 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:21:15,367 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:21:15,557 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 304 0
+DEBUG 2025-04-17 18:21:22,025 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 18:21:22,026 views Usuario Gerry inició sesión
+INFO 2025-04-17 18:21:22,042 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 18:21:22,055 views Acceso a la página de inicio
+INFO 2025-04-17 18:21:22,071 basehttp "GET / HTTP/1.1" 200 13993
+WARNING 2025-04-17 18:21:22,187 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:21:26,215 views Usuario  cerró sesión
+INFO 2025-04-17 18:21:26,220 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 18:21:26,229 views Acceso a la página de inicio
+INFO 2025-04-17 18:21:26,241 basehttp "GET / HTTP/1.1" 200 13410
+WARNING 2025-04-17 18:21:26,337 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:21:27,636 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:21:27,710 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+ERROR 2025-04-17 18:21:29,478 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+ERROR 2025-04-17 18:21:29,492 basehttp "GET /users/password-reset/ HTTP/1.1" 500 203589
+INFO 2025-04-17 18:22:15,547 autoreload Watching for file changes with StatReloader
+ERROR 2025-04-17 18:22:22,764 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+ERROR 2025-04-17 18:22:22,776 basehttp "GET /users/password-reset/ HTTP/1.1" 500 203589
+INFO 2025-04-17 18:24:10,219 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:24:10,323 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 18:24:16,778 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 18:24:16,779 views Usuario Gerry inició sesión
+INFO 2025-04-17 18:24:16,795 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 18:24:16,808 views Acceso a la página de inicio
+INFO 2025-04-17 18:24:16,834 basehttp "GET / HTTP/1.1" 200 13993
+WARNING 2025-04-17 18:24:16,982 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:24:22,353 basehttp "GET /users/profile/ HTTP/1.1" 200 11085
+INFO 2025-04-17 18:24:22,414 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 304 0
+WARNING 2025-04-17 18:24:22,429 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:24:27,535 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+WARNING 2025-04-17 18:24:27,682 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+ERROR 2025-04-17 18:24:30,513 log Internal Server Error: /users/profile/addresses/add/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 166, in add_address
+    return render(request, 'users/address_form.html', {'form': form, 'title': 'Agregar Dirección'})
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/address_form.html
+ERROR 2025-04-17 18:24:30,520 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 500 98946
+INFO 2025-04-17 18:29:07,657 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 18:29:10,628 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 9069
+INFO 2025-04-17 18:29:10,722 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 18:29:10,736 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:29:11,712 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 13450
+WARNING 2025-04-17 18:29:11,771 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:17,337 views Usuario Gerry agregó una nueva dirección
+INFO 2025-04-17 18:30:17,339 basehttp "POST /users/profile/addresses/add/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:30:17,380 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 12267
+WARNING 2025-04-17 18:30:17,513 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:22,106 basehttp "GET /users/profile/addresses/edit/1/ HTTP/1.1" 200 13612
+WARNING 2025-04-17 18:30:22,181 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:24,164 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 12028
+WARNING 2025-04-17 18:30:24,250 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:27,322 basehttp "GET /users/profile/ HTTP/1.1" 200 12352
+INFO 2025-04-17 18:30:27,395 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 304 0
+WARNING 2025-04-17 18:30:27,416 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:28,415 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 12028
+WARNING 2025-04-17 18:30:28,494 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:33,220 basehttp "GET /users/profile/ HTTP/1.1" 200 12352
+WARNING 2025-04-17 18:30:33,326 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:36,142 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 12028
+WARNING 2025-04-17 18:30:36,216 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:36,959 basehttp "GET /users/profile/ HTTP/1.1" 200 12352
+WARNING 2025-04-17 18:30:37,039 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:30:41,461 basehttp "GET /users/profile/edit/ HTTP/1.1" 200 13131
+WARNING 2025-04-17 18:30:41,565 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 18:30:55,549 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-17 18:30:55,559 views Usuario Gerry actualizó su perfil
+INFO 2025-04-17 18:30:55,563 basehttp "POST /users/profile/edit/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:30:55,617 basehttp "GET /users/profile/ HTTP/1.1" 200 12582
+WARNING 2025-04-17 18:30:55,728 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:31:08,340 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 12028
+WARNING 2025-04-17 18:31:08,475 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:31:09,499 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 13450
+WARNING 2025-04-17 18:31:09,572 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:31:10,759 basehttp "GET /users/profile/ HTTP/1.1" 200 12347
+WARNING 2025-04-17 18:31:10,841 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 18:31:11,904 views Acceso a la página de inicio
+INFO 2025-04-17 18:31:11,916 basehttp "GET / HTTP/1.1" 200 13759
+WARNING 2025-04-17 18:31:11,994 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:31:16,369 views Usuario  cerró sesión
+INFO 2025-04-17 18:31:16,375 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-17 18:31:16,381 views Acceso a la página de inicio
+INFO 2025-04-17 18:31:16,392 basehttp "GET / HTTP/1.1" 200 13410
+WARNING 2025-04-17 18:31:16,464 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:31:17,590 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:31:17,662 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:31:17,875 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 304 0
+ERROR 2025-04-17 18:31:19,373 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+ERROR 2025-04-17 18:31:19,398 basehttp "GET /users/password-reset/ HTTP/1.1" 500 203888
+INFO 2025-04-17 18:31:44,322 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\carritoCompras_project\settings.py changed, reloading.
+INFO 2025-04-17 18:31:46,489 autoreload Watching for file changes with StatReloader
+ERROR 2025-04-17 18:31:53,012 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 705, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 615, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'add_class'
+ERROR 2025-04-17 18:31:53,025 basehttp "GET /users/password-reset/ HTTP/1.1" 500 203888
+INFO 2025-04-17 18:38:43,103 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 18:38:49,133 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+INFO 2025-04-17 18:38:49,227 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 18:38:49,234 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:38:50,562 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+WARNING 2025-04-17 18:38:50,644 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+ERROR 2025-04-17 18:41:33,064 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\views.py", line 229, in dispatch
+    return super().dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\views.py", line 242, in form_valid
+    form.save(**opts)
+    ~~~~~~~~~^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\forms.py", line 498, in save
+    self.send_mail(
+    ~~~~~~~~~~~~~~^
+        subject_template_name,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        html_email_template_name=html_email_template_name,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\forms.py", line 423, in send_mail
+    subject = loader.render_to_string(subject_template_name, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: users/password_reset_subject.txt
+ERROR 2025-04-17 18:41:33,078 basehttp "POST /users/password-reset/ HTTP/1.1" 500 144952
+INFO 2025-04-17 18:43:05,876 autoreload Watching for file changes with StatReloader
+INFO 2025-04-17 18:43:09,278 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+WARNING 2025-04-17 18:43:09,380 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:43:15,142 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:43:15,224 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 7509
+WARNING 2025-04-17 18:43:15,394 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:44:28,586 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:44:28,736 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:44:28,749 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 304 0
+INFO 2025-04-17 18:44:30,397 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+WARNING 2025-04-17 18:44:30,472 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:44:32,832 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:44:32,856 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 7509
+WARNING 2025-04-17 18:44:32,978 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:44:56,377 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:44:56,467 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:44:58,246 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+WARNING 2025-04-17 18:44:58,323 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:45:01,356 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-04-17 18:45:01,372 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 7509
+WARNING 2025-04-17 18:45:01,467 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:45:04,409 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:45:04,507 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-17 18:45:07,354 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-17 18:45:07,500 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+DEBUG 2025-04-17 18:47:05,276 views Acceso a la página de inicio
+INFO 2025-04-17 18:47:05,286 basehttp "GET / HTTP/1.1" 200 13174
+INFO 2025-04-17 18:47:05,479 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-17 18:47:05,512 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957

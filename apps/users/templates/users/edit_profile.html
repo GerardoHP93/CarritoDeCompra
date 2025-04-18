@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Editar Perfil | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <!-- Barra lateral de navegación de perfil -->
+        <div class="col-md-3 mb-4">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Mi Cuenta</h4>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="{% url 'users:profile' %}" class="list-group-item list-group-item-action active">
+                        <i class="bi bi-person-circle me-2"></i> Información Personal
+                    </a>
+                    <a href="{% url 'users:addresses' %}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-geo-alt me-2"></i> Mis Direcciones
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-clock-history me-2"></i> Historial de Pedidos
+                    </a>
+                    <a href="{% url 'users:logout' %}" class="list-group-item list-group-item-action text-danger">
+                        <i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Formulario de edición de perfil -->
+        <div class="col-md-9">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Editar Información Personal</h4>
+                </div>
+                <div class="card-body">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="row">
+                            <!-- Imagen de perfil actual -->
+                            <div class="col-md-3 text-center mb-4">
+                                {% if user.cliente.imagen_perfil %}
+                                    <img src="{{ user.cliente.imagen_perfil.url }}" alt="Foto de perfil" class="img-fluid rounded-circle img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;">
+                                {% else %}
+                                    <img src="{% static 'images/default_profile.png' %}" alt="Foto de perfil predeterminada" class="img-fluid rounded-circle img-thumbnail" style="width: 150px; height: 150px; object-fit: cover;">
+                                {% endif %}
+                            </div>
+                            
+                            <!-- Formularios -->
+                            <div class="col-md-9">
+                                <h5 class="mb-3">Información de la cuenta</h5>
+                                
+                                <div class="mb-3">
+                                    <label for="{{ u_form.username.id_for_label }}" class="form-label">Nombre de usuario</label>
+                                    {{ u_form.username }}
+                                    <div class="form-text">{{ u_form.username.help_text }}</div>
+                                    {% if u_form.username.errors %}
+                                        <div class="invalid-feedback d-block">{{ u_form.username.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="{{ u_form.email.id_for_label }}" class="form-label">Email</label>
+                                    {{ u_form.email }}
+                                    {% if u_form.email.errors %}
+                                        <div class="invalid-feedback d-block">{{ u_form.email.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="{{ u_form.first_name.id_for_label }}" class="form-label">Nombre</label>
+                                        {{ u_form.first_name }}
+                                        {% if u_form.first_name.errors %}
+                                            <div class="invalid-feedback d-block">{{ u_form.first_name.errors }}</div>
+                                        {% endif %}
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-3">
+                                        <label for="{{ u_form.last_name.id_for_label }}" class="form-label">Apellido</label>
+                                        {{ u_form.last_name }}
+                                        {% if u_form.last_name.errors %}
+                                            <div class="invalid-feedback d-block">{{ u_form.last_name.errors }}</div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                
+                                <h5 class="mb-3 mt-4">Información personal adicional</h5>
+                                
+                                <div class="mb-3">
+                                    <label for="{{ c_form.telefono.id_for_label }}" class="form-label">Teléfono</label>
+                                    {{ c_form.telefono }}
+                                    {% if c_form.telefono.errors %}
+                                        <div class="invalid-feedback d-block">{{ c_form.telefono.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="{{ c_form.fecha_nacimiento.id_for_label }}" class="form-label">Fecha de nacimiento</label>
+                                    {{ c_form.fecha_nacimiento }}
+                                    {% if c_form.fecha_nacimiento.errors %}
+                                        <div class="invalid-feedback d-block">{{ c_form.fecha_nacimiento.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="{{ c_form.imagen_perfil.id_for_label }}" class="form-label">Imagen de perfil</label>
+                                    {{ c_form.imagen_perfil }}
+                                    {% if c_form.imagen_perfil.errors %}
+                                        <div class="invalid-feedback d-block">{{ c_form.imagen_perfil.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                
+                                <div class="mt-4 d-flex">
+                                    <button type="submit" class="btn btn-primary me-2">
+                                        <i class="bi bi-save me-1"></i> Guardar Cambios
+                                    </button>
+                                    <a href="{% url 'users:profile' %}" class="btn btn-outline-secondary">
+                                        <i class="bi bi-x-circle me-1"></i> Cancelar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

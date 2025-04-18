@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Incluimos las URLs de nuestras aplicaciones
     path('', include('apps.core.urls')),
+    path('users/', include('apps.users.urls')),
     # Las siguientes se implementarán en fases posteriores
-    # path('users/', include('apps.users.urls')),
     # path('products/', include('apps.products.urls')),
     # path('cart/', include('apps.cart.urls')),
     # path('orders/', include('apps.orders.urls')),

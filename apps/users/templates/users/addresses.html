@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mis Direcciones | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <!-- Barra lateral de navegación de perfil -->
+        <div class="col-md-3 mb-4">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Mi Cuenta</h4>
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="{% url 'users:profile' %}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-person-circle me-2"></i> Información Personal
+                    </a>
+                    <a href="{% url 'users:addresses' %}" class="list-group-item list-group-item-action active">
+                        <i class="bi bi-geo-alt me-2"></i> Mis Direcciones
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="bi bi-clock-history me-2"></i> Historial de Pedidos
+                    </a>
+                    <a href="{% url 'users:logout' %}" class="list-group-item list-group-item-action text-danger">
+                        <i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido principal - Direcciones -->
+        <div class="col-md-9">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">Mis Direcciones</h4>
+                    <a href="{% url 'users:add_address' %}" class="btn btn-light btn-sm">
+                        <i class="bi bi-plus-circle me-1"></i> Agregar Nueva Dirección
+                    </a>
+                </div>
+                <div class="card-body">
+                    {% if direcciones %}
+                        <div class="row">
+                            {% for direccion in direcciones %}
+                                <div class="col-md-6 mb-4">
+                                    <div class="card {% if direccion.es_principal %}border-primary{% else %}border-light{% endif %} h-100">
+                                        <div class="card-header {% if direccion.es_principal %}bg-primary text-white{% else %}bg-light{% endif %}">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h5 class="mb-0">
+                                                    {% if direccion.es_principal %}
+                                                        <i class="bi bi-star-fill me-1 text-warning"></i>
+                                                    {% endif %}
+                                                    {{ direccion.nombre_completo }}
+                                                </h5>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-sm {% if direccion.es_principal %}btn-light{% else %}btn-outline-secondary{% endif %} dropdown-toggle" type="button" id="direccionDropdown{{ direccion.id }}" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="direccionDropdown{{ direccion.id }}">
+                                                        <li>
+                                                            <a class="dropdown-item" href="{% url 'users:edit_address' direccion.id %}">
+                                                                <i class="bi bi-pencil me-2"></i> Editar
+                                                            </a>
+                                                        </li>
+                                                        {% if not direccion.es_principal %}
+                                                            <li>
+                                                                <a class="dropdown-item" href="{% url 'users:set_default_address' direccion.id %}" onclick="return confirm('¿Establecer como dirección principal?')">
+                                                                    <i class="bi bi-star me-2"></i> Establecer como principal
+                                                                </a>
+                                                            </li>
+                                                        {% endif %}
+                                                        <li>
+                                                            <a class="dropdown-item text-danger" href="{% url 'users:delete_address' direccion.id %}" onclick="return confirm('¿Estás seguro de que deseas eliminar esta dirección?')">
+                                                                <i class="bi bi-trash me-2"></i> Eliminar
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            {% if direccion.es_principal %}
+                                                <div class="badge bg-warning text-dark mt-1">Dirección Principal</div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                {{ direccion.calle }} {{ direccion.numero_exterior }}
+                                                {% if direccion.numero_interior %}, Int. {{ direccion.numero_interior }}{% endif %}<br>
+                                                {{ direccion.colonia }}, {{ direccion.ciudad }}<br>
+                                                {{ direccion.estado }}, {{ direccion.pais }}<br>
+                                                C.P. {{ direccion.codigo_postal }}<br>
+                                                Tel: {{ direccion.telefono_contacto }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="bi bi-geo-alt display-1 text-muted"></i>
+                            <h4 class="mt-3">No tienes direcciones guardadas</h4>
+                            <p class="text-muted">Agrega una dirección para facilitar tus compras.</p>
+                            <a href="{% url 'users:add_address' %}" class="btn btn-primary mt-2">
+                                <i class="bi bi-plus-circle me-1"></i> Agregar mi primera dirección
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
