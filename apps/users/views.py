@@ -9,6 +9,17 @@ from .forms import (
     ClienteUpdateForm, DireccionEnvioForm
 )
 from .models import DireccionEnvio
+from django.urls import reverse_lazy
+from django.contrib.auth.views import (
+    PasswordResetView, PasswordResetDoneView, 
+    PasswordResetConfirmView, PasswordResetCompleteView
+)
+from django.contrib.auth.tokens import default_token_generator
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode
+from django.template.loader import render_to_string
+from django.contrib.sites.shortcuts import get_current_site
+from .email_utils import enviar_correo
 
 # Configurar el logger
 logger = logging.getLogger('apps.users')
@@ -240,3 +251,36 @@ def set_default_address(request, pk):
         messages.error(request, 'Ha ocurrido un error al establecer la dirección como principal.')
     
     return redirect('users:addresses')
+
+
+# Agregar estas clases al final del archivo
+# Actualiza la clase CustomPasswordResetView para usar el método correcto
+class CustomPasswordResetView(PasswordResetView):
+    template_name = 'users/password_reset.html'
+    email_template_name = 'users/password_reset_email.html'
+    subject_template_name = 'users/password_reset_subject.txt'
+    success_url = reverse_lazy('users:password_reset_done')
+    
+    def form_valid(self, form):
+        """
+        Personalizar el envío de correos
+        """
+        # El método original de Django ya maneja la búsqueda de usuarios y envío de correos
+        # Solo registramos la actividad y utilizamos el método original
+        email = form.cleaned_data['email']
+        logger.info(f"Solicitud de restablecimiento de contraseña para {email}")
+        
+        # Llamar al método form_valid original de PasswordResetView
+        return super().form_valid(form)
+
+class CustomPasswordResetDoneView(PasswordResetDoneView):
+    template_name = 'users/password_reset_done.html'
+
+
+class CustomPasswordResetConfirmView(PasswordResetConfirmView):
+    template_name = 'users/password_reset_confirm.html'
+    success_url = reverse_lazy('users:password_reset_complete')
+
+
+class CustomPasswordResetCompleteView(PasswordResetCompleteView):
+    template_name = 'users/password_reset_complete.html'

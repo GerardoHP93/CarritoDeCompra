@@ -141,14 +141,15 @@ LOGIN_REDIRECT_URL = 'core:home'
 LOGOUT_REDIRECT_URL = 'core:home'
 
 # Configurar emails
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Para desarrollo
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Para desarrollo
 # En producción, cambiar a:
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'tu_email@gmail.com'
-# EMAIL_HOST_PASSWORD = 'tu_contraseña_de_app'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'al068612@uacam.mx'
+EMAIL_HOST_PASSWORD = 'zsifhhylduwkafsc'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 # Configuración de logging
 LOGGING = {

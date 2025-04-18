@@ -893,3 +893,230 @@ DEBUG 2025-04-17 18:47:05,276 views Acceso a la página de inicio
 INFO 2025-04-17 18:47:05,286 basehttp "GET / HTTP/1.1" 200 13174
 INFO 2025-04-17 18:47:05,479 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
 WARNING 2025-04-17 18:47:05,512 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 15:58:41,363 autoreload Watching for file changes with StatReloader
+INFO 2025-04-18 16:08:51,190 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-18 16:08:53,540 views Acceso a la página de inicio
+INFO 2025-04-18 16:08:53,720 basehttp "GET / HTTP/1.1" 200 13962
+INFO 2025-04-18 16:08:53,778 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+WARNING 2025-04-18 16:08:53,814 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+WARNING 2025-04-18 16:08:54,051 log Not Found: /favicon.ico
+WARNING 2025-04-18 16:08:54,052 basehttp "GET /favicon.ico HTTP/1.1" 404 3468
+INFO 2025-04-18 16:09:14,372 views Usuario  cerró sesión
+INFO 2025-04-18 16:09:14,374 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-18 16:09:14,380 views Acceso a la página de inicio
+INFO 2025-04-18 16:09:14,383 basehttp "GET / HTTP/1.1" 200 13410
+WARNING 2025-04-18 16:09:14,427 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 16:09:16,397 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-18 16:09:16,446 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 16:09:16,459 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 304 0
+INFO 2025-04-18 16:09:18,276 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+WARNING 2025-04-18 16:09:18,326 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 16:09:23,115 basehttp - Broken pipe from ('127.0.0.1', 63077)
+INFO 2025-04-18 16:09:23,888 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-04-18 16:09:23,918 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 7509
+WARNING 2025-04-18 16:09:24,008 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 16:09:47,993 basehttp "GET /users/password-reset-confirm/MQ/cogq7l-0f41a171bfe045f7b6c5d6b7481d5605/ HTTP/1.1" 302 0
+INFO 2025-04-18 16:09:48,046 basehttp "GET /users/password-reset-confirm/MQ/set-password/ HTTP/1.1" 200 8486
+WARNING 2025-04-18 16:09:48,121 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 16:15:47,986 basehttp "GET /users/password-reset-confirm/MQ/cogq7l-0f41a171bfe045f7b6c5d6b7481d5605/ HTTP/1.1" 302 0
+INFO 2025-04-18 16:15:48,000 basehttp "GET /users/password-reset-confirm/MQ/set-password/ HTTP/1.1" 200 8486
+WARNING 2025-04-18 16:15:48,116 basehttp "GET /static/js/main.js HTTP/1.1" 404 1957
+INFO 2025-04-18 16:40:05,032 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\carritoCompras_project\settings.py changed, reloading.
+INFO 2025-04-18 16:40:07,622 autoreload Watching for file changes with StatReloader
+INFO 2025-04-18 17:04:46,324 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-18 17:04:50,950 views Acceso a la página de inicio
+INFO 2025-04-18 17:04:51,007 basehttp "GET / HTTP/1.1" 200 13174
+INFO 2025-04-18 17:04:51,215 basehttp "GET /static/js/main.js HTTP/1.1" 200 1149
+INFO 2025-04-18 17:04:52,823 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+INFO 2025-04-18 17:04:54,163 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+ERROR 2025-04-18 17:04:56,330 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\views.py", line 229, in dispatch
+    return super().dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 271, in form_valid
+    active_users = self.get_users(email)
+                   ^^^^^^^^^^^^^^
+AttributeError: 'CustomPasswordResetView' object has no attribute 'get_users'
+ERROR 2025-04-18 17:04:56,336 basehttp "POST /users/password-reset/ HTTP/1.1" 500 118827
+ERROR 2025-04-18 17:05:48,852 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\views.py", line 229, in dispatch
+    return super().dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 271, in form_valid
+    active_users = self.get_users(email)
+                   ^^^^^^^^^^^^^^
+AttributeError: 'CustomPasswordResetView' object has no attribute 'get_users'
+ERROR 2025-04-18 17:05:48,858 basehttp "POST /users/password-reset/ HTTP/1.1" 500 118827
+ERROR 2025-04-18 17:06:20,736 log Internal Server Error: /users/password-reset/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\views.py", line 229, in dispatch
+    return super().dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\views\generic\edit.py", line 151, in post
+    return self.form_valid(form)
+           ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py", line 271, in form_valid
+    active_users = self.get_users(email)
+                   ^^^^^^^^^^^^^^
+AttributeError: 'CustomPasswordResetView' object has no attribute 'get_users'
+ERROR 2025-04-18 17:06:20,741 basehttp "POST /users/password-reset/ HTTP/1.1" 500 118827
+INFO 2025-04-18 17:37:00,164 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\users\views.py changed, reloading.
+INFO 2025-04-18 17:37:02,646 autoreload Watching for file changes with StatReloader
+INFO 2025-04-18 17:38:05,069 autoreload Watching for file changes with StatReloader
+INFO 2025-04-18 17:38:08,632 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+INFO 2025-04-18 17:38:08,678 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:38:10,806 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+INFO 2025-04-18 17:38:13,009 views Solicitud de restablecimiento de contraseña para gerardohp93@gmail.com
+INFO 2025-04-18 17:38:18,653 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-04-18 17:38:18,679 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 7509
+INFO 2025-04-18 17:39:11,834 basehttp "GET /users/password-reset-confirm/MQ/cogubp-f8337f001e4a5b4e73d1cda5dfda1dae/ HTTP/1.1" 302 0
+INFO 2025-04-18 17:39:11,949 basehttp "GET /users/password-reset-confirm/MQ/set-password/ HTTP/1.1" 200 8486
+DEBUG 2025-04-18 17:39:34,289 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-04-18 17:39:34,300 basehttp "POST /users/password-reset-confirm/MQ/set-password/ HTTP/1.1" 302 0
+INFO 2025-04-18 17:39:34,369 basehttp "GET /users/password-reset-complete/ HTTP/1.1" 200 7136
+INFO 2025-04-18 17:39:35,873 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+WARNING 2025-04-18 17:39:46,979 views Intento de inicio de sesión fallido
+INFO 2025-04-18 17:39:47,034 basehttp "POST /users/login/ HTTP/1.1" 200 10022
+DEBUG 2025-04-18 17:39:58,038 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-04-18 17:39:58,039 views Usuario Gerardo inició sesión
+INFO 2025-04-18 17:39:58,052 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-04-18 17:39:58,062 views Acceso a la página de inicio
+INFO 2025-04-18 17:39:58,122 basehttp "GET / HTTP/1.1" 200 14198
+INFO 2025-04-18 17:40:02,694 basehttp "GET /users/profile/ HTTP/1.1" 200 11296
+WARNING 2025-04-18 17:40:02,894 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-04-18 17:40:09,984 basehttp "GET /users/profile/edit/ HTTP/1.1" 200 13294
+WARNING 2025-04-18 17:40:10,090 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-04-18 17:40:40,983 basehttp "GET /admin/ HTTP/1.1" 200 7911
+INFO 2025-04-18 17:40:41,115 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,138 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,138 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,143 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,144 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,159 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,284 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-04-18 17:40:41,309 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:41,333 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-04-18 17:40:47,836 basehttp "GET /admin/ HTTP/1.1" 200 7911
+INFO 2025-04-18 17:40:51,667 basehttp "GET /admin/users/cliente/ HTTP/1.1" 200 13652
+INFO 2025-04-18 17:40:51,811 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,811 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,812 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,813 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,823 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,824 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,825 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,825 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,826 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,858 basehttp "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,858 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,882 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:51,939 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-18 17:40:52,025 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:52,026 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-04-18 17:40:52,027 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-04-18 17:41:02,094 basehttp "GET /admin/ HTTP/1.1" 200 7911
+INFO 2025-04-18 17:41:07,409 views Usuario  cerró sesión
+INFO 2025-04-18 17:41:07,417 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-18 17:41:07,431 views Acceso a la página de inicio
+INFO 2025-04-18 17:41:07,441 basehttp "GET / HTTP/1.1" 200 13410
+INFO 2025-04-18 17:41:09,482 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+INFO 2025-04-18 17:41:10,176 basehttp "GET /users/register/ HTTP/1.1" 200 10151
+INFO 2025-04-18 17:41:22,002 basehttp "POST /users/register/ HTTP/1.1" 200 10559
+INFO 2025-04-18 17:41:24,855 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+DEBUG 2025-04-18 17:41:32,890 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-18 17:41:32,891 views Usuario Gerry inició sesión
+INFO 2025-04-18 17:41:32,901 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-04-18 17:41:32,914 views Acceso a la página de inicio
+INFO 2025-04-18 17:41:32,938 basehttp "GET / HTTP/1.1" 200 13993
+INFO 2025-04-18 17:41:35,684 basehttp "GET /users/profile/ HTTP/1.1" 200 12347
+INFO 2025-04-18 17:41:35,773 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 200 111959
+INFO 2025-04-18 17:41:39,493 views Usuario  cerró sesión
+INFO 2025-04-18 17:41:39,497 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-04-18 17:41:39,503 views Acceso a la página de inicio
+INFO 2025-04-18 17:41:39,515 basehttp "GET / HTTP/1.1" 200 13410
+INFO 2025-04-18 17:41:39,582 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-18 17:41:41,142 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+INFO 2025-04-18 17:41:42,542 basehttp "GET /users/password-reset/ HTTP/1.1" 200 7854
+INFO 2025-04-18 17:41:49,383 views Solicitud de restablecimiento de contraseña para zurdoherrera10@gmail.com
+INFO 2025-04-18 17:41:53,734 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-04-18 17:41:53,753 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 7509
+INFO 2025-04-18 17:44:21,314 basehttp "GET /users/password-reset-confirm/Mg/coguhp-71cffd0b1b20a4dd409cde281602b59a/ HTTP/1.1" 302 0
+INFO 2025-04-18 17:44:21,340 basehttp "GET /users/password-reset-confirm/Mg/set-password/ HTTP/1.1" 200 8486
+INFO 2025-04-18 17:44:31,610 basehttp "POST /users/password-reset-confirm/Mg/set-password/ HTTP/1.1" 200 8750
+DEBUG 2025-04-18 17:44:42,895 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-18 17:44:42,905 basehttp "POST /users/password-reset-confirm/Mg/set-password/ HTTP/1.1" 302 0
+INFO 2025-04-18 17:44:42,926 basehttp "GET /users/password-reset-complete/ HTTP/1.1" 200 7136
+INFO 2025-04-18 17:44:44,433 basehttp "GET /users/login/ HTTP/1.1" 200 9605
+DEBUG 2025-04-18 17:44:56,292 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-04-18 17:44:56,293 views Usuario Gerry inició sesión
+INFO 2025-04-18 17:44:56,306 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-04-18 17:44:56,322 views Acceso a la página de inicio
+INFO 2025-04-18 17:44:56,348 basehttp "GET / HTTP/1.1" 200 13993
+INFO 2025-04-18 17:45:02,365 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 12028
+INFO 2025-04-18 17:45:09,360 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 13450
+DEBUG 2025-04-18 17:45:10,587 views Acceso a la página de inicio
+INFO 2025-04-18 17:45:10,596 basehttp "GET / HTTP/1.1" 200 13759
+INFO 2025-04-18 17:45:21,187 basehttp "GET /users/password-reset-confirm/Mg/coguhp-71cffd0b1b20a4dd409cde281602b59a/ HTTP/1.1" 200 7951
+INFO 2025-04-18 17:45:24,621 basehttp "GET /users/password-reset/ HTTP/1.1" 200 8439
+DEBUG 2025-04-18 17:45:33,741 views Acceso a la página de inicio
+INFO 2025-04-18 17:45:33,752 basehttp "GET / HTTP/1.1" 200 13759
+INFO 2025-04-18 17:45:33,829 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
