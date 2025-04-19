@@ -2405,3 +2405,919 @@ INFO 2025-04-18 22:00:36,945 basehttp "GET /media/productos/principal_xZKgqdY.we
 INFO 2025-04-18 22:00:36,950 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
 INFO 2025-04-18 22:00:36,975 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
 INFO 2025-04-18 22:00:36,975 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:35,597 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 01:41:41,210 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:41:41,356 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+INFO 2025-04-19 01:41:41,407 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,410 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,459 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,460 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,463 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,469 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,496 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:41,530 basehttp "GET /static/css/main.css HTTP/1.1" 200 7998
+INFO 2025-04-19 01:41:41,584 basehttp "GET /static/js/main.js HTTP/1.1" 200 1806
+DEBUG 2025-04-19 01:41:42,333 views Acceso a la página de inicio
+INFO 2025-04-19 01:41:42,376 basehttp "GET / HTTP/1.1" 200 15211
+INFO 2025-04-19 01:41:42,424 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:42,427 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:42,428 basehttp "GET /media/categorias/Imagen_de_la_categoria.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:42,432 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+INFO 2025-04-19 01:41:42,433 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:41:44,228 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:41:44,246 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+DEBUG 2025-04-19 01:41:46,232 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 01:41:46,296 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24925
+INFO 2025-04-19 01:41:46,359 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:41:49,010 views Acceso a la página de inicio
+INFO 2025-04-19 01:41:49,031 basehttp "GET / HTTP/1.1" 200 15211
+DEBUG 2025-04-19 01:41:50,648 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:41:50,666 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+DEBUG 2025-04-19 01:41:52,447 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-19 01:41:52,464 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 23588
+INFO 2025-04-19 01:41:52,541 basehttp "GET /media/productos/adicionales/1_IuAipSt.webp HTTP/1.1" 200 30158
+INFO 2025-04-19 01:41:52,543 basehttp "GET /media/productos/adicionales/2_dm4BNQ3.webp HTTP/1.1" 200 50474
+DEBUG 2025-04-19 01:42:10,709 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 01:42:10,730 basehttp "GET /products/ HTTP/1.1" 200 31793
+INFO 2025-04-19 01:42:10,794 basehttp "GET /media/productos/principal_cIifKU5.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:42:10,796 basehttp "GET /media/productos/principal_QeYiZT6.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:42:10,796 basehttp "GET /media/productos/principal.webp HTTP/1.1" 304 0
+INFO 2025-04-19 01:42:10,804 basehttp "GET /media/productos/Sabrita_chips_fuegos.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:42:16,741 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:42:16,762 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 22891
+INFO 2025-04-19 01:42:16,818 basehttp "GET /media/productos/adicionales/1_FyQndjt.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:42:19,676 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:42:19,693 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+DEBUG 2025-04-19 01:42:21,920 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:42:21,941 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 22891
+DEBUG 2025-04-19 01:42:30,004 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 2
+INFO 2025-04-19 01:42:30,006 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:30,015 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:42:30,057 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 24531
+DEBUG 2025-04-19 01:42:42,260 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:42,315 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19042
+DEBUG 2025-04-19 01:42:44,848 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=1
+INFO 2025-04-19 01:42:44,852 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:44,862 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:44,893 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:46,560 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=2
+INFO 2025-04-19 01:42:46,562 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:46,574 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:46,598 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:47,368 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=3
+INFO 2025-04-19 01:42:47,370 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:47,379 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:47,407 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:48,095 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=4
+INFO 2025-04-19 01:42:48,097 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:48,113 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:48,156 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19268
+DEBUG 2025-04-19 01:42:49,298 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=3
+INFO 2025-04-19 01:42:49,303 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:49,312 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:49,342 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:49,717 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=2
+INFO 2025-04-19 01:42:49,719 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:49,735 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:49,757 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:50,079 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=1
+INFO 2025-04-19 01:42:50,081 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:50,095 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:50,118 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:58,242 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=2
+INFO 2025-04-19 01:42:58,244 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:58,256 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:58,277 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:42:59,529 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=1
+INFO 2025-04-19 01:42:59,530 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:42:59,559 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:42:59,590 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:43:00,462 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=2
+INFO 2025-04-19 01:43:00,463 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:00,474 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:00,502 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19265
+DEBUG 2025-04-19 01:43:07,965 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:43:07,967 basehttp "POST /cart/remove/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:07,980 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:08,007 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13543
+DEBUG 2025-04-19 01:43:09,403 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 01:43:09,437 basehttp "GET /products/ HTTP/1.1" 200 31793
+DEBUG 2025-04-19 01:43:10,960 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:43:10,987 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 22891
+DEBUG 2025-04-19 01:43:13,238 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-19 01:43:13,240 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:13,252 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:43:13,280 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 24531
+INFO 2025-04-19 01:43:13,359 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:43:16,404 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-19 01:43:16,405 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:16,417 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:43:16,447 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 24554
+DEBUG 2025-04-19 01:43:20,319 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:43:20,342 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26194
+DEBUG 2025-04-19 01:43:21,867 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 01:43:21,890 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 15422
+DEBUG 2025-04-19 01:43:23,576 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 01:43:23,589 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 15422
+DEBUG 2025-04-19 01:43:23,878 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 01:43:23,904 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 15327
+INFO 2025-04-19 01:43:23,961 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:43:25,172 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-04-19 01:43:25,195 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 19869
+INFO 2025-04-19 01:43:25,259 basehttp "GET /media/productos/adicionales/barcel_1.jpeg HTTP/1.1" 200 106833
+INFO 2025-04-19 01:43:25,282 basehttp "GET /media/productos/adicionales/barcel_2.jpeg HTTP/1.1" 200 104931
+DEBUG 2025-04-19 01:43:26,490 views Producto agregado/actualizado en carrito: Papas Fritas Chip's Fuego 240g, cantidad: 1
+INFO 2025-04-19 01:43:26,491 basehttp "POST /cart/add/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:26,502 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-04-19 01:43:26,529 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 21407
+DEBUG 2025-04-19 01:43:32,193 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:32,212 basehttp "GET /cart/checkout/ HTTP/1.1" 200 22961
+DEBUG 2025-04-19 01:43:34,010 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=3
+INFO 2025-04-19 01:43:34,012 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:34,023 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:34,054 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:35,220 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=4
+INFO 2025-04-19 01:43:35,222 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:35,235 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:35,271 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23187
+DEBUG 2025-04-19 01:43:37,729 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=3
+INFO 2025-04-19 01:43:37,731 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:37,742 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:37,774 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:38,611 views Carrito actualizado: Bacardí ron sabor coco 700mL, cantidad=2
+INFO 2025-04-19 01:43:38,612 basehttp "POST /cart/update/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:38,623 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:38,646 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:40,703 views Carrito actualizado: Papas Fritas Chip's Fuego 240g, cantidad=2
+INFO 2025-04-19 01:43:40,705 basehttp "POST /cart/update/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:40,745 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:40,774 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:41,651 views Carrito actualizado: Papas Fritas Chip's Fuego 240g, cantidad=3
+INFO 2025-04-19 01:43:41,652 basehttp "POST /cart/update/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:41,662 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:41,691 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:42,459 views Carrito actualizado: Papas Fritas Chip's Fuego 240g, cantidad=2
+INFO 2025-04-19 01:43:42,461 basehttp "POST /cart/update/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:42,473 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:42,507 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:42,867 views Carrito actualizado: Papas Fritas Chip's Fuego 240g, cantidad=1
+INFO 2025-04-19 01:43:42,868 basehttp "POST /cart/update/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:42,883 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:42,906 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:43:45,857 views Producto eliminado del carrito: Papas Fritas Chip's Fuego 240g
+INFO 2025-04-19 01:43:45,858 basehttp "POST /cart/remove/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:45,872 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:45,893 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19303
+DEBUG 2025-04-19 01:43:51,252 views Carrito vaciado para usuario: Gerardo
+INFO 2025-04-19 01:43:51,253 basehttp "POST /cart/clear/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:43:51,270 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:43:51,279 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13518
+DEBUG 2025-04-19 01:43:57,015 views Acceso a la página de inicio
+INFO 2025-04-19 01:43:57,028 basehttp "GET / HTTP/1.1" 200 15211
+DEBUG 2025-04-19 01:45:04,890 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:45:04,905 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+INFO 2025-04-19 01:45:04,956 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:45:15,128 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:45:15,152 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 22891
+DEBUG 2025-04-19 01:45:33,549 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 2
+INFO 2025-04-19 01:45:33,550 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:45:33,561 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:45:33,596 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 24531
+INFO 2025-04-19 01:45:33,657 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:45:42,503 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 01:45:42,526 basehttp "GET /products/ HTTP/1.1" 200 33176
+DEBUG 2025-04-19 01:45:44,283 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 01:45:44,299 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 15327
+DEBUG 2025-04-19 01:45:45,582 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-04-19 01:45:45,611 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 19869
+DEBUG 2025-04-19 01:45:47,935 views Producto agregado/actualizado en carrito: Papas Fritas Chip's Fuego 240g, cantidad: 1
+INFO 2025-04-19 01:45:47,937 basehttp "POST /cart/add/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:45:47,949 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-04-19 01:45:47,981 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 21407
+DEBUG 2025-04-19 01:45:55,350 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:45:55,374 basehttp "GET /cart/checkout/ HTTP/1.1" 200 22961
+DEBUG 2025-04-19 01:46:01,589 views Carrito actualizado: Papas Fritas Chip's Fuego 240g, cantidad=2
+INFO 2025-04-19 01:46:01,592 basehttp "POST /cart/update/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:46:01,601 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:46:01,636 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23184
+DEBUG 2025-04-19 01:46:05,239 views Producto eliminado del carrito: Papas Fritas Chip's Fuego 240g
+INFO 2025-04-19 01:46:05,241 basehttp "POST /cart/remove/1/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:46:05,251 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:46:05,278 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19303
+DEBUG 2025-04-19 01:46:18,265 views Acceso a la página de inicio
+INFO 2025-04-19 01:46:18,292 basehttp "GET / HTTP/1.1" 200 16594
+DEBUG 2025-04-19 01:46:23,173 views Búsqueda de productos por "ron": 2 resultados
+INFO 2025-04-19 01:46:23,224 basehttp "GET /products/search/?q=ron HTTP/1.1" 200 14063
+DEBUG 2025-04-19 01:46:26,854 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 01:46:26,877 basehttp "GET /products/category/electrodomesticos/ HTTP/1.1" 200 15438
+DEBUG 2025-04-19 01:46:27,956 views Acceso a la página "Quiénes somos"
+INFO 2025-04-19 01:46:27,985 basehttp "GET /about/ HTTP/1.1" 200 14007
+DEBUG 2025-04-19 01:46:29,418 views Acceso a la página de contacto
+INFO 2025-04-19 01:46:29,479 basehttp "GET /contact/ HTTP/1.1" 200 16320
+INFO 2025-04-19 01:46:33,586 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 13371
+DEBUG 2025-04-19 01:48:20,692 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 01:48:20,693 basehttp "POST /cart/remove/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:48:20,715 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:48:20,729 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13543
+INFO 2025-04-19 01:48:20,810 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 01:48:20,813 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 01:49:08,442 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 01:49:08,462 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+DEBUG 2025-04-19 01:49:09,433 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 01:49:09,455 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24925
+DEBUG 2025-04-19 01:49:11,338 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-19 01:49:11,339 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:49:11,350 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 01:49:11,389 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26583
+DEBUG 2025-04-19 01:49:14,202 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:49:14,220 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19236
+DEBUG 2025-04-19 01:49:16,305 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 01:49:16,306 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:49:16,318 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:49:16,341 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19462
+DEBUG 2025-04-19 01:49:30,820 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=3
+INFO 2025-04-19 01:49:30,821 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 01:49:30,833 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 01:49:30,854 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19462
+DEBUG 2025-04-19 02:02:01,374 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:02:01,378 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:02:01,388 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:02:01,417 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19462
+INFO 2025-04-19 02:02:01,482 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:02:01,485 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:02:03,188 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:02:03,190 basehttp "POST /cart/remove/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:02:03,201 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:02:03,214 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13549
+DEBUG 2025-04-19 02:02:32,403 views Acceso a la página de inicio
+INFO 2025-04-19 02:02:32,419 basehttp "GET / HTTP/1.1" 200 15211
+DEBUG 2025-04-19 02:02:41,267 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 02:02:41,282 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14018
+DEBUG 2025-04-19 02:02:42,812 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:02:42,836 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19165
+INFO 2025-04-19 02:02:42,896 basehttp "GET /media/productos/adicionales/principal.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:02:42,897 basehttp "GET /media/productos/adicionales/2.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:02:42,901 basehttp "GET /media/productos/adicionales/1.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:02:43,813 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-04-19 02:02:43,814 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:02:43,827 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:02:43,867 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 20857
+DEBUG 2025-04-19 02:03:26,193 views Producto eliminado del carrito: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:03:26,194 basehttp "POST /cart/remove/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:03:26,208 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:03:26,218 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13564
+DEBUG 2025-04-19 02:09:06,702 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:09:06,735 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13288
+INFO 2025-04-19 02:09:06,773 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:09:06,774 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:09:11,505 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 02:09:11,521 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24811
+INFO 2025-04-19 02:09:11,572 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:09:11,575 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:09:11,583 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:09:11,583 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:09:11,583 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:09:12,491 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:09:12,515 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24925
+DEBUG 2025-04-19 02:09:14,765 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-19 02:09:14,766 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:09:14,777 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+ERROR 2025-04-19 02:09:15,036 log Internal Server Error: /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\views.py", line 56, in product_detail
+    return render(request, 'products/product_detail.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update_cart_ajax' not found. 'update_cart_ajax' is not a valid view function or pattern name.
+ERROR 2025-04-19 02:09:15,048 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 500 212300
+DEBUG 2025-04-19 02:09:19,566 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+ERROR 2025-04-19 02:09:19,634 log Internal Server Error: /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\views.py", line 56, in product_detail
+    return render(request, 'products/product_detail.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update_cart_ajax' not found. 'update_cart_ajax' is not a valid view function or pattern name.
+ERROR 2025-04-19 02:09:19,642 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 500 211554
+INFO 2025-04-19 02:10:55,686 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\urls.py changed, reloading.
+INFO 2025-04-19 02:10:56,777 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 02:11:03,824 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\urls.py changed, reloading.
+INFO 2025-04-19 02:11:04,770 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 02:11:08,200 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\urls.py changed, reloading.
+INFO 2025-04-19 02:11:09,089 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 02:11:40,312 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\views.py changed, reloading.
+INFO 2025-04-19 02:11:42,213 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 02:15:51,342 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 02:15:54,381 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 02:15:54,465 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26704
+INFO 2025-04-19 02:15:54,565 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:15:54,566 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:15:54,620 basehttp "GET /static/css/main.css HTTP/1.1" 200 9156
+INFO 2025-04-19 02:15:54,658 basehttp "GET /static/js/main.js HTTP/1.1" 200 8919
+INFO 2025-04-19 02:15:58,675 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:15:58,907 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:15:59,679 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:16:00,463 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:16:04,718 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:16:17,934 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:16:20,888 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:16:22,372 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:16:22,857 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:16:26,300 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 118
+DEBUG 2025-04-19 02:16:27,546 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:27,569 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19740
+INFO 2025-04-19 02:16:27,632 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:16:27,650 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:16:30,219 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:16:30,221 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:30,231 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:30,264 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+DEBUG 2025-04-19 02:16:33,298 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=3
+INFO 2025-04-19 02:16:33,302 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:33,314 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:33,341 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+INFO 2025-04-19 02:16:33,432 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:16:34,645 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:16:34,646 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:34,659 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:34,690 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+DEBUG 2025-04-19 02:16:35,322 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=1
+INFO 2025-04-19 02:16:35,323 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:35,338 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:35,375 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19963
+DEBUG 2025-04-19 02:16:36,125 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:16:36,126 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:36,138 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:36,173 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+DEBUG 2025-04-19 02:16:36,593 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=3
+INFO 2025-04-19 02:16:36,595 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:36,609 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:36,631 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+DEBUG 2025-04-19 02:16:37,039 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=4
+INFO 2025-04-19 02:16:37,042 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:37,057 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:37,079 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+DEBUG 2025-04-19 02:16:41,493 views Acceso a la página de inicio
+INFO 2025-04-19 02:16:41,538 basehttp "GET / HTTP/1.1" 200 17104
+INFO 2025-04-19 02:16:41,595 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-04-19 02:16:41,596 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-04-19 02:16:41,596 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:16:41,597 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+INFO 2025-04-19 02:16:41,606 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:16:45,010 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 02:16:45,027 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 15911
+INFO 2025-04-19 02:16:45,066 basehttp "GET /media/productos/principal.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:16:45,083 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:16:46,326 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:16:46,357 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 21058
+DEBUG 2025-04-19 02:16:48,544 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-04-19 02:16:48,546 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:48,556 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:16:48,588 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 22914
+INFO 2025-04-19 02:16:48,648 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:16:51,786 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:51,811 basehttp "GET /cart/checkout/ HTTP/1.1" 200 24003
+DEBUG 2025-04-19 02:16:54,436 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=2
+INFO 2025-04-19 02:16:54,438 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:16:54,448 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:16:54,489 basehttp "GET /cart/checkout/ HTTP/1.1" 200 24227
+DEBUG 2025-04-19 02:17:03,074 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=3
+INFO 2025-04-19 02:17:03,075 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:17:03,087 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:17:03,125 basehttp "GET /cart/checkout/ HTTP/1.1" 200 24227
+INFO 2025-04-19 02:17:03,187 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:17:17,585 views Producto eliminado del carrito: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:17:17,586 basehttp "POST /cart/remove/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:17:17,598 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:17:17,631 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20019
+INFO 2025-04-19 02:17:17,686 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:17:17,686 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-19 02:17:22,232 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:17:22,328 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:17:22,795 basehttp "POST /cart/update-ajax/11/ HTTP/1.1" 200 120
+DEBUG 2025-04-19 02:17:27,577 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=5
+INFO 2025-04-19 02:17:27,578 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:17:27,588 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:17:27,620 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+INFO 2025-04-19 02:17:27,679 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:17:28,945 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=6
+INFO 2025-04-19 02:17:28,947 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:17:28,958 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:17:28,987 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19966
+DEBUG 2025-04-19 02:17:33,291 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:17:33,292 basehttp "POST /cart/remove/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:17:33,304 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:17:33,318 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13768
+DEBUG 2025-04-19 02:20:47,951 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 02:20:47,963 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14237
+INFO 2025-04-19 02:20:48,017 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:20:48,020 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:20:49,101 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:20:49,129 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19384
+DEBUG 2025-04-19 02:20:51,696 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-04-19 02:20:51,697 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:20:51,709 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:20:51,736 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 21355
+INFO 2025-04-19 02:20:56,026 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:29:47,363 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\views.py changed, reloading.
+INFO 2025-04-19 02:29:48,370 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 02:29:56,706 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\cart\views.py changed, reloading.
+INFO 2025-04-19 02:29:58,137 autoreload Watching for file changes with StatReloader
+INFO 2025-04-19 02:34:03,638 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 02:34:07,701 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:34:07,786 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 21055
+INFO 2025-04-19 02:34:07,967 basehttp "GET /static/css/main.css HTTP/1.1" 200 9345
+INFO 2025-04-19 02:34:07,978 basehttp "GET /static/js/main.js HTTP/1.1" 200 8928
+INFO 2025-04-19 02:34:12,971 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:34:13,739 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:34:14,070 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 116
+INFO 2025-04-19 02:34:15,180 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:34:15,632 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:34:16,480 basehttp "POST /cart/update-ajax/2/ HTTP/1.1" 200 118
+INFO 2025-04-19 02:34:17,470 basehttp "POST /cart/remove-ajax/2/ HTTP/1.1" 200 145
+DEBUG 2025-04-19 02:34:21,733 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-04-19 02:34:21,735 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:21,743 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:34:21,769 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 21333
+INFO 2025-04-19 02:34:21,885 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:34:27,776 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:34:27,802 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19605
+INFO 2025-04-19 02:34:27,869 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:34:27,877 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:34:29,376 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=2
+INFO 2025-04-19 02:34:29,377 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:29,389 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:34:29,408 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19608
+DEBUG 2025-04-19 02:34:30,228 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=1
+INFO 2025-04-19 02:34:30,231 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:30,243 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:34:30,262 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19605
+INFO 2025-04-19 02:34:30,336 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:34:31,233 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=2
+INFO 2025-04-19 02:34:31,234 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:31,245 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:34:31,264 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19608
+DEBUG 2025-04-19 02:34:31,690 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=3
+INFO 2025-04-19 02:34:31,692 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:31,705 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:34:31,722 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19608
+DEBUG 2025-04-19 02:34:34,881 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 02:34:34,904 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26701
+INFO 2025-04-19 02:34:34,986 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:34:34,986 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:34:35,865 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:34:35,889 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26815
+DEBUG 2025-04-19 02:34:37,541 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-19 02:34:37,543 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:37,553 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:34:37,585 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 28637
+INFO 2025-04-19 02:34:37,694 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:34:43,585 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 3
+INFO 2025-04-19 02:34:43,587 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:34:43,597 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:34:43,631 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 28660
+INFO 2025-04-19 02:34:43,720 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:34:48,666 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:34:48,690 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23982
+INFO 2025-04-19 02:34:48,741 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:34:48,743 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:35:00,862 views Producto eliminado del carrito: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 02:35:00,864 basehttp "POST /cart/remove/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:00,875 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:00,892 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19997
+INFO 2025-04-19 02:35:00,985 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:35:03,899 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=5
+INFO 2025-04-19 02:35:03,901 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:03,910 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:03,928 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:35:05,115 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=6
+INFO 2025-04-19 02:35:05,116 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:05,126 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:05,144 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:35:05,463 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=7
+INFO 2025-04-19 02:35:05,465 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:05,476 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:05,495 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:35:05,936 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=6
+INFO 2025-04-19 02:35:05,937 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:05,950 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:05,969 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:35:06,254 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=5
+INFO 2025-04-19 02:35:06,256 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:06,269 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:06,290 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+INFO 2025-04-19 02:35:06,364 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:35:08,788 views Carrito vaciado para usuario: Gerardo
+INFO 2025-04-19 02:35:08,789 basehttp "POST /cart/clear/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:35:08,800 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:35:08,811 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13715
+INFO 2025-04-19 02:35:08,891 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:49:49,820 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 02:49:49,862 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25008
+INFO 2025-04-19 02:49:49,938 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:49,941 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:49,972 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:49,973 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:49,983 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:49,983 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:49,995 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:49:50,028 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:49:51,336 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:49:51,362 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25122
+DEBUG 2025-04-19 02:49:53,589 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-19 02:49:53,591 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:49:53,608 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:49:53,641 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 27059
+DEBUG 2025-04-19 02:49:57,224 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:49:57,281 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19718
+DEBUG 2025-04-19 02:49:59,066 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:49:59,068 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:49:59,082 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:49:59,102 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:50:00,356 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=3
+INFO 2025-04-19 02:50:00,358 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:00,373 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:00,394 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:50:01,268 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:50:01,272 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:01,301 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:01,325 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:50:01,581 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=1
+INFO 2025-04-19 02:50:01,582 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:01,592 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:01,613 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19718
+DEBUG 2025-04-19 02:50:03,090 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=2
+INFO 2025-04-19 02:50:03,095 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:03,125 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:03,150 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:50:03,667 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=3
+INFO 2025-04-19 02:50:03,670 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:03,690 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:03,720 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:50:03,993 views Carrito actualizado: Tequila Don Julio 70 Cristalino 700, cantidad=4
+INFO 2025-04-19 02:50:03,996 basehttp "POST /cart/update/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:04,011 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:04,035 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19721
+DEBUG 2025-04-19 02:50:05,068 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:50:05,070 basehttp "POST /cart/remove/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:05,078 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:05,089 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13746
+DEBUG 2025-04-19 02:50:15,120 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 02:50:15,174 basehttp "GET /products/category/electrodomesticos/ HTTP/1.1" 200 14252
+INFO 2025-04-19 02:50:15,246 basehttp "GET /media/productos/principal_QeYiZT6.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:50:16,971 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 02:50:16,996 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 18218
+DEBUG 2025-04-19 02:50:17,012 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 02:50:17,034 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 18218
+INFO 2025-04-19 02:50:17,091 basehttp "GET /media/productos/adicionales/1_zPOOeZh.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:50:18,986 views Producto agregado/actualizado en carrito: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad: 1
+INFO 2025-04-19 02:50:18,990 basehttp "POST /cart/add/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:19,019 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 02:50:19,047 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 20210
+DEBUG 2025-04-19 02:50:21,285 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 02:50:21,322 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26718
+DEBUG 2025-04-19 02:50:22,322 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 02:50:22,392 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 24798
+INFO 2025-04-19 02:50:22,462 basehttp "GET /media/productos/adicionales/1_FyQndjt.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:50:24,657 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 3
+INFO 2025-04-19 02:50:24,660 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:24,685 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 02:50:24,718 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 26603
+INFO 2025-04-19 02:50:27,497 basehttp "POST /cart/remove-ajax/3/ HTTP/1.1" 200 151
+DEBUG 2025-04-19 02:50:33,565 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 02:50:33,617 basehttp "GET /products/category/electrodomesticos/ HTTP/1.1" 200 15915
+DEBUG 2025-04-19 02:50:34,771 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 02:50:34,831 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 19881
+DEBUG 2025-04-19 02:50:36,467 views Producto agregado/actualizado en carrito: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad: 1
+INFO 2025-04-19 02:50:36,469 basehttp "POST /cart/add/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:36,488 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 02:50:36,542 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 21758
+DEBUG 2025-04-19 02:50:39,336 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:39,422 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23826
+DEBUG 2025-04-19 02:50:41,485 views Carrito actualizado: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad=2
+INFO 2025-04-19 02:50:41,487 basehttp "POST /cart/update/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:41,505 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:41,531 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23826
+DEBUG 2025-04-19 02:50:42,666 views Carrito actualizado: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad=3
+INFO 2025-04-19 02:50:42,667 basehttp "POST /cart/update/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:42,682 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:42,708 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23827
+DEBUG 2025-04-19 02:50:43,174 views Carrito actualizado: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad=4
+INFO 2025-04-19 02:50:43,176 basehttp "POST /cart/update/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:43,194 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:43,225 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23827
+DEBUG 2025-04-19 02:50:44,718 views Producto eliminado del carrito: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 02:50:44,719 basehttp "POST /cart/remove/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:50:44,733 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:50:44,754 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19805
+DEBUG 2025-04-19 02:51:05,174 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:51:05,200 basehttp "GET /products/ HTTP/1.1" 200 33653
+INFO 2025-04-19 02:51:05,259 basehttp "GET /media/productos/principal_cIifKU5.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:51:05,260 basehttp "GET /media/productos/Sabrita_chips_fuegos.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:51:11,960 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 02:51:11,976 basehttp "GET /products/category/electrodomesticos/ HTTP/1.1" 200 15915
+DEBUG 2025-04-19 02:51:14,800 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:51:14,826 basehttp "GET /products/ HTTP/1.1" 200 33653
+INFO 2025-04-19 02:51:14,887 basehttp "GET /media/productos/principal.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:51:17,958 views Búsqueda de productos por " ventilador": 0 resultados
+INFO 2025-04-19 02:51:17,981 basehttp "GET /products/search/?q=+ventilador HTTP/1.1" 200 11821
+DEBUG 2025-04-19 02:51:26,067 views Búsqueda de productos por "ventilador": 1 resultados
+INFO 2025-04-19 02:51:26,084 basehttp "GET /products/search/?q=ventilador HTTP/1.1" 200 13203
+INFO 2025-04-19 02:51:26,147 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:51:28,646 views Acceso a la página de inicio
+INFO 2025-04-19 02:51:28,670 basehttp "GET / HTTP/1.1" 200 17071
+INFO 2025-04-19 02:51:28,739 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-04-19 02:51:28,745 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-04-19 02:51:28,753 basehttp "GET /media/categorias/Imagen_de_la_categoria.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:51:28,783 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:51:36,878 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:51:37,249 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 120
+INFO 2025-04-19 02:51:37,932 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 121
+INFO 2025-04-19 02:51:38,103 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 121
+DEBUG 2025-04-19 02:51:39,046 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:51:39,066 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19531
+DEBUG 2025-04-19 02:51:41,517 views Carrito vaciado para usuario: Gerardo
+INFO 2025-04-19 02:51:41,518 basehttp "POST /cart/clear/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:51:41,530 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:51:41,540 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13715
+INFO 2025-04-19 02:51:41,601 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:51:44,651 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:51:44,670 basehttp "GET /products/ HTTP/1.1" 200 31990
+DEBUG 2025-04-19 02:51:49,042 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-19 02:51:49,069 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 19149
+INFO 2025-04-19 02:51:49,124 basehttp "GET /media/productos/adicionales/1_rZ0kv0Y.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:51:49,125 basehttp "GET /media/productos/adicionales/2_0XHubCC.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:51:50,528 views Producto agregado/actualizado en carrito: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad: 1
+INFO 2025-04-19 02:51:50,529 basehttp "POST /cart/add/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:51:50,540 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-19 02:51:50,564 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 21136
+INFO 2025-04-19 02:55:13,069 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 02:55:16,655 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-19 02:55:16,731 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 20856
+INFO 2025-04-19 02:55:16,780 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-19 02:55:16,858 basehttp "GET /static/css/main.css HTTP/1.1" 200 9345
+DEBUG 2025-04-19 02:55:17,706 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-19 02:55:17,734 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 20856
+INFO 2025-04-19 02:55:17,773 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:55:18,094 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-19 02:55:18,120 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 20856
+INFO 2025-04-19 02:55:18,164 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:55:23,302 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:55:27,751 views Acceso a la página "Quiénes somos"
+INFO 2025-04-19 02:55:27,775 basehttp "GET /about/ HTTP/1.1" 200 14528
+INFO 2025-04-19 02:55:27,855 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:55:30,490 views Acceso a la página de inicio
+INFO 2025-04-19 02:55:30,518 basehttp "GET / HTTP/1.1" 200 17115
+INFO 2025-04-19 02:55:30,586 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:55:30,591 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:55:51,222 views Acceso a la página de inicio
+INFO 2025-04-19 02:55:51,249 basehttp "GET / HTTP/1.1" 200 17115
+INFO 2025-04-19 02:55:51,319 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:55:54,075 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:55:54,105 basehttp "GET /products/ HTTP/1.1" 200 33697
+DEBUG 2025-04-19 02:55:55,926 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 02:55:55,955 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26829
+INFO 2025-04-19 02:55:56,068 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:56:00,646 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:56:00,669 basehttp "GET /products/ HTTP/1.1" 200 33697
+DEBUG 2025-04-19 02:56:03,551 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-04-19 02:56:03,574 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 24542
+INFO 2025-04-19 02:56:03,691 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:56:05,634 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:56:05,661 basehttp "GET /products/ HTTP/1.1" 200 33697
+DEBUG 2025-04-19 02:56:08,710 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-19 02:56:08,735 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 25492
+INFO 2025-04-19 02:56:08,854 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:56:08,855 basehttp "GET /media/productos/adicionales/1_IuAipSt.webp HTTP/1.1" 304 0
+INFO 2025-04-19 02:56:08,895 basehttp "GET /media/productos/adicionales/2_dm4BNQ3.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:56:17,199 views Producto agregado/actualizado en carrito: Johnnie Walker Blue Label X750cc, cantidad: 4
+INFO 2025-04-19 02:56:17,200 basehttp "POST /cart/add/7/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:56:17,213 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-19 02:56:17,239 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 27304
+INFO 2025-04-19 02:56:17,329 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:56:23,868 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:56:23,894 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23836
+INFO 2025-04-19 02:56:24,021 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:56:36,983 views Carrito actualizado: Johnnie Walker Blue Label X750cc, cantidad=3
+INFO 2025-04-19 02:56:36,984 basehttp "POST /cart/update/7/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:56:36,995 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:56:37,019 basehttp "GET /cart/checkout/ HTTP/1.1" 200 23836
+INFO 2025-04-19 02:56:37,107 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:56:38,622 views Acceso a la página de inicio
+INFO 2025-04-19 02:56:38,641 basehttp "GET / HTTP/1.1" 200 18667
+INFO 2025-04-19 02:57:00,819 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 02:57:52,236 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 02:57:52,663 views Acceso a la página de inicio
+INFO 2025-04-19 02:57:52,743 basehttp "GET / HTTP/1.1" 200 18667
+INFO 2025-04-19 02:57:52,909 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-19 02:57:52,912 basehttp "GET /static/css/main.css HTTP/1.1" 200 9342
+INFO 2025-04-19 02:58:06,694 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 02:58:07,069 views Acceso a la página de inicio
+INFO 2025-04-19 02:58:07,197 basehttp "GET / HTTP/1.1" 200 18667
+INFO 2025-04-19 02:58:07,342 basehttp "GET /static/css/main.css HTTP/1.1" 200 9344
+INFO 2025-04-19 02:58:18,575 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 02:58:19,180 views Acceso a la página de inicio
+INFO 2025-04-19 02:58:19,259 basehttp "GET / HTTP/1.1" 200 18667
+INFO 2025-04-19 02:58:19,386 basehttp "GET /static/css/main.css HTTP/1.1" 200 9344
+INFO 2025-04-19 02:58:26,595 basehttp "POST /cart/remove-ajax/7/ HTTP/1.1" 200 130
+INFO 2025-04-19 02:58:56,741 basehttp "POST /cart/remove-ajax/5/ HTTP/1.1" 200 147
+DEBUG 2025-04-19 02:59:16,094 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 02:59:16,124 basehttp "GET /products/ HTTP/1.1" 200 31990
+INFO 2025-04-19 02:59:16,202 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:59:18,195 views Detalle de producto: Whisky Johnnie Walker Red Label Blended Scotch 1000mL
+INFO 2025-04-19 02:59:18,223 basehttp "GET /products/whisky-johnnie-walker-red-label-blended-scotch-1000ml/ HTTP/1.1" 200 23252
+INFO 2025-04-19 02:59:18,274 basehttp "GET /media/productos/adicionales/1_uYqfWpH.webp HTTP/1.1" 200 27496
+DEBUG 2025-04-19 02:59:21,894 views Producto agregado/actualizado en carrito: Whisky Johnnie Walker Red Label Blended Scotch 1000mL, cantidad: 1
+INFO 2025-04-19 02:59:21,896 basehttp "POST /cart/add/8/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:59:21,906 views Detalle de producto: Whisky Johnnie Walker Red Label Blended Scotch 1000mL
+INFO 2025-04-19 02:59:21,942 basehttp "GET /products/whisky-johnnie-walker-red-label-blended-scotch-1000ml/ HTTP/1.1" 200 25242
+INFO 2025-04-19 02:59:25,708 basehttp "POST /cart/remove-ajax/8/ HTTP/1.1" 200 148
+DEBUG 2025-04-19 02:59:32,316 views Producto agregado/actualizado en carrito: Whisky Johnnie Walker Red Label Blended Scotch 1000mL, cantidad: 1
+INFO 2025-04-19 02:59:32,319 basehttp "POST /cart/add/8/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:59:32,333 views Detalle de producto: Whisky Johnnie Walker Red Label Blended Scotch 1000mL
+INFO 2025-04-19 02:59:32,369 basehttp "GET /products/whisky-johnnie-walker-red-label-blended-scotch-1000ml/ HTTP/1.1" 200 25242
+INFO 2025-04-19 02:59:32,441 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 02:59:34,260 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:59:34,281 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19646
+DEBUG 2025-04-19 02:59:36,780 views Carrito actualizado: Whisky Johnnie Walker Red Label Blended Scotch 1000mL, cantidad=2
+INFO 2025-04-19 02:59:36,781 basehttp "POST /cart/update/8/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:59:36,793 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:59:36,822 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19646
+DEBUG 2025-04-19 02:59:40,495 views Producto eliminado del carrito: Whisky Johnnie Walker Red Label Blended Scotch 1000mL
+INFO 2025-04-19 02:59:40,497 basehttp "POST /cart/remove/8/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 02:59:40,514 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 02:59:40,529 basehttp "GET /cart/checkout/ HTTP/1.1" 200 13764
+INFO 2025-04-19 02:59:40,636 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:00:22,185 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 03:00:22,201 basehttp "GET /products/ HTTP/1.1" 200 31990
+INFO 2025-04-19 03:00:22,254 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 03:00:22,258 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:00:23,671 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 03:00:23,694 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23088
+DEBUG 2025-04-19 03:00:25,330 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-19 03:00:25,334 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:00:25,342 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 03:00:25,373 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25008
+DEBUG 2025-04-19 03:00:30,547 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-19 03:00:30,552 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:00:30,561 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-19 03:00:30,591 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25031
+DEBUG 2025-04-19 03:00:45,810 views Acceso a la página de inicio
+INFO 2025-04-19 03:00:45,837 basehttp "GET / HTTP/1.1" 200 17071
+INFO 2025-04-19 03:00:45,905 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:00:47,326 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 03:00:47,354 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26671
+DEBUG 2025-04-19 03:00:50,006 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-19 03:00:50,037 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 25448
+DEBUG 2025-04-19 03:00:51,827 views Producto agregado/actualizado en carrito: Johnnie Walker Blue Label X750cc, cantidad: 1
+INFO 2025-04-19 03:00:51,829 basehttp "POST /cart/add/7/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:00:51,840 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-19 03:00:51,871 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 27260
+INFO 2025-04-19 03:00:54,705 basehttp "POST /cart/update-ajax/7/ HTTP/1.1" 200 120
+INFO 2025-04-19 03:00:55,745 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 119
+INFO 2025-04-19 03:00:55,900 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 120
+INFO 2025-04-19 03:00:56,258 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 120
+INFO 2025-04-19 03:00:56,401 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 120
+INFO 2025-04-19 03:00:57,653 basehttp "POST /cart/update-ajax/7/ HTTP/1.1" 200 120
+INFO 2025-04-19 03:00:59,414 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 131
+INFO 2025-04-19 03:01:01,040 basehttp "POST /cart/remove-ajax/7/ HTTP/1.1" 200 127
