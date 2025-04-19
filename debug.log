@@ -3321,3 +3321,94 @@ INFO 2025-04-19 03:00:56,401 basehttp "POST /cart/update-ajax/10/ HTTP/1.1" 200 
 INFO 2025-04-19 03:00:57,653 basehttp "POST /cart/update-ajax/7/ HTTP/1.1" 200 120
 INFO 2025-04-19 03:00:59,414 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 131
 INFO 2025-04-19 03:01:01,040 basehttp "POST /cart/remove-ajax/7/ HTTP/1.1" 200 127
+INFO 2025-04-19 03:23:42,226 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-19 03:23:48,354 views Acceso a la página de inicio
+INFO 2025-04-19 03:23:48,425 basehttp "GET / HTTP/1.1" 200 15713
+INFO 2025-04-19 03:23:48,570 basehttp "GET /static/css/main.css HTTP/1.1" 200 10400
+INFO 2025-04-19 03:23:48,650 basehttp "GET /static/js/main.js HTTP/1.1" 200 8761
+DEBUG 2025-04-19 03:23:49,705 views Acceso a la página de inicio
+INFO 2025-04-19 03:23:49,721 basehttp "GET / HTTP/1.1" 200 15713
+DEBUG 2025-04-19 03:23:54,268 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 03:23:54,296 basehttp "GET /products/ HTTP/1.1" 200 32295
+INFO 2025-04-19 03:23:54,384 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-04-19 03:23:54,387 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-04-19 03:23:54,405 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+INFO 2025-04-19 03:23:54,411 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-04-19 03:23:54,420 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:23:55,419 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 03:23:55,452 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25427
+DEBUG 2025-04-19 03:23:57,273 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-19 03:23:57,275 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:23:57,287 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 03:23:57,322 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 28923
+DEBUG 2025-04-19 03:24:03,203 views Acceso a la página de inicio
+INFO 2025-04-19 03:24:03,225 basehttp "GET / HTTP/1.1" 200 17387
+DEBUG 2025-04-19 03:24:05,364 views Listado de productos: 1 productos mostrados
+INFO 2025-04-19 03:24:05,376 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 16194
+DEBUG 2025-04-19 03:24:06,577 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 03:24:06,603 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 21341
+INFO 2025-04-19 03:24:06,691 basehttp "GET /media/productos/adicionales/principal.webp HTTP/1.1" 304 0
+INFO 2025-04-19 03:24:06,691 basehttp "GET /media/productos/adicionales/1.webp HTTP/1.1" 304 0
+INFO 2025-04-19 03:24:06,691 basehttp "GET /media/productos/adicionales/2.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:24:08,819 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 3
+INFO 2025-04-19 03:24:08,820 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:24:08,833 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 03:24:08,869 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 24756
+DEBUG 2025-04-19 03:24:16,019 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 03:24:16,023 basehttp "POST /cart/remove-ajax/11/ HTTP/1.1" 200 132
+DEBUG 2025-04-19 03:24:18,434 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 03:24:18,507 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19724
+DEBUG 2025-04-19 03:24:19,983 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=4
+INFO 2025-04-19 03:24:19,984 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:24:19,993 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 03:24:20,020 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19724
+DEBUG 2025-04-19 03:24:20,632 views Carrito actualizado: Carne de res Marketside congelada para hamburguesa, cantidad=5
+INFO 2025-04-19 03:24:20,633 basehttp "POST /cart/update/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:24:20,647 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 03:24:20,675 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19724
+DEBUG 2025-04-19 03:24:22,322 views Producto eliminado del carrito: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-19 03:24:22,323 basehttp "POST /cart/remove/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:24:22,335 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 03:24:22,343 basehttp "GET /cart/checkout/ HTTP/1.1" 200 15436
+DEBUG 2025-04-19 03:24:42,437 views Listado de productos: 7 productos mostrados
+INFO 2025-04-19 03:24:42,457 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25313
+INFO 2025-04-19 03:24:42,585 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:24:44,615 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 03:24:44,637 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25427
+DEBUG 2025-04-19 03:24:47,120 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-19 03:24:47,121 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:24:47,134 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 03:24:47,187 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 28923
+DEBUG 2025-04-19 03:24:54,744 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-19 03:24:54,747 basehttp "POST /cart/remove-ajax/11/ HTTP/1.1" 200 130
+DEBUG 2025-04-19 03:24:56,233 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 03:24:56,254 basehttp "GET /products/ HTTP/1.1" 200 32295
+DEBUG 2025-04-19 03:25:23,081 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-04-19 03:25:23,102 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23140
+INFO 2025-04-19 03:25:23,165 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-19 03:25:23,221 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:25:24,407 views Producto agregado/actualizado en carrito: Johnnie Walker black label blended scotch whisky 1 L, cantidad: 1
+INFO 2025-04-19 03:25:24,411 basehttp "POST /cart/add/9/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:25:24,420 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-04-19 03:25:24,445 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 26684
+DEBUG 2025-04-19 03:25:46,027 views Producto agregado/actualizado en carrito: Johnnie Walker black label blended scotch whisky 1 L, cantidad: 1
+INFO 2025-04-19 03:25:46,029 basehttp "POST /cart/add/9/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:25:46,039 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-04-19 03:25:46,068 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 26707
+DEBUG 2025-04-19 03:25:51,897 views Acceso a la página de inicio
+INFO 2025-04-19 03:25:51,926 basehttp "GET / HTTP/1.1" 200 17418
+DEBUG 2025-04-19 03:26:02,421 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 03:26:02,438 basehttp "GET /cart/checkout/ HTTP/1.1" 200 19752
+DEBUG 2025-04-19 03:26:05,933 views Producto eliminado del carrito: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-04-19 03:26:05,934 basehttp "POST /cart/remove/9/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:26:05,947 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-19 03:26:05,961 basehttp "GET /cart/checkout/ HTTP/1.1" 200 15438
+DEBUG 2025-04-19 03:26:12,192 views Listado de productos: 11 productos mostrados
+INFO 2025-04-19 03:26:12,214 basehttp "GET /products/ HTTP/1.1" 200 32295
+INFO 2025-04-19 03:26:12,274 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+DEBUG 2025-04-19 03:26:20,233 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 03:26:20,252 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 18523
+DEBUG 2025-04-19 03:26:21,314 views Producto agregado/actualizado en carrito: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad: 1
+INFO 2025-04-19 03:26:21,315 basehttp "POST /cart/add/3/ HTTP/1.1" 302 0
+DEBUG 2025-04-19 03:26:21,327 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-04-19 03:26:21,351 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 22079

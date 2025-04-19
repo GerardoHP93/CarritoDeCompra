@@ -19,12 +19,18 @@
     </header>
 
     <main class="container py-4">
+        <!-- Contenedor de toasts para notificaciones -->
+        <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 1999;"></div>
+        
+        <!-- Mensajes que no son toasts -->
         {% if messages %}
             <div class="messages">
                 {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                    </div>
+                    {% if 'toast' not in message.tags %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         {% endif %}
@@ -33,7 +39,6 @@
     </main>
 
     {% include 'includes/footer.html' %}
-    <!-- Después de la etiqueta footer -->
     {% include 'includes/cart_sidebar.html' %}
 
     <!-- Bootstrap JS with Popper -->
@@ -44,6 +49,61 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Custom JS -->
     <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Procesar mensajes de tipo toast -->
+<!-- Procesar mensajes de tipo toast -->
+<!-- Mensajes que no son toasts -->
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            {% if 'toast' not in message.tags %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% else %}
+                <!-- Estos mensajes se procesan en JavaScript -->
+                <div class="toast-message" style="display: none;"
+                     data-message="{{ message|escapejs }}"
+                     data-type="{{ message.tags }}"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Procesar mensajes toast ocultos
+            var toastMessages = document.querySelectorAll('.toast-message');
+            for (var i = 0; i < toastMessages.length; i++) {
+                var element = toastMessages[i];
+                var message = element.getAttribute('data-message');
+                var tags = element.getAttribute('data-type');
+                
+                var type = 'info';
+                if (tags.indexOf('success') !== -1) {
+                    type = 'success';
+                } else if (tags.indexOf('error') !== -1) {
+                    type = 'error';
+                } else if (tags.indexOf('warning') !== -1) {
+                    type = 'warning';
+                }
+                
+                if (typeof showToast === 'function') {
+                    showToast(message, type);
+                } else if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        icon: type,
+                        title: message,
+                        showConfirmButton: false,
+                        timer: 3000
+                    });
+                }
+            }
+        });
+    </script>
+{% endif %}
+    
     {% block extra_js %}{% endblock %}
 </body>
 </html>

@@ -42,6 +42,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Función global para mostrar notificación Toast
+window.showToast = function(message, type = 'info') {
+    // Si SweetAlert2 está disponible
+    if (typeof Swal !== 'undefined') {
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+        
+        Toast.fire({
+            icon: type,
+            title: message
+        });
+    } else {
+        // Crear un toast manualmente si SweetAlert2 no está disponible
+        const toastContainer = document.getElementById('toast-container') || createToastContainer();
+        const toast = document.createElement('div');
+        toast.className = `toast-notification toast-${type}`;
+        toast.textContent = message;
+        
+        toastContainer.appendChild(toast);
+        
+        // Eliminar después de 3 segundos
+        setTimeout(() => {
+            toast.classList.add('hide');
+            setTimeout(() => {
+                toast.remove();
+            }, 300);
+        }, 3000);
+    }
+};
+
+function createToastContainer() {
+    const container = document.createElement('div');
+    container.id = 'toast-container';
+    document.body.appendChild(container);
+    return container;
+}
+
 // Funciones para actualizar el carrito via AJAX
 document.addEventListener('DOMContentLoaded', function() {
     // Manejar el eliminar productos desde sidebar
@@ -161,51 +207,5 @@ document.addEventListener('DOMContentLoaded', function() {
         if (counter) {
             counter.textContent = count > 0 ? count : '';
         }
-    }
-    
-    // Función para mostrar notificación Toast
-    function showToast(message, type = 'info') {
-        // Si SweetAlert2 está disponible
-        if (typeof Swal !== 'undefined') {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            });
-            
-            Toast.fire({
-                icon: type,
-                title: message
-            });
-        } else {
-            // Crear un toast manualmente si SweetAlert2 no está disponible
-            const toastContainer = document.getElementById('toast-container') || createToastContainer();
-            const toast = document.createElement('div');
-            toast.className = `toast-notification toast-${type}`;
-            toast.textContent = message;
-            
-            toastContainer.appendChild(toast);
-            
-            // Eliminar después de 3 segundos
-            setTimeout(() => {
-                toast.classList.add('hide');
-                setTimeout(() => {
-                    toast.remove();
-                }, 300);
-            }, 3000);
-        }
-    }
-    
-    function createToastContainer() {
-        const container = document.createElement('div');
-        container.id = 'toast-container';
-        document.body.appendChild(container);
-        return container;
     }
 });

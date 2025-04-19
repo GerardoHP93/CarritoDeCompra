@@ -157,12 +157,7 @@
                     input.value = value + 1;
                     form.submit();
                 } else {
-                    Swal.fire({
-                        title: 'Stock limitado',
-                        text: `Solo hay ${maxStock} unidades disponibles.`,
-                        icon: 'warning',
-                        confirmButtonText: 'Entendido'
-                    });
+                    showToast(`Solo hay ${maxStock} unidades disponibles.`, 'warning');
                 }
             });
         });
