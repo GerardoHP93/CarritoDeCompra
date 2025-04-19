@@ -58,13 +58,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # Nuestro procesador de contexto personalizado para el carrito
+                # Nuestros procesadores de contexto personalizados
                 'apps.cart.context_processors.cart_context',
+                'apps.products.context_processors.categories',  # Añadir esta línea
             ],
         },
     },
 ]
-
 WSGI_APPLICATION = 'carritoCompras_project.wsgi.application'
 
 # Database

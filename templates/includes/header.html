@@ -7,17 +7,43 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarMain">
+            <!-- Menú Principal -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:home' %}">Inicio</a>
+                </li>
+                <!-- Menú desplegable de categorías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorías
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                        <li><a class="dropdown-item" href="{% url 'products:product_list' %}">Todas las categorías</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        {% for category in categories %}
+                            <li><a class="dropdown-item" href="{% url 'products:product_list_by_category' category.slug %}">{{ category.nombre }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:about' %}">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:contact' %}">Contacto</a>
+                </li>
+            </ul>
+            
             <!-- Búsqueda -->
-            <form class="d-flex mx-auto my-2 my-lg-0" style="max-width: 500px;">
+            <form class="d-flex mx-auto my-2 my-lg-0" style="max-width: 500px;" action="{% url 'products:product_search' %}" method="get">
                 <div class="input-group">
-                    <input class="form-control" type="search" placeholder="Buscar productos..." aria-label="Search">
+                    <input class="form-control" type="search" name="q" placeholder="Buscar productos..." aria-label="Search">
                     <button class="btn btn-light" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
             </form>
             
-            <!-- Menú de navegación -->
+            <!-- Menú de navegación usuario/carrito -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 {% if user.is_authenticated %}
                     <li class="nav-item dropdown">

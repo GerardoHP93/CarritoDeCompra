@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Inicio | Market Digital{% endblock %}
 
@@ -11,7 +12,7 @@
                 <p class="lead">Tu destino para compras de supermercado en línea con las mejores ofertas y productos de calidad.</p>
                 <hr class="my-4">
                 <p>Navega por nuestras categorías o busca tus productos favoritos.</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Ver productos</a>
+                <a class="btn btn-primary btn-lg" href="{% url 'products:product_list' %}" role="button">Ver productos</a>
             </div>
         </div>
     </div>
@@ -20,18 +21,30 @@
         <div class="col-12">
             <h2 class="text-center mb-4">Categorías Destacadas</h2>
             <div class="row">
-                <!-- Esto se llenará dinámicamente con categorías en fases posteriores -->
-                {% for i in '12345'|make_list %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Categoría #{{ i }}</h5>
-                            <p class="card-text">Descripción breve de la categoría.</p>
-                            <a href="#" class="btn btn-outline-primary">Ver productos</a>
+                {% if categories %}
+                    {% for category in categories|slice:":6" %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            {% if category.imagen %}
+                                <img src="{{ category.imagen.url }}" class="card-img-top" alt="{{ category.nombre }}" style="height: 180px; object-fit: cover;">
+                            {% else %}
+                                <div class="bg-light text-center py-5">
+                                    <i class="bi bi-card-image text-muted display-4"></i>
+                                </div>
+                            {% endif %}
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ category.nombre }}</h5>
+                                <p class="card-text">{{ category.descripcion|truncatechars:100 }}</p>
+                                <a href="{% url 'products:product_list_by_category' category.slug %}" class="btn btn-outline-primary">Ver productos</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <div class="col-12">
+                        <div class="alert alert-info">No hay categorías disponibles en este momento.</div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -39,20 +52,46 @@
     <div class="row">
         <div class="col-12">
             <h2 class="text-center mb-4">Productos Destacados</h2>
-            <div class="row">
-                <!-- Esto se llenará dinámicamente con productos en fases posteriores -->
-                {% for i in '123456'|make_list %}
-                <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card product-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto #{{ i }}</h5>
-                            <p class="card-text">Descripción breve del producto.</p>
-                            <p class="card-text text-primary fw-bold">$XX.XX</p>
-                            <button class="btn btn-sm btn-primary add-to-cart">Agregar al carrito</button>
+            <div class="row product-grid">
+                {% if featured_products %}
+                    {% for product in featured_products %}
+                    <div class="col-md-4 col-lg-3 mb-4">
+                        <div class="card product-card h-100">
+                            <a href="{% url 'products:product_detail' product.slug %}">
+                                {% if product.imagen_principal %}
+                                    <img src="{{ product.imagen_principal.url }}" class="card-img-top" alt="{{ product.nombre }}" style="height: 200px; object-fit: cover;">
+                                {% else %}
+                                    <img src="{% static 'images/no-image.png' %}" class="card-img-top" alt="Imagen no disponible" style="height: 200px; object-fit: cover;">
+                                {% endif %}
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="{% url 'products:product_detail' product.slug %}" class="text-decoration-none text-dark">{{ product.nombre }}</a>
+                                </h5>
+                                <p class="card-text text-muted">{{ product.descripcion|truncatechars:80 }}</p>
+                            </div>
+                            <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+                                <span class="text-primary fw-bold">${{ product.precio }}</span>
+                                {% if product.stock > 0 %}
+                                    <button class="btn btn-sm btn-primary add-to-cart">
+                                        <i class="bi bi-cart-plus me-1"></i> Agregar
+                                    </button>
+                                {% else %}
+                                    <span class="badge bg-danger">Agotado</span>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    <div class="col-12">
+                        <div class="alert alert-info">No hay productos destacados disponibles en este momento.</div>
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="{% url 'products:product_list' %}" class="btn btn-outline-primary">Ver todos los productos</a>
             </div>
         </div>
     </div>

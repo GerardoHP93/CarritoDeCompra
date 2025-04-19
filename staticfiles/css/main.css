@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Estilo para los mensajes de alerta */
+.alert {
+    border-radius: 0;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el grid de productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilo para el carrito lateral */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.cart-sidebar.active {
+    transform: translateX(0);
+}
+
+/* Estilos para los botones de cantidad en el carrito */
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 0;
+}
+
+/* Estilos para las páginas de login y registro */
+.auth-background {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    background-color: #0d6efd; /* Color de respaldo si no hay imagen */
+    background-image: url('/static/images/market_background.jpg');
+}
+
+.auth-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 128, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Estilos adicionales para productos */
+.product-thumbnail {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.product-thumbnail.active {
+    border-color: #0d6efd;
+}
+
+.product-thumbnail:hover {
+    opacity: 0.8;
+}
+
+/* Estilos para valoraciones */
+.rating-stars {
+    color: #ffc107;
+}
+
+/* Mejoras para la grid de productos */
+.product-grid .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-grid .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-grid .card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.product-grid .product-card:hover .card-img-top {
+    transform: scale(1.05);
+}
