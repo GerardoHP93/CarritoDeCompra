@@ -42,19 +42,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Modificar en static/js/main.js
+
 // Función global para mostrar notificación Toast
 window.showToast = function(message, type = 'info') {
     // Si SweetAlert2 está disponible
     if (typeof Swal !== 'undefined') {
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top-end',
+            position: 'top', // Cambiar de 'top-end' a 'top'
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                // Ajustar manualmente la posición vertical para que esté debajo del header
+                toast.style.marginTop = '200px'; // Añadir esta línea
+                toast.addEventListener('mouseenter', Swal.stopTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
             }
         });
         
@@ -84,6 +88,7 @@ window.showToast = function(message, type = 'info') {
 function createToastContainer() {
     const container = document.createElement('div');
     container.id = 'toast-container';
+    container.style.top = '200px'; // Asegurar posición correcta al crear el contenedor
     document.body.appendChild(container);
     return container;
 }
@@ -144,6 +149,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Mostrar notificación Toast
                     showToast('Producto eliminado', 'success');
+                    
+                    // NUEVO: Verificar si estamos en la página del carrito (/cart/checkout/)
+                    // y recargar la página para mostrar los cambios
+                    if (window.location.pathname === '/cart/checkout/') {
+                        window.location.reload();
+                    }
                 } else {
                     showToast('Error al eliminar producto', 'error');
                 }
@@ -201,11 +212,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // static/js/main.js (modificación de la función updateCartCounter)
+
     // Función para actualizar el contador del carrito
     function updateCartCounter(count) {
         const counter = document.querySelector('.cart-button .badge');
         if (counter) {
-            counter.textContent = count > 0 ? count : '';
+            if (count > 0) {
+                counter.textContent = count;
+                counter.style.display = 'block';  // Asegurarse de que sea visible
+            } else {
+                counter.style.display = 'none';  // Ocultar cuando count es 0
+            }
+        } else if (count > 0) {
+            // Si no existe el contador pero hay items, crear uno nuevo
+            const cartButton = document.querySelector('.cart-button');
+            if (cartButton) {
+                const newBadge = document.createElement('span');
+                newBadge.className = 'position-absolute badge rounded-pill bg-danger cart-badge';
+                newBadge.textContent = count;
+                cartButton.appendChild(newBadge);
+            }
         }
     }
 });

@@ -20,7 +20,7 @@
 
     <main class="container py-4">
         <!-- Contenedor de toasts para notificaciones -->
-        <div id="toast-container" style="position: fixed; top: 20px; right: 20px; z-index: 1999;"></div>
+        <div id="toast-container" style="position: fixed; top: 200px; right: 20px; z-index: 1999;"></div>
         
         <!-- Mensajes que no son toasts -->
         {% if messages %}
@@ -69,39 +69,45 @@
         {% endfor %}
     </div>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Procesar mensajes toast ocultos
-            var toastMessages = document.querySelectorAll('.toast-message');
-            for (var i = 0; i < toastMessages.length; i++) {
-                var element = toastMessages[i];
-                var message = element.getAttribute('data-message');
-                var tags = element.getAttribute('data-type');
-                
-                var type = 'info';
-                if (tags.indexOf('success') !== -1) {
-                    type = 'success';
-                } else if (tags.indexOf('error') !== -1) {
-                    type = 'error';
-                } else if (tags.indexOf('warning') !== -1) {
-                    type = 'warning';
-                }
-                
-                if (typeof showToast === 'function') {
-                    showToast(message, type);
-                } else if (typeof Swal !== 'undefined') {
-                    Swal.fire({
-                        toast: true,
-                        position: 'top-end',
-                        icon: type,
-                        title: message,
-                        showConfirmButton: false,
-                        timer: 3000
-                    });
-                }
+<!-- En templates/base.html o donde esté el script que procesa mensajes -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Procesar mensajes toast ocultos
+        var toastMessages = document.querySelectorAll('.toast-message');
+        for (var i = 0; i < toastMessages.length; i++) {
+            var element = toastMessages[i];
+            var message = element.getAttribute('data-message');
+            var tags = element.getAttribute('data-type');
+            
+            var type = 'info';
+            if (tags.indexOf('success') !== -1) {
+                type = 'success';
+            } else if (tags.indexOf('error') !== -1) {
+                type = 'error';
+            } else if (tags.indexOf('warning') !== -1) {
+                type = 'warning';
             }
-        });
-    </script>
+            
+            if (typeof showToast === 'function') {
+                showToast(message, type);
+            } else if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    toast: true,
+                    position: 'top', // Cambiar de 'top-end' a 'top'
+                    icon: type,
+                    title: message,
+                    showConfirmButton: false,
+                    timer: 3000,
+                    didOpen: (toast) => {
+                        // Ajustar manualmente la posición vertical
+                        toast.style.marginTop = '120px';
+                    }
+                });
+            }
+        }
+    });
+</script>
 {% endif %}
     
     {% block extra_js %}{% endblock %}

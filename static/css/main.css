@@ -419,7 +419,12 @@ main {
     top: 0;
     right: 0;
     transform: translate(25%, -25%);
-    padding: 0.20rem 0.5rem;
+    padding: 0.25rem 0.5rem;
+    display: none; /* Por defecto oculto */
+}
+
+.cart-badge:not(:empty) {
+    display: block;
 }
 
 .cart-button {
@@ -446,13 +451,6 @@ main {
     align-items: center;
 }
 
-/* Estilos para notificaciones toast */
-#toast-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1999;
-}
 
 .toast-notification {
     padding: 12px 20px;
@@ -489,7 +487,7 @@ main {
 /* Estilos para notificaciones toast */
 #toast-container {
     position: fixed;
-    top: 20px;
+    top: 200px;
     right: 20px;
     z-index: 1999;
 }

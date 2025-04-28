@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container py-4">
     <h2 class="mb-4">Proceso de Compra</h2>
-    
+
     <!-- Pasos del proceso de compra -->
     <div class="checkout-steps mb-4">
         <div class="row">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-8">
             <div class="card border-0 shadow">
@@ -54,9 +54,10 @@
                 <div class="card-body">
                     <div class="alert alert-info">
                         <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i> Importante</h5>
-                        <p class="mb-0">Por favor, revisa todos los detalles de tu pedido antes de confirmar la compra. Una vez confirmada, no podrás modificar la orden.</p>
+                        <p class="mb-0">Por favor, revisa todos los detalles de tu pedido antes de confirmar la compra.
+                            Una vez confirmada, no podrás modificar la orden.</p>
                     </div>
-                    
+
                     <h5 class="mb-3 mt-4">Productos en tu Carrito</h5>
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -70,17 +71,19 @@
                             </thead>
                             <tbody>
                                 {% for item in items_carrito %}
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <img src="{{ item.producto.imagen_principal.url }}" alt="{{ item.producto.nombre }}" class="img-thumbnail me-2" style="width: 50px; height: 50px; object-fit: cover;">
-                                                <span>{{ item.producto.nombre }}</span>
-                                            </div>
-                                        </td>
-                                        <td>${{ item.producto.precio }}</td>
-                                        <td>{{ item.cantidad }}</td>
-                                        <td>${{ item.subtotal }}</td>
-                                    </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="{{ item.producto.imagen_principal.url }}"
+                                                alt="{{ item.producto.nombre }}" class="img-thumbnail me-2"
+                                                style="width: 50px; height: 50px; object-fit: cover;">
+                                            <span>{{ item.producto.nombre }}</span>
+                                        </div>
+                                    </td>
+                                    <td>${{ item.producto.precio }}</td>
+                                    <td>{{ item.cantidad }}</td>
+                                    <td>${{ item.subtotal }}</td>
+                                </tr>
                                 {% endfor %}
                             </tbody>
                             <tfoot>
@@ -93,7 +96,7 @@
                             </tfoot>
                         </table>
                     </div>
-                    
+
                     <div class="row mt-4">
                         <div class="col-md-6">
                             <div class="card mb-3">
@@ -104,7 +107,8 @@
                                     <p class="mb-0">
                                         {{ direccion_data.nombre_completo }}<br>
                                         {{ direccion_data.calle }} {{ direccion_data.numero_exterior }}
-                                        {% if direccion_data.numero_interior %}, Int. {{ direccion_data.numero_interior }}{% endif %}<br>
+                                        {% if direccion_data.numero_interior %}, Int. {{ direccion_data.numero_interior
+                                        }}{% endif %}<br>
                                         {{ direccion_data.colonia }}, {{ direccion_data.ciudad }}<br>
                                         {{ direccion_data.estado }}, {{ direccion_data.pais }}<br>
                                         C.P. {{ direccion_data.codigo_postal }}<br>
@@ -113,7 +117,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="card">
                                 <div class="card-header bg-light">
@@ -121,33 +125,33 @@
                                 </div>
                                 <div class="card-body">
                                     {% if pago_data.metodo_pago == 'tarjeta' %}
-                                        <p>
-                                            <strong>Tarjeta de crédito/débito</strong><br>
-                                            Tipo: 
-                                            {% if pago_data.tipo_tarjeta == 'visa' %}
-                                                Visa
-                                            {% elif pago_data.tipo_tarjeta == 'mastercard' %}
-                                                MasterCard
-                                            {% elif pago_data.tipo_tarjeta == 'amex' %}
-                                                American Express
-                                            {% else %}
-                                                {{ pago_data.tipo_tarjeta }}
-                                            {% endif %}
-                                            <br>
-                                            Número: **** **** **** {{ pago_data.numero_tarjeta|slice:"-4:" }}<br>
-                                            Titular: {{ pago_data.titular_tarjeta }}
-                                        </p>
+                                    <p>
+                                        <strong>Tarjeta de crédito/débito</strong><br>
+                                        Tipo:
+                                        {% if pago_data.tipo_tarjeta == 'visa' %}
+                                        Visa
+                                        {% elif pago_data.tipo_tarjeta == 'mastercard' %}
+                                        MasterCard
+                                        {% elif pago_data.tipo_tarjeta == 'amex' %}
+                                        American Express
+                                        {% else %}
+                                        {{ pago_data.tipo_tarjeta }}
+                                        {% endif %}
+                                        <br>
+                                        Número: **** **** **** {{ pago_data.numero_tarjeta|slice:"-4:" }}<br>
+                                        Titular: {{ pago_data.titular_tarjeta }}
+                                    </p>
                                     {% elif pago_data.metodo_pago == 'paypal' %}
-                                        <p>
-                                            <strong>PayPal</strong><br>
-                                            Tu pedido será procesado a través de PayPal.
-                                        </p>
+                                    <p>
+                                        <strong>PayPal</strong><br>
+                                        Tu pedido será procesado a través de PayPal.
+                                    </p>
                                     {% else %}
-                                        <p>
-                                            <strong>{{ pago_data.metodo_pago }}</strong>
-                                        </p>
+                                    <p>
+                                        <strong>{{ pago_data.metodo_pago }}</strong>
+                                    </p>
                                     {% endif %}
-                                    
+
                                     <p class="mb-0">
                                         <strong>Referencia de pago:</strong> {{ pago_data.referencia_pago }}
                                     </p>
@@ -155,16 +159,18 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <form method="post" id="formConfirmacion" class="mt-4">
                         {% csrf_token %}
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" id="aceptarTerminos" required>
                             <label class="form-check-label" for="aceptarTerminos">
-                                He leído y acepto los <a href="#" data-bs-toggle="modal" data-bs-target="#modalTerminos">términos y condiciones</a> de compra.
+                                He leído y acepto los <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalTerminos">términos y condiciones</a> de compra.
                             </label>
                         </div>
-                        
+
+                        <!-- apps/orders/templates/orders/checkout_resumen.html (corregir enlace de retroceso) -->
                         <div class="d-flex justify-content-between mt-4">
                             <a href="{% url 'orders:checkout_pago' %}" class="btn btn-outline-secondary">
                                 <i class="bi bi-arrow-left me-1"></i> Volver al método de pago
@@ -177,7 +183,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-4">
             <div class="card border-0 shadow">
                 <div class="card-header bg-primary text-white">
@@ -203,7 +209,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="card border-0 shadow mt-4">
                 <div class="card-body">
                     <h5 class="card-title">Información de Entrega</h5>
@@ -214,7 +220,8 @@
                         <i class="bi bi-shield-check me-2"></i> Todas las transacciones son seguras y encriptadas.
                     </p>
                     <p class="card-text mb-0">
-                        <i class="bi bi-arrow-counterclockwise me-2"></i> Política de devoluciones: 30 días para productos en condiciones originales.
+                        <i class="bi bi-arrow-counterclockwise me-2"></i> Política de devoluciones: 30 días para
+                        productos en condiciones originales.
                     </p>
                 </div>
             </div>
@@ -233,21 +240,26 @@
             <div class="modal-body">
                 <h6>1. Aceptación de los términos</h6>
                 <p>Al realizar una compra en Market Digital, aceptas los siguientes términos y condiciones.</p>
-                
+
                 <h6>2. Precios y pagos</h6>
-                <p>Todos los precios incluyen IVA. Los pagos se procesan de forma segura a través de nuestros proveedores de servicios de pago.</p>
-                
+                <p>Todos los precios incluyen IVA. Los pagos se procesan de forma segura a través de nuestros
+                    proveedores de servicios de pago.</p>
+
                 <h6>3. Envíos</h6>
-                <p>Los productos serán enviados a la dirección proporcionada durante el proceso de compra. El tiempo estimado de entrega es de 3 a 5 días hábiles, dependiendo de la ubicación.</p>
-                
+                <p>Los productos serán enviados a la dirección proporcionada durante el proceso de compra. El tiempo
+                    estimado de entrega es de 3 a 5 días hábiles, dependiendo de la ubicación.</p>
+
                 <h6>4. Devoluciones</h6>
-                <p>Disponemos de una política de devoluciones de 30 días para productos en condiciones originales. Contacta a nuestro servicio de atención al cliente para iniciar una devolución.</p>
-                
+                <p>Disponemos de una política de devoluciones de 30 días para productos en condiciones originales.
+                    Contacta a nuestro servicio de atención al cliente para iniciar una devolución.</p>
+
                 <h6>5. Privacidad</h6>
-                <p>Nos comprometemos a proteger tu privacidad. Tus datos personales serán utilizados únicamente para procesar tu pedido y mejorar tu experiencia de compra.</p>
-                
+                <p>Nos comprometemos a proteger tu privacidad. Tus datos personales serán utilizados únicamente para
+                    procesar tu pedido y mejorar tu experiencia de compra.</p>
+
                 <h6>6. Limitación de responsabilidad</h6>
-                <p>Market Digital no será responsable por daños indirectos, incidentales o consecuentes relacionados con la compra o uso de nuestros productos.</p>
+                <p>Market Digital no será responsable por daños indirectos, incidentales o consecuentes relacionados con
+                    la compra o uso de nuestros productos.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
@@ -258,12 +270,12 @@
 
 {% block extra_js %}
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const formConfirmacion = document.getElementById('formConfirmacion');
         const btnConfirmar = document.getElementById('btnConfirmar');
         const aceptarTerminos = document.getElementById('aceptarTerminos');
-        
-        formConfirmacion.addEventListener('submit', function(e) {
+
+        formConfirmacion.addEventListener('submit', function (e) {
             if (!aceptarTerminos.checked) {
                 e.preventDefault();
                 Swal.fire({
@@ -274,7 +286,7 @@
                 });
                 return false;
             }
-            
+
             // Deshabilitar el botón para evitar múltiples envíos
             btnConfirmar.disabled = true;
             btnConfirmar.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Procesando...';

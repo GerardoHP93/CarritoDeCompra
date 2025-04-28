@@ -1,4 +1,5 @@
-from .models import Carrito, ItemCarrito
+# apps/cart/context_processors.py
+from .models import Carrito
 
 def cart_context(request):
     """
@@ -7,11 +8,12 @@ def cart_context(request):
     cart_count = 0
     cart_total = 0
     cart_items = []
+    cart = None
     
     if request.user.is_authenticated:
         try:
             cart, created = Carrito.objects.get_or_create(usuario=request.user)
-            cart_items = cart.items.all()
+            cart_items = cart.items.all().select_related('producto')
             cart_count = cart.cantidad_productos
             cart_total = cart.total
         except Exception as e:
@@ -22,4 +24,5 @@ def cart_context(request):
         'cart_count': cart_count,
         'cart_total': cart_total,
         'cart_items': cart_items,
+        'cart': cart  # Añadir el objeto carrito completo
     }

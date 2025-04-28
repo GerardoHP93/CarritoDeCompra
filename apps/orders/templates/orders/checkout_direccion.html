@@ -1,4 +1,4 @@
-<!-- apps/orders/templates/orders/checkout_direccion.html -->
+
 {% extends 'base.html' %}
 
 {% block title %}Dirección de Envío | Market Digital{% endblock %}
@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container py-4">
     <h2 class="mb-4">Proceso de Compra</h2>
-    
+
     <!-- Pasos del proceso de compra -->
     <div class="checkout-steps mb-4">
         <div class="row">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-8">
             <div class="card border-0 shadow">
@@ -54,145 +54,138 @@
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
-                        
+
                         {% if direcciones.exists %}
-                            <div class="mb-4 direcciones-guardadas">
-                                <div class="form-check mb-3">
-                                    {{ form.usar_direccion_guardada }}
-                                    <label class="form-check-label" for="{{ form.usar_direccion_guardada.id_for_label }}">
-                                        Usar una dirección guardada
-                                    </label>
-                                </div>
-                                
-                                <div class="form-group direccion-select mb-3">
-                                    <label for="{{ form.direccion_guardada.id_for_label }}">Selecciona una dirección</label>
-                                    {{ form.direccion_guardada }}
-                                </div>
-                                
-                                <div class="direcciones-list row">
-                                    {% for direccion in direcciones %}
-                                        <div class="col-md-6 mb-3">
-                                            <div class="card direccion-card h-100 {% if direccion.es_principal %}border-primary{% else %}border-light{% endif %}" data-direccion-id="{{ direccion.id }}">
-                                                <div class="card-body">
-                                                    <h6>{{ direccion.nombre_completo }}</h6>
-                                                    <p class="small mb-0">
-                                                        {{ direccion.calle }} {{ direccion.numero_exterior }}
-                                                        {% if direccion.numero_interior %}, Int. {{ direccion.numero_interior }}{% endif %}<br>
-                                                        {{ direccion.colonia }}, {{ direccion.ciudad }}<br>
-                                                        {{ direccion.estado }}, {{ direccion.pais }}<br>
-                                                        C.P. {{ direccion.codigo_postal }}<br>
-                                                        Tel: {{ direccion.telefono_contacto }}
-                                                    </p>
-                                                </div>
-                                                <div class="card-footer bg-light">
-                                                    <button type="button" class="btn btn-sm btn-outline-primary select-direccion-btn" data-id="{{ direccion.id }}">
-                                                        Usar esta dirección
-                                                    </button>
-                                                </div>
-                                            </div>
+                        <div class="mb-4 direcciones-guardadas">
+                            <div class="form-check mb-3">
+                                {{ form.usar_direccion_guardada }}
+                                <label class="form-check-label" for="{{ form.usar_direccion_guardada.id_for_label }}">
+                                    Usar una dirección guardada
+                                </label>
+                            </div>
+
+                            <div class="form-group direccion-select mb-3">
+                                <label for="{{ form.direccion_guardada.id_for_label }}">Selecciona una dirección</label>
+                                {{ form.direccion_guardada }}
+                            </div>
+
+                            <div class="direcciones-list row">
+                                {% for direccion in direcciones %}
+                                <div class="col-md-6 mb-3">
+                                    <div class="card direccion-card h-100 {% if direccion.es_principal %}border-primary{% else %}border-light{% endif %}"
+                                        data-direccion-id="{{ direccion.id }}">
+                                        <div class="card-body">
+                                            <h6>{{ direccion.nombre_completo }}</h6>
+                                            <p class="small mb-0">
+                                                {{ direccion.calle }} {{ direccion.numero_exterior }}
+                                                {% if direccion.numero_interior %}, Int. {{ direccion.numero_interior }}{% endif %}<br>
+                                                {{ direccion.colonia }}, {{ direccion.ciudad }}<br>
+                                                {{ direccion.estado }}, {{ direccion.pais }}<br>
+                                                C.P. {{ direccion.codigo_postal }}<br>
+                                                Tel: {{ direccion.telefono_contacto }}
+                                            </p>
                                         </div>
-                                    {% endfor %}
+                                        <div class="card-footer bg-light">
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-primary select-direccion-btn"
+                                                data-id="{{ direccion.id }}">
+                                                Usar esta dirección
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+                                {% endfor %}
                             </div>
-                            
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="nuevaDireccion">
-                                    <label class="form-check-label" for="nuevaDireccion">
-                                        Agregar nueva dirección
-                                    </label>
-                                </div>
-                            </div>
+                        </div>
                         {% endif %}
-                        
-                        <div id="formularioDireccion" {% if direcciones.exists %}style="display: none;"{% endif %}>
+
+                        <div id="formularioDireccion" {% if direcciones.exists and form.usar_direccion_guardada.value %}style="display: none;"{% endif %}>
                             <h5 class="mb-3">Información de Envío</h5>
-                            
+
                             <div class="mb-3">
                                 <label for="{{ form.nombre_completo.id_for_label }}">Nombre completo</label>
                                 {{ form.nombre_completo }}
-                                <!-- apps/orders/templates/orders/checkout_direccion.html (continuación) -->
                                 {% if form.nombre_completo.errors %}
-                                    <div class="invalid-feedback d-block">{{ form.nombre_completo.errors }}</div>
+                                <div class="invalid-feedback d-block">{{ form.nombre_completo.errors }}</div>
                                 {% endif %}
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.calle.id_for_label }}">Calle</label>
                                     {{ form.calle }}
                                     {% if form.calle.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.calle.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.calle.errors }}</div>
                                     {% endif %}
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="{{ form.numero_exterior.id_for_label }}">Número exterior</label>
                                     {{ form.numero_exterior }}
                                     {% if form.numero_exterior.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.numero_exterior.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.numero_exterior.errors }}</div>
                                     {% endif %}
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="{{ form.numero_interior.id_for_label }}">Número interior</label>
                                     {{ form.numero_interior }}
                                     {% if form.numero_interior.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.numero_interior.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.numero_interior.errors }}</div>
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.colonia.id_for_label }}">Colonia</label>
                                     {{ form.colonia }}
                                     {% if form.colonia.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.colonia.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.colonia.errors }}</div>
                                     {% endif %}
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.codigo_postal.id_for_label }}">Código postal</label>
                                     {{ form.codigo_postal }}
                                     {% if form.codigo_postal.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.codigo_postal.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.codigo_postal.errors }}</div>
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.ciudad.id_for_label }}">Ciudad</label>
                                     {{ form.ciudad }}
                                     {% if form.ciudad.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.ciudad.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.ciudad.errors }}</div>
                                     {% endif %}
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.estado.id_for_label }}">Estado</label>
                                     {{ form.estado }}
                                     {% if form.estado.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.estado.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.estado.errors }}</div>
                                     {% endif %}
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.pais.id_for_label }}">País</label>
                                     {{ form.pais }}
                                     {% if form.pais.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.pais.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.pais.errors }}</div>
                                     {% endif %}
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="{{ form.telefono_contacto.id_for_label }}">Teléfono de contacto</label>
                                     {{ form.telefono_contacto }}
                                     {% if form.telefono_contacto.errors %}
-                                        <div class="invalid-feedback d-block">{{ form.telefono_contacto.errors }}</div>
+                                    <div class="invalid-feedback d-block">{{ form.telefono_contacto.errors }}</div>
                                     {% endif %}
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="d-flex justify-content-between mt-4">
                             <a href="{% url 'cart:cart_detail' %}" class="btn btn-outline-secondary">
                                 <i class="bi bi-arrow-left me-1"></i> Volver al carrito
@@ -205,7 +198,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-md-4">
             <div class="card border-0 shadow">
                 <div class="card-header bg-primary text-white">
@@ -213,30 +206,30 @@
                 </div>
                 <div class="card-body">
                     {% if cart_items %}
-                        <ul class="list-group list-group-flush mb-3">
-                            {% for item in cart_items %}
-                                <li class="list-group-item d-flex justify-content-between lh-sm">
-                                    <div>
-                                        <h6 class="my-0">{{ item.producto.nombre }}</h6>
-                                        <small class="text-muted">{{ item.cantidad }} x ${{ item.producto.precio }}</small>
-                                    </div>
-                                    <span class="text-muted">${{ item.subtotal }}</span>
-                                </li>
-                            {% endfor %}
-                            <li class="list-group-item d-flex justify-content-between bg-light">
-                                <div class="text-success">
-                                    <h6 class="my-0">Total</h6>
-                                </div>
-                                <span class="text-success fw-bold">${{ cart.total }}</span>
-                            </li>
-                        </ul>
+                    <ul class="list-group list-group-flush mb-3">
+                        {% for item in cart_items %}
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">{{ item.producto.nombre }}</h6>
+                                <small class="text-muted">{{ item.cantidad }} x ${{ item.producto.precio }}</small>
+                            </div>
+                            <span class="text-muted">${{ item.subtotal }}</span>
+                        </li>
+                        {% endfor %}
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">Total</h6>
+                            </div>
+                            <span class="text-success fw-bold">${{ cart.total }}</span>
+                        </li>
+                    </ul>
                     {% else %}
-                        <div class="text-center py-3">
-                            <p class="text-muted">Tu carrito está vacío</p>
-                            <a href="{% url 'products:product_list' %}" class="btn btn-sm btn-outline-primary">
-                                Ir a la tienda
-                            </a>
-                        </div>
+                    <div class="text-center py-3">
+                        <p class="text-muted">Tu carrito está vacío</p>
+                        <a href="{% url 'products:product_list' %}" class="btn btn-sm btn-outline-primary">
+                            Ir a la tienda
+                        </a>
+                    </div>
                     {% endif %}
                 </div>
             </div>
@@ -247,42 +240,26 @@
 {% block extra_js %}
 <script>
     // Gestionar selección de direcciones
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const usarDireccionGuardada = document.getElementById('{{ form.usar_direccion_guardada.id_for_label }}');
         const direccionSelect = document.getElementById('{{ form.direccion_guardada.id_for_label }}');
-        const nuevaDireccionCheck = document.getElementById('nuevaDireccion');
         const formularioDireccion = document.getElementById('formularioDireccion');
         const selectBtns = document.querySelectorAll('.select-direccion-btn');
         const direccionCards = document.querySelectorAll('.direccion-card');
-        
+
         // Función para mostrar/ocultar sección de dirección guardada
         function toggleDireccionGuardada() {
             if (usarDireccionGuardada && usarDireccionGuardada.checked) {
                 document.querySelector('.direccion-select').style.display = 'block';
                 document.querySelector('.direcciones-list').style.display = 'flex';
                 formularioDireccion.style.display = 'none';
-                if (nuevaDireccionCheck) nuevaDireccionCheck.checked = false;
             } else {
                 document.querySelector('.direccion-select').style.display = 'none';
                 document.querySelector('.direcciones-list').style.display = 'none';
                 formularioDireccion.style.display = 'block';
             }
         }
-        
-        // Función para mostrar/ocultar formulario de nueva dirección
-        function toggleNuevaDireccion() {
-            if (nuevaDireccionCheck && nuevaDireccionCheck.checked) {
-                formularioDireccion.style.display = 'block';
-                if (usarDireccionGuardada) usarDireccionGuardada.checked = false;
-                document.querySelector('.direccion-select').style.display = 'none';
-                document.querySelector('.direcciones-list').style.display = 'none';
-            } else if (usarDireccionGuardada && usarDireccionGuardada.checked) {
-                formularioDireccion.style.display = 'none';
-                document.querySelector('.direccion-select').style.display = 'block';
-                document.querySelector('.direcciones-list').style.display = 'flex';
-            }
-        }
-        
+
         // Función para resaltar tarjeta seleccionada
         function highlightSelectedCard(selectedId) {
             direccionCards.forEach(card => {
@@ -294,27 +271,23 @@
                 }
             });
         }
-        
+
         // Event listeners
         if (usarDireccionGuardada) {
             usarDireccionGuardada.addEventListener('change', toggleDireccionGuardada);
             // Inicializar estado
             toggleDireccionGuardada();
         }
-        
-        if (nuevaDireccionCheck) {
-            nuevaDireccionCheck.addEventListener('change', toggleNuevaDireccion);
-        }
-        
+
         if (direccionSelect) {
-            direccionSelect.addEventListener('change', function() {
+            direccionSelect.addEventListener('change', function () {
                 highlightSelectedCard(this.value);
             });
         }
-        
+
         // Botones de selección en tarjetas
         selectBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 const id = this.dataset.id;
                 if (direccionSelect) {
                     direccionSelect.value = id;

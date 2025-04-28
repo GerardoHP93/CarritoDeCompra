@@ -1,4 +1,5 @@
 # apps/orders/views.py
+
 import logging
 import uuid
 from django.shortcuts import render, redirect, get_object_or_404
@@ -28,6 +29,8 @@ def checkout_direccion(request):
         if not carrito.items.exists():
             messages.warning(request, "Tu carrito está vacío. Agrega productos antes de continuar.", extra_tags='toast')
             return redirect('cart:cart_detail')
+        # Obtener los items del carrito para mostrarlos en la vista
+        cart_items = carrito.items.all().select_related('producto')
     except Carrito.DoesNotExist:
         messages.warning(request, "Tu carrito está vacío. Agrega productos antes de continuar.", extra_tags='toast')
         return redirect('cart:cart_detail')
@@ -38,15 +41,18 @@ def checkout_direccion(request):
         try:
             # Si hay una orden existente, verificar si ya está en proceso
             orden = Orden.objects.get(id=orden_id, usuario=request.user, estado='pendiente')
-            if 'direccion_completa' in request.session:
-                # Si ya se completó el paso de dirección, redirigir al próximo paso
-                return redirect('orders:checkout_pago')
+            
+            # MODIFICADO: No redirigir automáticamente al siguiente paso
+            # Solo verificar si el carrito ha cambiado
+            if not verificar_carrito_orden(carrito, orden):
+                logger.info(f"Carrito ha cambiado, limpiando sesión de checkout para usuario {request.user.username}")
+                limpiar_sesion_checkout(request)
+                orden_id = None
+                
         except Orden.DoesNotExist:
             # Si la orden no existe o no pertenece al usuario, eliminar la sesión
-            if 'orden_id' in request.session:
-                del request.session['orden_id']
-            if 'direccion_completa' in request.session:
-                del request.session['direccion_completa']
+            limpiar_sesion_checkout(request)
+            orden_id = None
     
     # Obtener las direcciones guardadas del usuario
     direcciones = DireccionEnvio.objects.filter(cliente=request.user.cliente)
@@ -166,7 +172,9 @@ def checkout_direccion(request):
     context = {
         'form': form,
         'direcciones': direcciones,
-        'active_step': 'direccion'
+        'active_step': 'direccion',
+        'cart': carrito,  # Añadir el carrito al contexto
+        'cart_items': cart_items  # Añadir los items del carrito al contexto
     }
     
     return render(request, 'orders/checkout_direccion.html', context)
@@ -189,17 +197,30 @@ def checkout_pago(request):
     
     try:
         orden = Orden.objects.get(id=orden_id, usuario=request.user, estado='pendiente')
+        # Obtener el carrito y los items para mostrarlos en la vista
+        carrito = Carrito.objects.get(usuario=request.user)
+        cart_items = carrito.items.all().select_related('producto')
+        
+        # Verificar si los productos en la orden y el carrito son los mismos
+        if not verificar_carrito_orden(carrito, orden):
+            logger.info(f"Carrito ha cambiado, limpiando sesión de checkout para usuario {request.user.username}")
+            limpiar_sesion_checkout(request)
+            return redirect('orders:checkout_direccion')
+            
     except Orden.DoesNotExist:
-        if 'orden_id' in request.session:
-            del request.session['orden_id']
-        if 'direccion_completa' in request.session:
-            del request.session['direccion_completa']
+        limpiar_sesion_checkout(request)
         messages.error(request, "Ha ocurrido un error con tu orden. Por favor, inténtalo de nuevo.", extra_tags='toast')
         return redirect('cart:cart_detail')
+    except Carrito.DoesNotExist:
+        # Manejar el caso en que no haya carrito
+        carrito = None
+        cart_items = []
+        messages.warning(request, "Tu carrito está vacío. Agrega productos antes de continuar.", extra_tags='toast')
+        return redirect('cart:cart_detail')
     
-    # Verificar si ya completó el paso de pago
-    if 'pago_completo' in request.session:
-        return redirect('orders:checkout_resumen')
+    # # Verificar si ya completó el paso de pago
+    # if 'pago_completo' in request.session and request.method != 'POST':
+    #     return redirect('orders:checkout_resumen')
     
     if request.method == 'POST':
         form = MetodoPagoForm(request.POST)
@@ -237,7 +258,9 @@ def checkout_pago(request):
     
     context = {
         'form': form,
-        'active_step': 'pago'
+        'active_step': 'pago',
+        'cart': carrito,  # Añadir el carrito al contexto
+        'cart_items': cart_items  # Añadir los items del carrito al contexto
     }
     
     return render(request, 'orders/checkout_pago.html', context)
@@ -260,20 +283,20 @@ def checkout_resumen(request):
     
     try:
         orden = Orden.objects.get(id=orden_id, usuario=request.user, estado='pendiente')
-    except Orden.DoesNotExist:
-        if 'orden_id' in request.session:
-            del request.session['orden_id']
-        if 'direccion_completa' in request.session:
-            del request.session['direccion_completa']
-        if 'pago_completo' in request.session:
-            del request.session['pago_completo']
-        messages.error(request, "Ha ocurrido un error con tu orden. Por favor, inténtalo de nuevo.", extra_tags='toast')
-        return redirect('cart:cart_detail')
-    
-    # Obtener el carrito
-    try:
+        # Obtener el carrito
         carrito = Carrito.objects.get(usuario=request.user)
         items_carrito = carrito.items.all().select_related('producto')
+        
+        # NUEVO: Verificar si los productos en la orden y el carrito son los mismos
+        if not verificar_carrito_orden(carrito, orden):
+            logger.info(f"Carrito ha cambiado, limpiando sesión de checkout para usuario {request.user.username}")
+            limpiar_sesion_checkout(request)
+            return redirect('orders:checkout_direccion')
+            
+    except Orden.DoesNotExist:
+        limpiar_sesion_checkout(request)
+        messages.error(request, "Ha ocurrido un error con tu orden. Por favor, inténtalo de nuevo.", extra_tags='toast')
+        return redirect('cart:cart_detail')
     except Carrito.DoesNotExist:
         messages.warning(request, "Tu carrito está vacío. Agrega productos antes de continuar.", extra_tags='toast')
         return redirect('cart:cart_detail')
@@ -288,6 +311,7 @@ def checkout_resumen(request):
             try:
                 # Actualizar la orden con los detalles finales
                 orden.estado = 'pagado'  # Cambiar estado a pagado
+                orden.total = carrito.total  # Asegurarse de que el total esté actualizado
                 orden.fecha_actualizacion = timezone.now()
                 orden.save()
                 
@@ -312,12 +336,7 @@ def checkout_resumen(request):
                 
                 # Limpiar datos de la sesión relacionados con el checkout
                 request.session['orden_completada'] = orden.numero_orden
-                if 'orden_id' in request.session:
-                    del request.session['orden_id']
-                if 'direccion_completa' in request.session:
-                    del request.session['direccion_completa']
-                if 'pago_completo' in request.session:
-                    del request.session['pago_completo']
+                limpiar_sesion_checkout(request)
                 
                 logger.info(f"Orden #{orden.numero_orden} completada exitosamente por el usuario {request.user.username}")
                 
@@ -334,7 +353,8 @@ def checkout_resumen(request):
         'items_carrito': items_carrito,
         'direccion_data': direccion_data,
         'pago_data': pago_data,
-        'active_step': 'resumen'
+        'active_step': 'resumen',
+        'cart': carrito  # Añadir el carrito al contexto
     }
     
     return render(request, 'orders/checkout_resumen.html', context)
@@ -399,3 +419,27 @@ def detalle_orden(request, numero_orden):
     }
     
     return render(request, 'orders/detalle_orden.html', context)
+
+# Funciones auxiliares
+def limpiar_sesion_checkout(request):
+    """
+    Limpia las variables de sesión relacionadas con el proceso de checkout.
+    """
+    if 'orden_id' in request.session:
+        del request.session['orden_id']
+    if 'direccion_completa' in request.session:
+        del request.session['direccion_completa']
+    if 'pago_completo' in request.session:
+        del request.session['pago_completo']
+
+def verificar_carrito_orden(carrito, orden):
+    """
+    Verifica si los productos en el carrito son consistentes con la orden.
+    Retorna True si son consistentes, False si hay diferencias.
+    
+    Esta función es útil para detectar si el usuario ha modificado su carrito
+    después de iniciar el proceso de checkout.
+    """
+    # Como no tenemos detalles en la orden hasta que se confirma, comparamos el total
+    # Si el total es diferente, significa que el carrito ha cambiado
+    return abs(carrito.total - orden.total) < 0.01  # Comparar con un pequeño margen de error para evitar problemas de redondeo

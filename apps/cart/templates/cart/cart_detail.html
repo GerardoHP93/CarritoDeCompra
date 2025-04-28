@@ -119,6 +119,7 @@
         
 <!-- apps/cart/templates/cart/cart_detail.html (modificación del botón) -->
 <!-- ... (código existente) ... -->
+<!-- En apps/cart/templates/cart/cart_detail.html -->
 <div class="d-flex justify-content-between mt-4">
     <a href="{% url 'products:product_list' %}" class="btn btn-outline-primary">
         <i class="bi bi-arrow-left me-1"></i> Seguir comprando
@@ -185,6 +186,24 @@
                 const form = this.closest('form');
                 form.submit();
             });
+        });
+    });
+
+
+    document.querySelectorAll('form[action^="/cart/remove/"]').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            // Permitir que el formulario se envíe normalmente
+            // pero también notificar al carrito lateral si está abierto
+            const productId = this.action.split('/').filter(part => part).pop();
+            
+            // Si el carrito lateral está abierto, actualizar su visualización
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartSidebar && cartSidebar.classList.contains('active')) {
+                const sidebarItem = cartSidebar.querySelector(`[data-product-id="${productId}"]`).closest('.cart-item');
+                if (sidebarItem) {
+                    sidebarItem.style.opacity = '0.5'; // Visual indicator that it's being removed
+                }
+            }
         });
     });
 </script>
