@@ -45,18 +45,34 @@ document.addEventListener('DOMContentLoaded', function() {
 // Modificar en static/js/main.js
 
 // Función global para mostrar notificación Toast
+// En static/js/main.js (reemplazar la función showToast completamente)
+
+// Función global para mostrar notificación Toast
 window.showToast = function(message, type = 'info') {
     // Si SweetAlert2 está disponible
     if (typeof Swal !== 'undefined') {
+        // Aplicar estilo personalizado para ajustar la posición de todos los toasts de SweetAlert2
+        const styleElement = document.createElement('style');
+        styleElement.innerHTML = `
+            .swal2-container.swal2-top {
+                top: 70px !important;
+            }
+            .swal2-container.swal2-top-end {
+                top:70px !important;
+            }
+        `;
+        document.head.appendChild(styleElement);
+        
         const Toast = Swal.mixin({
             toast: true,
-            position: 'top', // Cambiar de 'top-end' a 'top'
+            position: 'top-end',
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
+            customClass: {
+                container: 'custom-toast-container'
+            },
             didOpen: (toast) => {
-                // Ajustar manualmente la posición vertical para que esté debajo del header
-                toast.style.marginTop = '200px'; // Añadir esta línea
                 toast.addEventListener('mouseenter', Swal.stopTimer);
                 toast.addEventListener('mouseleave', Swal.resumeTimer);
             }
@@ -88,7 +104,10 @@ window.showToast = function(message, type = 'info') {
 function createToastContainer() {
     const container = document.createElement('div');
     container.id = 'toast-container';
-    container.style.top = '200px'; // Asegurar posición correcta al crear el contenedor
+    container.style.top = '70px';
+    container.style.position = 'fixed';
+    container.style.right = '20px';
+    container.style.zIndex = '1999';
     document.body.appendChild(container);
     return container;
 }

@@ -4114,3 +4114,66 @@ DEBUG 2025-04-28 01:42:57,790 views Detalle de producto: Bacardí ron sabor coco 
 INFO 2025-04-28 01:42:57,837 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27088
 DEBUG 2025-04-28 01:43:06,766 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
 INFO 2025-04-28 01:43:06,770 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 128
+INFO 2025-04-28 09:11:52,979 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 09:12:09,713 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-28 09:12:11,730 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:12:11,909 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23411
+WARNING 2025-04-28 09:12:12,315 log Not Found: /favicon.ico
+WARNING 2025-04-28 09:12:12,317 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+DEBUG 2025-04-28 09:12:13,951 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:12:13,953 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:12:13,967 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:12:14,012 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27441
+DEBUG 2025-04-28 09:12:26,627 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:12:26,632 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 128
+DEBUG 2025-04-28 09:12:39,182 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:12:39,184 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:12:39,202 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:12:39,277 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27441
+DEBUG 2025-04-28 09:13:41,976 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:13:42,076 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25107
+DEBUG 2025-04-28 09:13:43,256 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:13:43,260 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:13:43,284 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:13:43,384 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27464
+INFO 2025-04-28 09:13:51,057 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-28 09:13:52,837 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:13:52,997 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25107
+DEBUG 2025-04-28 09:13:54,271 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:13:54,276 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:13:54,294 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:13:54,365 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27464
+DEBUG 2025-04-28 09:14:03,643 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:14:03,647 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:14:03,682 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:14:03,783 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27465
+DEBUG 2025-04-28 09:14:15,720 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:14:15,724 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 128
+DEBUG 2025-04-28 09:14:19,878 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:14:19,880 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:14:19,901 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:14:19,966 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27441
+DEBUG 2025-04-28 09:15:06,968 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:15:07,080 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25106
+DEBUG 2025-04-28 09:15:09,221 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:15:09,223 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:15:09,238 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:15:09,276 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27462
+DEBUG 2025-04-28 09:15:14,451 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:15:14,454 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:15:14,474 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:15:14,540 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27462
+DEBUG 2025-04-28 09:15:19,229 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:15:19,235 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 128
+DEBUG 2025-04-28 09:15:27,234 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:15:27,237 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:15:27,254 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:15:27,314 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27439
+DEBUG 2025-04-28 09:16:20,228 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:16:20,352 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25106
+DEBUG 2025-04-28 09:16:21,640 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 09:16:21,642 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 09:16:21,659 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:16:21,702 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27462
+DEBUG 2025-04-28 09:16:26,410 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 09:16:26,415 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 128

@@ -486,10 +486,10 @@ main {
 
 /* Estilos para notificaciones toast */
 #toast-container {
-    position: fixed;
-    top: 200px;
-    right: 20px;
-    z-index: 1999;
+    position: fixed !important;
+    top:70px !important;
+    right: 20px !important;
+    z-index: 1999 !important;
 }
 
 .toast-notification {
@@ -541,4 +541,16 @@ main {
     right: 0;
     transform: translate(25%, -25%);
     padding: 0.25rem 0.5rem;
+}
+
+/* Override SweetAlert2 toast positioning */
+.swal2-container.swal2-top,
+.swal2-container.swal2-top-end,
+.swal2-container.swal2-top-right {
+    top: 70px !important;
+}
+
+/* Custom container class for our toast */
+.custom-toast-container {
+    top: 200px !important;
 }

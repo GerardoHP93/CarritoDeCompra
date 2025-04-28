@@ -20,7 +20,7 @@
 
     <main class="container py-4">
         <!-- Contenedor de toasts para notificaciones -->
-        <div id="toast-container" style="position: fixed; top: 200px; right: 20px; z-index: 1999;"></div>
+        <div id="toast-container" style="position: fixed; top: 70px; right: 20px; z-index: 1999;"></div>
         
         <!-- Mensajes que no son toasts -->
         {% if messages %}
@@ -70,9 +70,20 @@
     </div>
     
 <!-- En templates/base.html o donde esté el script que procesa mensajes -->
-
+<!-- En templates/base.html (reemplazar el script) -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Aplicar estilo global para SweetAlert2
+        const styleElement = document.createElement('style');
+        styleElement.innerHTML = `
+            .swal2-container.swal2-top,
+            .swal2-container.swal2-top-end,
+            .swal2-container.swal2-top-right {
+                top: 70px !important;
+            }
+        `;
+        document.head.appendChild(styleElement);
+        
         // Procesar mensajes toast ocultos
         var toastMessages = document.querySelectorAll('.toast-message');
         for (var i = 0; i < toastMessages.length; i++) {
@@ -94,14 +105,13 @@
             } else if (typeof Swal !== 'undefined') {
                 Swal.fire({
                     toast: true,
-                    position: 'top', // Cambiar de 'top-end' a 'top'
+                    position: 'top-end',
                     icon: type,
                     title: message,
                     showConfirmButton: false,
                     timer: 3000,
-                    didOpen: (toast) => {
-                        // Ajustar manualmente la posición vertical
-                        toast.style.marginTop = '120px';
+                    customClass: {
+                        container: 'custom-toast-container'
                     }
                 });
             }
