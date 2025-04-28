@@ -3412,3 +3412,179 @@ DEBUG 2025-04-19 03:26:21,314 views Producto agregado/actualizado en carrito: Ve
 INFO 2025-04-19 03:26:21,315 basehttp "POST /cart/add/3/ HTTP/1.1" 302 0
 DEBUG 2025-04-19 03:26:21,327 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
 INFO 2025-04-19 03:26:21,351 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 22079
+INFO 2025-04-27 02:30:56,276 autoreload Watching for file changes with StatReloader
+INFO 2025-04-27 02:39:35,724 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-27 02:39:40,651 views Acceso a la página de inicio
+INFO 2025-04-27 02:39:41,003 basehttp "GET / HTTP/1.1" 200 17539
+INFO 2025-04-27 02:39:41,106 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,117 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,118 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,174 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,176 basehttp "GET /media/categorias/Imagen_de_la_categoria.webp HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,206 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,214 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+INFO 2025-04-27 02:39:41,217 basehttp "GET /media/productos/principal_QeYiZT6.webp HTTP/1.1" 304 0
+WARNING 2025-04-27 02:39:42,299 log Not Found: /favicon.ico
+WARNING 2025-04-27 02:39:42,300 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+INFO 2025-04-27 02:39:47,539 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 27841
+INFO 2025-04-27 03:09:04,857 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-27 03:09:05,026 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32970
+INFO 2025-04-27 03:09:44,658 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 03:09:44,753 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26098
+INFO 2025-04-27 03:10:12,863 views Orden #ORD-AB184DE10DCA completada exitosamente por el usuario Gerardo
+INFO 2025-04-27 03:10:12,889 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-04-27 03:10:13,020 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16400
+INFO 2025-04-27 03:10:30,380 basehttp "GET /orders/historial/ HTTP/1.1" 200 12257
+INFO 2025-04-27 03:10:33,664 basehttp "GET /orders/detalle/ORD-AB184DE10DCA/ HTTP/1.1" 200 16735
+INFO 2025-04-27 23:13:34,828 autoreload Watching for file changes with StatReloader
+INFO 2025-04-27 23:13:57,141 autoreload Watching for file changes with StatReloader
+INFO 2025-04-27 23:15:11,694 autoreload Watching for file changes with StatReloader
+INFO 2025-04-27 23:15:24,647 autoreload Watching for file changes with StatReloader
+INFO 2025-04-27 23:15:41,823 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-27 23:15:44,705 views Acceso a la página de inicio
+INFO 2025-04-27 23:15:44,951 basehttp "GET / HTTP/1.1" 200 15730
+INFO 2025-04-27 23:15:45,004 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:45,007 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:45,016 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:45,070 basehttp "GET /media/categorias/Imagen_de_la_categoria.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:45,070 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:45,071 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:45,096 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+WARNING 2025-04-27 23:15:45,349 log Not Found: /favicon.ico
+WARNING 2025-04-27 23:15:45,349 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+DEBUG 2025-04-27 23:15:54,107 views Listado de productos: 7 productos mostrados
+INFO 2025-04-27 23:15:54,138 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25330
+INFO 2025-04-27 23:15:54,191 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:54,192 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:54,199 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:54,200 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:54,207 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:54,219 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:15:54,219 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:16:01,334 basehttp "GET /orders/historial/ HTTP/1.1" 200 12257
+INFO 2025-04-27 23:16:03,167 basehttp "GET /orders/detalle/ORD-AB184DE10DCA/ HTTP/1.1" 200 16735
+INFO 2025-04-27 23:16:11,164 basehttp "GET /orders/historial/ HTTP/1.1" 200 12257
+DEBUG 2025-04-27 23:16:12,424 views Listado de productos: 11 productos mostrados
+INFO 2025-04-27 23:16:12,439 basehttp "GET /products/ HTTP/1.1" 200 32312
+INFO 2025-04-27 23:16:12,469 basehttp "GET /media/productos/principal_cIifKU5.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:16:12,486 basehttp "GET /media/productos/Sabrita_chips_fuegos.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:16:12,486 basehttp "GET /media/productos/principal_QeYiZT6.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:16:12,487 basehttp "GET /media/productos/principal.webp HTTP/1.1" 304 0
+DEBUG 2025-04-27 23:16:14,946 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-27 23:16:15,004 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23410
+INFO 2025-04-27 23:16:15,043 basehttp "GET /media/productos/adicionales/1_FyQndjt.webp HTTP/1.1" 304 0
+DEBUG 2025-04-27 23:16:17,232 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 2
+INFO 2025-04-27 23:16:17,234 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-27 23:16:17,245 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-27 23:16:17,284 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 26988
+DEBUG 2025-04-27 23:16:21,561 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-27 23:16:21,582 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25172
+DEBUG 2025-04-27 23:16:26,347 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-27 23:16:26,381 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 27206
+INFO 2025-04-27 23:16:26,440 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 304 0
+DEBUG 2025-04-27 23:16:27,918 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-04-27 23:16:27,919 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-04-27 23:16:27,932 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-27 23:16:27,996 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 30587
+INFO 2025-04-27 23:16:45,168 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 29838
+INFO 2025-04-27 23:17:12,352 basehttp "GET /users/profile/ HTTP/1.1" 200 17852
+WARNING 2025-04-27 23:17:12,396 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-04-27 23:17:14,680 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15828
+INFO 2025-04-27 23:17:17,076 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 20209
+INFO 2025-04-27 23:17:43,365 views Usuario Gerardo agregó una nueva dirección
+INFO 2025-04-27 23:17:43,367 basehttp "POST /users/profile/addresses/add/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:17:43,436 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 20618
+INFO 2025-04-27 23:17:47,218 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 33255
+INFO 2025-04-27 23:18:27,200 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 18774
+INFO 2025-04-27 23:18:31,610 basehttp "GET /users/profile/addresses/edit/2/ HTTP/1.1" 200 20356
+INFO 2025-04-27 23:18:33,061 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 18774
+INFO 2025-04-27 23:18:34,155 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 20209
+INFO 2025-04-27 23:19:00,342 views Usuario Gerardo agregó una nueva dirección
+INFO 2025-04-27 23:19:00,346 basehttp "POST /users/profile/addresses/add/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:19:00,405 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 24314
+INFO 2025-04-27 23:19:04,930 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 34832
+INFO 2025-04-27 23:21:30,571 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 22470
+INFO 2025-04-27 23:21:32,018 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 20209
+INFO 2025-04-27 23:23:41,029 views Usuario Gerardo agregó una nueva dirección
+INFO 2025-04-27 23:23:41,033 basehttp "POST /users/profile/addresses/add/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:23:41,118 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 28000
+INFO 2025-04-27 23:23:44,491 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 36398
+INFO 2025-04-27 23:24:07,746 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:24:07,795 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 34936
+INFO 2025-04-27 23:24:18,437 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:24:18,496 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 28079
+INFO 2025-04-27 23:24:32,849 views Orden #ORD-91D07973A033 completada exitosamente por el usuario Gerardo
+INFO 2025-04-27 23:24:32,866 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:24:32,908 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16723
+DEBUG 2025-04-27 23:24:42,426 views Acceso a la página de contacto
+INFO 2025-04-27 23:24:42,470 basehttp "GET /contact/ HTTP/1.1" 200 15456
+DEBUG 2025-04-27 23:24:44,404 views Acceso a la página "Quiénes somos"
+INFO 2025-04-27 23:24:44,431 basehttp "GET /about/ HTTP/1.1" 200 13143
+DEBUG 2025-04-27 23:24:45,157 views Acceso a la página de inicio
+INFO 2025-04-27 23:24:45,180 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-27 23:24:45,543 views Acceso a la página de inicio
+INFO 2025-04-27 23:24:45,572 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-27 23:24:58,395 views Búsqueda de productos por "tequila": 1 resultados
+INFO 2025-04-27 23:24:58,427 basehttp "GET /products/search/?q=tequila HTTP/1.1" 200 12259
+DEBUG 2025-04-27 23:25:02,115 views Búsqueda de productos por "bacardi": 0 resultados
+INFO 2025-04-27 23:25:02,128 basehttp "GET /products/search/?q=bacardi HTTP/1.1" 200 10476
+DEBUG 2025-04-27 23:25:05,629 views Búsqueda de productos por "bacar": 2 resultados
+INFO 2025-04-27 23:25:05,643 basehttp "GET /products/search/?q=bacar HTTP/1.1" 200 13201
+DEBUG 2025-04-27 23:25:09,490 views Búsqueda de productos por "bacardí": 2 resultados
+INFO 2025-04-27 23:25:09,506 basehttp "GET /products/search/?q=bacard%C3%AD HTTP/1.1" 200 13204
+DEBUG 2025-04-27 23:25:11,598 views Acceso a la página de inicio
+INFO 2025-04-27 23:25:11,619 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-27 23:25:13,813 views Listado de productos: 1 productos mostrados
+INFO 2025-04-27 23:25:13,832 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14537
+DEBUG 2025-04-27 23:25:16,989 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-27 23:25:17,010 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19684
+INFO 2025-04-27 23:25:17,062 basehttp "GET /media/productos/adicionales/principal.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:25:17,063 basehttp "GET /media/productos/adicionales/1.webp HTTP/1.1" 304 0
+INFO 2025-04-27 23:25:17,070 basehttp "GET /media/productos/adicionales/2.webp HTTP/1.1" 304 0
+DEBUG 2025-04-27 23:25:22,190 views Listado de productos: 11 productos mostrados
+INFO 2025-04-27 23:25:22,207 basehttp "GET /products/ HTTP/1.1" 200 32312
+DEBUG 2025-04-27 23:25:24,836 views Acceso a la página de inicio
+INFO 2025-04-27 23:25:24,854 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-27 23:25:27,594 views Listado de productos: 11 productos mostrados
+INFO 2025-04-27 23:25:27,618 basehttp "GET /products/ HTTP/1.1" 200 32312
+DEBUG 2025-04-27 23:25:30,151 views Acceso a la página de inicio
+INFO 2025-04-27 23:25:30,169 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-27 23:25:48,977 views Acceso a la página de inicio
+INFO 2025-04-27 23:25:48,995 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-27 23:25:55,910 views Listado de productos: 1 productos mostrados
+INFO 2025-04-27 23:25:55,923 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14537
+DEBUG 2025-04-27 23:25:57,141 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-27 23:25:57,225 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19684
+DEBUG 2025-04-27 23:25:58,019 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-04-27 23:25:58,020 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-27 23:25:58,035 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-27 23:25:58,074 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 23313
+INFO 2025-04-27 23:27:10,903 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 34378
+INFO 2025-04-27 23:27:32,979 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:27:33,023 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32940
+INFO 2025-04-27 23:27:54,017 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:27:54,051 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:28:40,911 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:28:40,946 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:28:45,325 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:28:45,359 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:28:49,142 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:28:49,174 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:28:52,430 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:28:52,467 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:30:25,966 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:30:25,977 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:30:26,007 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:30:28,868 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:30:28,902 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+DEBUG 2025-04-27 23:30:38,543 views Acceso a la página de inicio
+INFO 2025-04-27 23:30:38,575 basehttp "GET / HTTP/1.1" 200 17522
+INFO 2025-04-27 23:30:41,209 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:30:41,224 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:30:41,261 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:31:00,127 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:31:00,139 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-27 23:31:00,172 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+INFO 2025-04-27 23:32:10,218 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26052
+DEBUG 2025-04-27 23:32:46,660 views Acceso a la página de inicio
+INFO 2025-04-27 23:32:46,689 basehttp "GET / HTTP/1.1" 200 17522

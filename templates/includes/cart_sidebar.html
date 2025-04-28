@@ -53,11 +53,14 @@
                 <span>Total:</span>
                 <span class="fw-bold">${{ cart.total }}</span>
             </div>
-            <div class="cart-actions">
-                <a href="{% url 'cart:cart_detail' %}" class="btn btn-primary w-100">
-                    Realizar compra
-                </a>
-            </div>
+<!-- templates/includes/cart_sidebar.html (modificación del botón) -->
+<!-- ... (código existente) ... -->
+<div class="cart-actions">
+    <a href="{% url 'orders:checkout_direccion' %}" class="btn btn-primary w-100">
+        Realizar compra
+    </a>
+</div>
+<!-- ... (código existente) ... -->
         {% endif %}
     </div>
 </div>

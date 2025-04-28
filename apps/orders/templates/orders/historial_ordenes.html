@@ -1,0 +1,87 @@
+<!-- apps/orders/templates/orders/historial_ordenes.html -->
+{% extends 'base.html' %}
+
+{% block title %}Mis Pedidos | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Mi Historial de Pedidos</h2>
+        <a href="{% url 'products:product_list' %}" class="btn btn-outline-primary">
+            <i class="bi bi-shop me-1"></i> Ir a la tienda
+        </a>
+    </div>
+    
+    {% if ordenes %}
+        <div class="card border-0 shadow">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Orden #</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Total</th>
+                                <th>Método de Pago</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for orden in ordenes %}
+                                <tr>
+                                    <td>{{ orden.numero_orden }}</td>
+                                    <td>{{ orden.fecha_creacion|date:"d/m/Y H:i" }}</td>
+                                    <td>
+                                        {% if orden.estado == 'pendiente' %}
+                                            <span class="badge bg-warning text-dark">Pendiente</span>
+                                        {% elif orden.estado == 'pagado' %}
+                                            <span class="badge bg-success">Pagado</span>
+                                        {% elif orden.estado == 'preparando' %}
+                                            <span class="badge bg-info">Preparando</span>
+                                        {% elif orden.estado == 'enviado' %}
+                                            <span class="badge bg-primary">Enviado</span>
+                                        {% elif orden.estado == 'entregado' %}
+                                            <span class="badge bg-success">Entregado</span>
+                                        {% elif orden.estado == 'cancelado' %}
+                                            <span class="badge bg-danger">Cancelado</span>
+                                        {% else %}
+                                            <span class="badge bg-secondary">{{ orden.estado }}</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>${{ orden.total }}</td>
+                                    <td>
+                                        {% if orden.metodo_pago == 'tarjeta' %}
+                                            Tarjeta de crédito/débito
+                                        {% elif orden.metodo_pago == 'paypal' %}
+                                            PayPal
+                                        {% else %}
+                                            {{ orden.metodo_pago }}
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'orders:detalle_orden' orden.numero_orden %}" class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-eye me-1"></i> Ver detalles
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="card border-0 shadow">
+            <div class="card-body text-center py-5">
+                <i class="bi bi-cart-x display-1 text-muted"></i>
+                <h4 class="mt-3">No tienes pedidos aún</h4>
+                <p class="text-muted">¡Explora nuestra tienda y realiza tu primera compra!</p>
+                <a href="{% url 'products:product_list' %}" class="btn btn-primary mt-2">
+                    <i class="bi bi-shop me-1"></i> Ir a la tienda
+                </a>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

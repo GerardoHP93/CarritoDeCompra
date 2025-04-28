@@ -1,3 +1,6 @@
+# carritoCompras_project/urls.py (actualización)
+
+# carritoCompras_project/urls.py
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -9,9 +12,8 @@ urlpatterns = [
     path('', include('apps.core.urls')),
     path('users/', include('apps.users.urls')),
     path('products/', include('apps.products.urls')),
-    path('cart/', include('apps.cart.urls')),  # Añadir esta línea
-    # Las siguientes se implementarán en fases posteriores
-    # path('orders/', include('apps.orders.urls')),
+    path('cart/', include('apps.cart.urls')),
+    path('orders/', include('apps.orders.urls')),  # Añadir esta línea
 ]
 
 # Servir archivos estáticos y media durante desarrollo
