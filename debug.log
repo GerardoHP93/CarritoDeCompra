@@ -4846,3 +4846,1117 @@ DEBUG 2025-05-03 13:23:38,851 views Detalle de producto: Johnnie Walker black la
 INFO 2025-05-03 13:23:38,883 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23157
 DEBUG 2025-05-03 13:23:45,890 views Detalle de producto: Bacardí ron sabor coco 700mL
 INFO 2025-05-03 13:23:45,934 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23410
+INFO 2025-05-03 15:05:34,812 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:06:01,190 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\admin.py changed, reloading.
+INFO 2025-05-03 15:06:02,153 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:06:07,628 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\admin.py changed, reloading.
+INFO 2025-05-03 15:06:08,781 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:06:20,477 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 15:06:22,086 views Acceso a la página de inicio
+INFO 2025-05-03 15:06:22,402 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 15:06:28,486 views Acceso a la página de inicio
+INFO 2025-05-03 15:06:28,507 basehttp "GET / HTTP/1.1" 200 15959
+WARNING 2025-05-03 15:06:32,908 log Not Found: /products/inventario/
+WARNING 2025-05-03 15:06:32,909 basehttp "GET /products/inventario/ HTTP/1.1" 404 4471
+WARNING 2025-05-03 15:08:26,430 log Not Found: /products/inventario/
+WARNING 2025-05-03 15:08:26,431 basehttp "GET /products/inventario/ HTTP/1.1" 404 4471
+INFO 2025-05-03 15:10:13,942 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\urls.py changed, reloading.
+INFO 2025-05-03 15:10:15,183 autoreload Watching for file changes with StatReloader
+ERROR 2025-05-03 15:10:20,509 log Internal Server Error: /products/inventario/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 48, in dashboard_inventario
+    return render(request, 'products/inventory/dashboard.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 6: 'block'. Looking for one of: endblock.
+ERROR 2025-05-03 15:10:20,523 basehttp "GET /products/inventario/ HTTP/1.1" 500 202540
+INFO 2025-05-03 15:12:21,006 autoreload Watching for file changes with StatReloader
+ERROR 2025-05-03 15:12:24,416 log Internal Server Error: /products/inventario/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: products_pedidoproveedor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 48, in dashboard_inventario
+    return render(request, 'products/inventory/dashboard.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+       ^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 398, in __bool__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: products_pedidoproveedor
+ERROR 2025-05-03 15:12:24,430 basehttp "GET /products/inventario/ HTTP/1.1" 500 233049
+INFO 2025-05-03 15:12:46,454 autoreload Watching for file changes with StatReloader
+ERROR 2025-05-03 15:12:49,383 log Internal Server Error: /products/inventario/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: products_pedidoproveedor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 48, in dashboard_inventario
+    return render(request, 'products/inventory/dashboard.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+       ^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 398, in __bool__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: products_pedidoproveedor
+ERROR 2025-05-03 15:12:49,399 basehttp "GET /products/inventario/ HTTP/1.1" 500 233186
+ERROR 2025-05-03 15:12:53,342 log Internal Server Error: /products/inventario/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: products_pedidoproveedor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 48, in dashboard_inventario
+    return render(request, 'products/inventory/dashboard.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+       ^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 398, in __bool__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: products_pedidoproveedor
+ERROR 2025-05-03 15:12:53,350 basehttp "GET /products/inventario/ HTTP/1.1" 500 233049
+INFO 2025-05-03 15:13:58,000 autoreload Watching for file changes with StatReloader
+ERROR 2025-05-03 15:14:01,202 log Internal Server Error: /products/inventario/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: products_pedidoproveedor
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 48, in dashboard_inventario
+    return render(request, 'products/inventory/dashboard.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+       ^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 398, in __bool__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: products_pedidoproveedor
+ERROR 2025-05-03 15:14:01,217 basehttp "GET /products/inventario/ HTTP/1.1" 500 233186
+INFO 2025-05-03 15:15:50,285 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:15:57,170 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+DEBUG 2025-05-03 15:16:12,766 views Listado de productos: 11 productos mostrados
+INFO 2025-05-03 15:16:12,801 basehttp "GET /products/ HTTP/1.1" 200 32198
+INFO 2025-05-03 15:16:12,861 basehttp "GET /media/productos/principal_cIifKU5.webp HTTP/1.1" 304 0
+INFO 2025-05-03 15:16:12,864 basehttp "GET /media/productos/principal_QeYiZT6.webp HTTP/1.1" 304 0
+INFO 2025-05-03 15:16:12,865 basehttp "GET /media/productos/Sabrita_chips_fuegos.webp HTTP/1.1" 304 0
+DEBUG 2025-05-03 15:16:15,544 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-05-03 15:16:15,598 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 22427
+WARNING 2025-05-03 15:16:15,662 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-05-03 15:16:15,793 basehttp "GET /media/productos/adicionales/1_rZ0kv0Y.webp HTTP/1.1" 200 14024
+INFO 2025-05-03 15:16:15,795 basehttp "GET /media/productos/adicionales/2_0XHubCC.webp HTTP/1.1" 200 2580
+INFO 2025-05-03 15:16:28,802 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 11366
+INFO 2025-05-03 15:16:38,392 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 31058
+INFO 2025-05-03 15:16:45,743 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 31058
+INFO 2025-05-03 15:16:47,919 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+ERROR 2025-05-03 15:17:56,881 inventory_views Error al crear pedido: NOT NULL constraint failed: products_pedidoproveedor.total
+INFO 2025-05-03 15:17:56,892 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 30650
+INFO 2025-05-03 15:17:57,003 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+ERROR 2025-05-03 15:18:07,628 inventory_views Error al crear pedido: NOT NULL constraint failed: products_pedidoproveedor.total
+INFO 2025-05-03 15:18:07,642 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 30650
+INFO 2025-05-03 15:18:07,715 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 15:18:38,255 autoreload Watching for file changes with StatReloader
+ERROR 2025-05-03 15:18:40,369 inventory_views Error al crear pedido: NOT NULL constraint failed: products_pedidoproveedor.total
+INFO 2025-05-03 15:18:40,471 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 30650
+INFO 2025-05-03 15:18:40,540 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+ERROR 2025-05-03 15:29:00,076 inventory_views Error al crear pedido: NOT NULL constraint failed: products_pedidoproveedor.total
+INFO 2025-05-03 15:29:00,091 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 30649
+INFO 2025-05-03 15:29:00,225 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 15:32:50,176 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\models.py changed, reloading.
+INFO 2025-05-03 15:32:53,206 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:36:40,047 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:36:55,107 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\models.py changed, reloading.
+INFO 2025-05-03 15:36:56,231 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:37:05,179 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 23064
+ERROR 2025-05-03 15:37:07,696 log Internal Server Error: /products/inventario/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    raise TypeError
+TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 240, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\fields\mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'proveedor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: products_proveedor.tiempo_entrega_dias
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 48, in dashboard_inventario
+    return render(request, 'products/inventory/dashboard.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 901, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 258, in __get__
+    rel_obj = self.get_object(instance)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 221, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: products_proveedor.tiempo_entrega_dias
+ERROR 2025-05-03 15:37:07,712 basehttp "GET /products/inventario/ HTTP/1.1" 500 310787
+INFO 2025-05-03 15:37:50,505 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:37:52,477 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+DEBUG 2025-05-03 15:38:11,486 views Acceso a la página de inicio
+INFO 2025-05-03 15:38:11,512 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 15:38:13,062 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 15:38:13,081 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25216
+DEBUG 2025-05-03 15:38:15,742 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 15:38:15,770 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24559
+DEBUG 2025-05-03 15:38:18,777 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-05-03 15:38:18,816 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23639
+DEBUG 2025-05-03 15:38:23,621 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-05-03 15:38:23,647 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 24336
+INFO 2025-05-03 15:38:23,830 basehttp "GET /media/productos/adicionales/1_IuAipSt.webp HTTP/1.1" 200 30158
+INFO 2025-05-03 15:38:23,831 basehttp "GET /media/productos/adicionales/2_dm4BNQ3.webp HTTP/1.1" 200 50474
+DEBUG 2025-05-03 15:38:26,949 views Producto agregado/actualizado en carrito: Johnnie Walker Blue Label X750cc, cantidad: 5
+INFO 2025-05-03 15:38:26,953 basehttp "POST /cart/add/7/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 15:38:26,961 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-05-03 15:38:27,004 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 28374
+INFO 2025-05-03 15:38:32,264 basehttp "POST /cart/update-ajax/7/ HTTP/1.1" 200 87
+DEBUG 2025-05-03 15:38:33,559 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 15:38:33,663 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21006
+INFO 2025-05-03 15:38:38,896 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32323
+INFO 2025-05-03 15:38:45,763 basehttp "GET /products/inventario/ HTTP/1.1" 200 22085
+INFO 2025-05-03 15:38:47,497 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 32648
+INFO 2025-05-03 15:38:47,563 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+ERROR 2025-05-03 15:39:14,382 inventory_views Error al crear pedido: 'PedidoProveedor' object has no attribute 'generar_numero_pedido'
+INFO 2025-05-03 15:39:14,407 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 32250
+INFO 2025-05-03 15:39:14,556 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 15:39:31,250 autoreload Watching for file changes with StatReloader
+ERROR 2025-05-03 15:39:33,696 inventory_views Error al crear pedido: 'PedidoProveedor' object has no attribute 'generar_numero_pedido'
+INFO 2025-05-03 15:39:33,791 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 32250
+INFO 2025-05-03 15:39:33,943 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 15:42:41,285 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\models.py changed, reloading.
+INFO 2025-05-03 15:42:43,223 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 15:42:54,176 inventory_views Pedido a proveedor #PED-287E574C creado
+INFO 2025-05-03 15:42:54,196 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 302 0
+INFO 2025-05-03 15:42:54,301 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 18015
+INFO 2025-05-03 15:43:07,085 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 19837
+ERROR 2025-05-03 15:43:12,379 log Internal Server Error: /products/inventario/pedidos/PED-287E574C/editar/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 211, in editar_pedido_proveedor
+    return render(request, 'products/inventory/editar_pedido.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/inventory/editar_pedido.html
+ERROR 2025-05-03 15:43:12,383 basehttp "GET /products/inventario/pedidos/PED-287E574C/editar/ HTTP/1.1" 500 108860
+INFO 2025-05-03 15:43:22,128 basehttp "GET /products/inventario/pedidos/PED-287E574C/cancelar/ HTTP/1.1" 200 18944
+INFO 2025-05-03 15:43:32,107 basehttp "GET /products/inventario/pedidos/PED-287E574C/pagar/ HTTP/1.1" 200 19722
+INFO 2025-05-03 15:43:44,260 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 19837
+ERROR 2025-05-03 15:43:46,755 log Internal Server Error: /products/inventario/pedidos/PED-287E574C/editar/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 211, in editar_pedido_proveedor
+    return render(request, 'products/inventory/editar_pedido.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/inventory/editar_pedido.html
+ERROR 2025-05-03 15:43:46,758 basehttp "GET /products/inventario/pedidos/PED-287E574C/editar/ HTTP/1.1" 500 108860
+DEBUG 2025-05-03 16:23:10,505 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:23:10,547 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+ERROR 2025-05-03 16:23:14,653 log Internal Server Error: /products/inventario/pedidos/PED-287E574C/editar/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 211, in editar_pedido_proveedor
+    return render(request, 'products/inventory/editar_pedido.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/inventory/editar_pedido.html
+ERROR 2025-05-03 16:23:14,655 basehttp "GET /products/inventario/pedidos/PED-287E574C/editar/ HTTP/1.1" 500 108860
+ERROR 2025-05-03 16:23:58,962 log Internal Server Error: /products/inventario/pedidos/PED-287E574C/editar/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 211, in editar_pedido_proveedor
+    return render(request, 'products/inventory/editar_pedido.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/inventory/editar_pedido.html
+ERROR 2025-05-03 16:23:58,965 basehttp "GET /products/inventario/pedidos/PED-287E574C/editar/ HTTP/1.1" 500 108860
+ERROR 2025-05-03 16:31:39,693 log Internal Server Error: /products/inventario/pedidos/PED-287E574C/editar/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py", line 211, in editar_pedido_proveedor
+    return render(request, 'products/inventory/editar_pedido.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: products/inventory/editar_pedido.html
+ERROR 2025-05-03 16:31:39,695 basehttp "GET /products/inventario/pedidos/PED-287E574C/editar/ HTTP/1.1" 500 108860
+INFO 2025-05-03 16:32:42,591 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py changed, reloading.
+INFO 2025-05-03 16:32:43,850 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 16:33:36,040 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\urls.py changed, reloading.
+INFO 2025-05-03 16:33:37,209 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 16:33:54,738 basehttp "GET /products/inventario/pedidos/PED-287E574C/editar/ HTTP/1.1" 200 35529
+INFO 2025-05-03 16:33:54,906 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 16:34:07,452 basehttp "GET /products/inventario/pedidos/PED-287E574C/pagar/ HTTP/1.1" 200 19722
+INFO 2025-05-03 16:34:15,608 inventory_views Pedido a proveedor #PED-287E574C pagado
+INFO 2025-05-03 16:34:15,613 basehttp "POST /products/inventario/pedidos/PED-287E574C/pagar/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:34:15,656 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 21805
+INFO 2025-05-03 16:34:29,524 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29421
+INFO 2025-05-03 16:34:29,673 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:34:32,349 basehttp "GET /admin/products/pedidoproveedor/ HTTP/1.1" 200 18016
+INFO 2025-05-03 16:34:32,397 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:34:32,571 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-05-03 16:34:35,714 basehttp "GET /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 200 29377
+INFO 2025-05-03 16:34:35,771 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:34:35,784 basehttp "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-05-03 16:34:35,806 basehttp "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-05-03 16:34:35,812 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-05-03 16:34:35,820 basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+INFO 2025-05-03 16:34:35,844 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-05-03 16:34:35,954 basehttp "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-05-03 16:34:41,717 basehttp "POST /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:34:41,755 basehttp "GET /admin/products/pedidoproveedor/ HTTP/1.1" 200 18254
+INFO 2025-05-03 16:34:41,870 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:34:41,917 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-05-03 16:34:43,573 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 19226
+DEBUG 2025-05-03 16:34:46,294 views Acceso a la página de inicio
+INFO 2025-05-03 16:34:46,320 basehttp "GET / HTTP/1.1" 200 17661
+DEBUG 2025-05-03 16:34:48,842 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:34:48,865 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26918
+DEBUG 2025-05-03 16:34:50,655 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:34:50,688 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+INFO 2025-05-03 16:34:56,690 basehttp "GET /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 200 29377
+INFO 2025-05-03 16:34:56,742 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-03 16:35:08,947 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:35:08,976 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+INFO 2025-05-03 16:35:14,694 basehttp "GET /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 200 29377
+INFO 2025-05-03 16:35:14,747 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:35:14,933 basehttp "GET /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 200 29377
+INFO 2025-05-03 16:35:14,977 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:35:15,145 basehttp "GET /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 200 29377
+INFO 2025-05-03 16:35:15,191 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:35:22,993 basehttp "POST /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:35:23,036 basehttp "GET /admin/products/pedidoproveedor/ HTTP/1.1" 200 18254
+INFO 2025-05-03 16:35:23,131 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-03 16:35:27,341 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:35:27,376 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:35:28,096 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:35:28,116 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:35:28,268 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:35:28,299 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:35:33,986 views Acceso a la página de inicio
+INFO 2025-05-03 16:35:34,014 basehttp "GET / HTTP/1.1" 200 17661
+DEBUG 2025-05-03 16:35:34,954 views Acceso a la página de inicio
+INFO 2025-05-03 16:35:34,986 basehttp "GET / HTTP/1.1" 200 17661
+DEBUG 2025-05-03 16:35:35,204 views Acceso a la página de inicio
+INFO 2025-05-03 16:35:35,227 basehttp "GET / HTTP/1.1" 200 17661
+DEBUG 2025-05-03 16:35:37,077 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:35:37,104 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26918
+DEBUG 2025-05-03 16:35:38,719 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:35:38,750 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+INFO 2025-05-03 16:35:44,214 basehttp "GET /admin/products/pedidoproveedor/1/change/ HTTP/1.1" 200 29377
+INFO 2025-05-03 16:35:47,090 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29421
+INFO 2025-05-03 16:35:47,137 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:35:56,559 basehttp "GET /products/inventario/ HTTP/1.1" 200 22085
+INFO 2025-05-03 16:36:01,051 basehttp "GET /products/inventario/pedidos/crear/ HTTP/1.1" 200 32623
+INFO 2025-05-03 16:36:04,728 basehttp "GET /orders/historial/ HTTP/1.1" 200 25173
+INFO 2025-05-03 16:36:18,797 basehttp "GET /admin/ HTTP/1.1" 200 16839
+INFO 2025-05-03 16:36:22,499 basehttp "GET /products/inventario/ HTTP/1.1" 200 22085
+INFO 2025-05-03 16:36:27,056 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 14643
+INFO 2025-05-03 16:36:29,166 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 19226
+DEBUG 2025-05-03 16:36:43,922 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:43,956 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+INFO 2025-05-03 16:36:52,539 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 16:36:54,542 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:54,626 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:55,390 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:55,413 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:55,580 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:55,626 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:55,889 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:55,924 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:56,257 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:56,296 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:56,506 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:56,539 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:56,696 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:36:56,749 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 26261
+DEBUG 2025-05-03 16:36:59,681 views Acceso a la página de inicio
+INFO 2025-05-03 16:36:59,706 basehttp "GET / HTTP/1.1" 200 17661
+INFO 2025-05-03 16:37:01,279 views Usuario  cerró sesión
+INFO 2025-05-03 16:37:01,281 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 16:37:01,286 views Acceso a la página de inicio
+INFO 2025-05-03 16:37:01,298 basehttp "GET / HTTP/1.1" 200 17280
+INFO 2025-05-03 16:37:02,705 basehttp "GET /users/login/ HTTP/1.1" 200 12823
+DEBUG 2025-05-03 16:37:07,679 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-05-03 16:37:07,679 views Usuario Gerry inició sesión
+INFO 2025-05-03 16:37:07,686 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 16:37:07,692 views Acceso a la página de inicio
+INFO 2025-05-03 16:37:07,713 basehttp "GET / HTTP/1.1" 200 17878
+DEBUG 2025-05-03 16:37:09,677 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:37:09,696 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24784
+DEBUG 2025-05-03 16:37:13,660 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 16:37:13,692 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24127
+INFO 2025-05-03 16:38:50,957 basehttp "GET /orders/historial/ HTTP/1.1" 200 12034
+INFO 2025-05-03 16:38:53,028 views Usuario  cerró sesión
+INFO 2025-05-03 16:38:53,031 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 16:38:53,036 views Acceso a la página de inicio
+INFO 2025-05-03 16:38:53,045 basehttp "GET / HTTP/1.1" 200 17280
+INFO 2025-05-03 16:38:54,251 basehttp "GET /users/login/ HTTP/1.1" 200 12823
+DEBUG 2025-05-03 16:38:59,841 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-05-03 16:38:59,842 views Usuario Gerardo inició sesión
+INFO 2025-05-03 16:38:59,848 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 16:38:59,854 views Acceso a la página de inicio
+INFO 2025-05-03 16:38:59,887 basehttp "GET / HTTP/1.1" 200 20016
+DEBUG 2025-05-03 16:39:01,997 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:39:02,017 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 26918
+DEBUG 2025-05-03 16:39:06,451 views Producto eliminado del carrito: Johnnie Walker Blue Label X750cc
+INFO 2025-05-03 16:39:06,453 basehttp "POST /cart/remove-ajax/7/ HTTP/1.1" 200 127
+INFO 2025-05-03 16:39:09,403 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+INFO 2025-05-03 16:39:12,686 basehttp "GET /admin/ HTTP/1.1" 200 16839
+INFO 2025-05-03 16:39:23,805 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 12941
+INFO 2025-05-03 16:39:25,252 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 17524
+INFO 2025-05-03 16:45:27,672 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py changed, reloading.
+INFO 2025-05-03 16:45:29,309 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 16:46:51,794 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\models.py changed, reloading.
+INFO 2025-05-03 16:46:53,315 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 16:49:10,227 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py changed, reloading.
+INFO 2025-05-03 16:49:11,612 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 16:54:42,980 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 16:54:53,206 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+INFO 2025-05-03 16:54:56,819 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 12941
+INFO 2025-05-03 16:54:58,229 basehttp "GET /products/inventario/pedidos/PED-287E574C/ HTTP/1.1" 200 19985
+INFO 2025-05-03 16:55:06,339 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 12941
+INFO 2025-05-03 16:55:07,653 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+INFO 2025-05-03 16:55:10,269 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=9 HTTP/1.1" 200 30946
+INFO 2025-05-03 16:55:10,388 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 16:55:38,644 inventory_views Pedido a proveedor #PED-60B341BF creado
+INFO 2025-05-03 16:55:38,655 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=9 HTTP/1.1" 302 0
+INFO 2025-05-03 16:55:38,688 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 17640
+INFO 2025-05-03 16:55:43,713 basehttp "GET /products/inventario/pedidos/PED-60B341BF/ HTTP/1.1" 200 18221
+INFO 2025-05-03 16:55:45,202 basehttp "GET /products/inventario/pedidos/PED-60B341BF/editar/ HTTP/1.1" 200 33819
+INFO 2025-05-03 16:55:45,305 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 16:55:47,789 basehttp "GET /products/inventario/pedidos/PED-60B341BF/ HTTP/1.1" 200 18221
+INFO 2025-05-03 16:55:51,639 basehttp "GET /products/inventario/pedidos/PED-60B341BF/editar/ HTTP/1.1" 200 33819
+INFO 2025-05-03 16:55:51,806 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 16:56:04,325 basehttp "GET /products/inventario/pedidos/PED-60B341BF/pagar/ HTTP/1.1" 200 18037
+INFO 2025-05-03 16:56:09,308 inventory_views Pedido a proveedor #PED-60B341BF pagado
+INFO 2025-05-03 16:56:09,310 basehttp "POST /products/inventario/pedidos/PED-60B341BF/pagar/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:56:09,348 basehttp "GET /products/inventario/pedidos/PED-60B341BF/ HTTP/1.1" 200 20189
+INFO 2025-05-03 16:56:17,236 basehttp "GET /admin/products/pedidoproveedor/ HTTP/1.1" 200 18595
+INFO 2025-05-03 16:56:17,315 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 16:56:24,541 basehttp "GET /admin/products/pedidoproveedor/2/change/ HTTP/1.1" 200 29369
+INFO 2025-05-03 16:56:24,597 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-03 16:56:42,211 views Acceso a la página de inicio
+INFO 2025-05-03 16:56:42,237 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 16:56:45,065 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:56:45,086 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25216
+DEBUG 2025-05-03 16:56:46,382 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-05-03 16:56:46,414 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23639
+DEBUG 2025-05-03 16:56:49,639 views Acceso a la página de inicio
+INFO 2025-05-03 16:56:49,661 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 16:56:51,199 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:56:51,214 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25216
+DEBUG 2025-05-03 16:57:04,533 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:04,556 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+INFO 2025-05-03 16:57:12,198 basehttp "POST /admin/products/pedidoproveedor/2/change/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:57:12,246 basehttp "GET /admin/products/pedidoproveedor/ HTTP/1.1" 200 18833
+INFO 2025-05-03 16:57:12,357 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-03 16:57:16,795 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:16,813 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:18,075 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:18,096 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:18,246 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:18,281 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:18,409 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:18,438 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:18,577 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:18,609 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:18,753 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:18,790 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:18,902 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:18,936 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:19,125 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:19,159 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+DEBUG 2025-05-03 16:57:19,408 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 16:57:19,448 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+INFO 2025-05-03 16:57:25,553 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+INFO 2025-05-03 16:57:28,372 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 14268
+INFO 2025-05-03 16:57:34,060 basehttp "GET /products/inventario/pedidos/PED-60B341BF/ HTTP/1.1" 200 19715
+DEBUG 2025-05-03 16:58:09,012 views Acceso a la página de inicio
+INFO 2025-05-03 16:58:09,029 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 16:58:10,837 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 16:58:10,858 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25216
+DEBUG 2025-05-03 16:58:18,155 views Acceso a la página de inicio
+INFO 2025-05-03 16:58:18,180 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 16:58:21,239 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 16:58:21,251 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 14692
+DEBUG 2025-05-03 16:58:22,176 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-05-03 16:58:22,196 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 19232
+INFO 2025-05-03 16:58:22,352 basehttp "GET /media/productos/adicionales/barcel_1.jpeg HTTP/1.1" 200 106833
+INFO 2025-05-03 16:58:22,354 basehttp "GET /media/productos/adicionales/barcel_2.jpeg HTTP/1.1" 200 104931
+DEBUG 2025-05-03 16:58:33,813 views Acceso a la página de inicio
+INFO 2025-05-03 16:58:33,832 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 16:58:37,070 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 16:58:37,083 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 14692
+DEBUG 2025-05-03 16:58:37,648 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-05-03 16:58:37,669 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 19232
+INFO 2025-05-03 16:58:41,801 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+INFO 2025-05-03 16:58:43,750 basehttp "GET /products/inventario/pedidos/crear/ HTTP/1.1" 200 30921
+INFO 2025-05-03 16:58:45,409 basehttp "GET /products/inventario/api/productos-proveedor/1/ HTTP/1.1" 200 102
+INFO 2025-05-03 16:58:59,772 inventory_views Pedido a proveedor #PED-94059DD4 creado
+INFO 2025-05-03 16:58:59,777 basehttp "POST /products/inventario/pedidos/crear/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:58:59,819 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 18960
+INFO 2025-05-03 16:59:03,020 basehttp "GET /products/inventario/pedidos/PED-94059DD4/pagar/ HTTP/1.1" 200 17993
+INFO 2025-05-03 16:59:08,380 inventory_views Pedido a proveedor #PED-94059DD4 pagado
+INFO 2025-05-03 16:59:08,383 basehttp "POST /products/inventario/pedidos/PED-94059DD4/pagar/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:59:08,416 basehttp "GET /products/inventario/pedidos/PED-94059DD4/ HTTP/1.1" 200 20160
+INFO 2025-05-03 16:59:10,905 basehttp "GET /products/inventario/pedidos/PED-94059DD4/recibir/ HTTP/1.1" 200 17937
+INFO 2025-05-03 16:59:18,413 inventory_views Pedido a proveedor #PED-94059DD4 marcado en tránsito
+INFO 2025-05-03 16:59:18,419 basehttp "POST /products/inventario/pedidos/PED-94059DD4/recibir/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:59:18,450 basehttp "GET /products/inventario/pedidos/PED-94059DD4/ HTTP/1.1" 200 20181
+INFO 2025-05-03 16:59:20,241 basehttp "GET /products/inventario/pedidos/PED-94059DD4/recibir/ HTTP/1.1" 200 18475
+INFO 2025-05-03 16:59:25,551 inventory_views Stock actualizado para Papas Fritas Chip's Fuego 240g: 95 + 5 = 100 unidades
+INFO 2025-05-03 16:59:25,553 inventory_views Pedido a proveedor #PED-94059DD4 recibido y stock actualizado
+INFO 2025-05-03 16:59:25,558 basehttp "POST /products/inventario/pedidos/PED-94059DD4/recibir/ HTTP/1.1" 302 0
+INFO 2025-05-03 16:59:25,592 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 18003
+INFO 2025-05-03 16:59:30,038 basehttp "GET /products/inventario/pedidos/PED-94059DD4/ HTTP/1.1" 200 19634
+DEBUG 2025-05-03 16:59:32,722 views Acceso a la página de inicio
+INFO 2025-05-03 16:59:32,739 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 16:59:35,174 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 16:59:35,188 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 14692
+DEBUG 2025-05-03 16:59:36,188 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-05-03 16:59:36,205 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 19234
+INFO 2025-05-03 16:59:42,597 basehttp "GET /products/inventario/ HTTP/1.1" 200 20383
+INFO 2025-05-03 16:59:45,484 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 200 30946
+INFO 2025-05-03 16:59:45,609 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 420
+INFO 2025-05-03 17:00:00,686 inventory_views Pedido a proveedor #PED-E343F8F1 creado
+INFO 2025-05-03 17:00:00,691 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=11 HTTP/1.1" 302 0
+INFO 2025-05-03 17:00:00,727 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 20287
+INFO 2025-05-03 17:00:08,262 basehttp "GET /products/inventario/pedidos/PED-E343F8F1/ HTTP/1.1" 200 18160
+INFO 2025-05-03 17:00:10,881 basehttp "GET /products/inventario/pedidos/PED-E343F8F1/pagar/ HTTP/1.1" 200 18020
+INFO 2025-05-03 17:00:14,615 inventory_views Pedido a proveedor #PED-E343F8F1 pagado
+INFO 2025-05-03 17:00:14,619 basehttp "POST /products/inventario/pedidos/PED-E343F8F1/pagar/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:00:14,661 basehttp "GET /products/inventario/pedidos/PED-E343F8F1/ HTTP/1.1" 200 20128
+INFO 2025-05-03 17:00:17,930 basehttp "GET /products/inventario/pedidos/PED-E343F8F1/recibir/ HTTP/1.1" 200 18114
+INFO 2025-05-03 17:00:19,611 inventory_views Pedido a proveedor #PED-E343F8F1 marcado en tránsito
+INFO 2025-05-03 17:00:19,619 basehttp "POST /products/inventario/pedidos/PED-E343F8F1/recibir/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:00:19,650 basehttp "GET /products/inventario/pedidos/PED-E343F8F1/ HTTP/1.1" 200 20149
+INFO 2025-05-03 17:00:20,645 basehttp "GET /products/inventario/pedidos/PED-E343F8F1/recibir/ HTTP/1.1" 200 18653
+INFO 2025-05-03 17:00:22,144 inventory_views Stock actualizado para Tequila Don Julio 70 Cristalino 700: 0 + 40 = 40 unidades
+INFO 2025-05-03 17:00:22,144 inventory_views Pedido a proveedor #PED-E343F8F1 recibido y stock actualizado
+INFO 2025-05-03 17:00:22,149 basehttp "POST /products/inventario/pedidos/PED-E343F8F1/recibir/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:00:22,188 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 19330
+DEBUG 2025-05-03 17:00:24,273 views Acceso a la página de inicio
+INFO 2025-05-03 17:00:24,291 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 17:00:25,679 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 17:00:25,694 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25559
+DEBUG 2025-05-03 17:00:26,939 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 17:00:26,966 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25675
+DEBUG 2025-05-03 17:00:38,989 views Acceso a la página de inicio
+INFO 2025-05-03 17:00:39,009 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 17:00:39,798 views Acceso a la página de inicio
+INFO 2025-05-03 17:00:39,824 basehttp "GET / HTTP/1.1" 200 15959
+INFO 2025-05-03 17:00:42,026 basehttp "GET /products/inventario/ HTTP/1.1" 200 18932
+DEBUG 2025-05-03 17:00:45,759 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 17:00:45,779 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23386
+INFO 2025-05-03 17:00:53,186 basehttp "GET /products/inventario/ HTTP/1.1" 200 18932
+DEBUG 2025-05-03 17:01:00,591 views Listado de productos: 11 productos mostrados
+INFO 2025-05-03 17:01:00,612 basehttp "GET /products/ HTTP/1.1" 200 32541
+DEBUG 2025-05-03 17:01:07,289 views Listado de productos: 11 productos mostrados
+INFO 2025-05-03 17:01:07,310 basehttp "GET /products/ HTTP/1.1" 200 32541
+DEBUG 2025-05-03 17:01:10,643 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-05-03 17:01:10,671 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 24336
+INFO 2025-05-03 17:01:18,189 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 16915
+INFO 2025-05-03 17:01:24,118 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=9 HTTP/1.1" 200 30946
+INFO 2025-05-03 17:01:24,218 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 421
+INFO 2025-05-03 17:01:31,452 inventory_views Pedido a proveedor #PED-1FD40FEC creado
+INFO 2025-05-03 17:01:31,460 basehttp "POST /products/inventario/pedidos/crear/?proveedor=7&producto=9 HTTP/1.1" 302 0
+INFO 2025-05-03 17:01:31,507 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 21613
+INFO 2025-05-03 17:01:35,035 basehttp "GET /products/inventario/ HTTP/1.1" 200 20458
+INFO 2025-05-03 17:01:37,504 basehttp "GET /products/inventario/pedidos/PED-1FD40FEC/ HTTP/1.1" 200 18026
+INFO 2025-05-03 17:01:40,079 basehttp "GET /products/inventario/pedidos/PED-1FD40FEC/cancelar/ HTTP/1.1" 200 17256
+INFO 2025-05-03 17:01:44,059 inventory_views Pedido a proveedor #PED-1FD40FEC cancelado
+INFO 2025-05-03 17:01:44,060 basehttp "POST /products/inventario/pedidos/PED-1FD40FEC/cancelar/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:01:44,092 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 20618
+INFO 2025-05-03 17:01:48,952 basehttp "GET /products/inventario/ HTTP/1.1" 200 18932
+INFO 2025-05-03 17:04:21,632 basehttp "GET /products/inventario/pedidos/crear/?proveedor=7&producto=9 HTTP/1.1" 200 30946
+INFO 2025-05-03 17:04:21,772 basehttp "GET /products/inventario/api/productos-proveedor/7/ HTTP/1.1" 200 421
+DEBUG 2025-05-03 17:04:29,462 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-05-03 17:04:29,480 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 18767
+INFO 2025-05-03 17:04:29,559 basehttp "GET /media/productos/adicionales/1_zPOOeZh.webp HTTP/1.1" 200 35470

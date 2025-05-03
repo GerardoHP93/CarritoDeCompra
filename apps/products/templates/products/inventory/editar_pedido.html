@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Editar Pedido | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Editar Pedido #{{ pedido.numero_pedido }}</h2>
+        <div>
+            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-1"></i> Volver al detalle
+            </a>
+        </div>
+    </div>
+    
+    {% if pedido.estado == 'pendiente' %}
+        <div class="card border-0 shadow mb-4">
+            <div class="card-body">
+                <form method="post" id="pedidoForm">
+                    {% csrf_token %}
+                    
+                    <!-- Información básica del pedido -->
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <h4 class="mb-3">Información del Pedido</h4>
+                            
+                            <div class="mb-3">
+                                <label for="{{ form.proveedor.id_for_label }}" class="form-label">Proveedor</label>
+                                {{ form.proveedor }}
+                                {% if form.proveedor.errors %}
+                                    <div class="invalid-feedback d-block">{{ form.proveedor.errors }}</div>
+                                {% endif %}
+                                <div class="form-text">Proveedor al que se realizó el pedido.</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <p class="text-info">
+                                    <i class="bi bi-info-circle-fill me-2"></i> La fecha estimada de entrega se calculará automáticamente según el proveedor seleccionado.
+                                </p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="{{ form.notas.id_for_label }}" class="form-label">Notas</label>
+                                {{ form.notas }}
+                                {% if form.notas.errors %}
+                                    <div class="invalid-feedback d-block">{{ form.notas.errors }}</div>
+                                {% endif %}
+                                <div class="form-text">Información adicional sobre el pedido (opcional).</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Productos del pedido -->
+                    <h4 class="mb-3">Productos del Pedido</h4>
+                    
+                    {{ formset.management_form }}
+                    
+                    <div id="productos-container">
+                        {% for form in formset %}
+                            <div class="producto-form card mb-3">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="{{ form.producto.id_for_label }}" class="form-label">Producto</label>
+                                            {{ form.producto }}
+                                            {% if form.producto.errors %}
+                                                <div class="invalid-feedback d-block">{{ form.producto.errors }}</div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="{{ form.cantidad.id_for_label }}" class="form-label">Cantidad</label>
+                                            {{ form.cantidad }}
+                                            {% if form.cantidad.errors %}
+                                                <div class="invalid-feedback d-block">{{ form.cantidad.errors }}</div>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <label for="{{ form.precio_unitario.id_for_label }}" class="form-label">Precio Unitario</label>
+                                            {{ form.precio_unitario }}
+                                            {% if form.precio_unitario.errors %}
+                                                <div class="invalid-feedback d-block">{{ form.precio_unitario.errors }}</div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    
+                                    {{ form.id }}
+                                    {{ form.DELETE }}
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-sm btn-outline-danger remove-producto">
+                                            <i class="bi bi-trash me-1"></i> Eliminar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button type="button" id="add-producto" class="btn btn-outline-secondary">
+                            <i class="bi bi-plus-lg me-1"></i> Añadir otro producto
+                        </button>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-outline-secondary">
+                            <i class="bi bi-x-circle me-1"></i> Cancelar
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-save me-1"></i> Guardar Cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    {% else %}
+        <div class="alert alert-warning">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i> No se puede editar este pedido porque ya ha sido procesado (estado: {{ pedido.get_estado_display }}).
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-primary">
+                <i class="bi bi-arrow-left me-1"></i> Volver al detalle del pedido
+            </a>
+        </div>
+    {% endif %}
+</div>
+
+<!-- Template para nuevos formularios de producto -->
+<template id="producto-form-template">
+    <div class="producto-form card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="__prefix__-producto" class="form-label">Producto</label>
+                    <select name="detalles-__prefix__-producto" id="detalles-__prefix__-producto" class="form-select producto-select">
+                        <option value="">Selecciona un producto</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="__prefix__-cantidad" class="form-label">Cantidad</label>
+                    <input type="number" name="detalles-__prefix__-cantidad" id="detalles-__prefix__-cantidad" class="form-control" value="1" min="1">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="__prefix__-precio_unitario" class="form-label">Precio Unitario</label>
+                    <input type="number" name="detalles-__prefix__-precio_unitario" id="detalles-__prefix__-precio_unitario" class="form-control" value="0.00" min="0.01" step="0.01">
+                </div>
+            </div>
+            
+            <input type="hidden" name="detalles-__prefix__-id" id="detalles-__prefix__-id">
+            <input type="hidden" name="detalles-__prefix__-DELETE" id="detalles-__prefix__-DELETE">
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-sm btn-outline-danger remove-producto">
+                    <i class="bi bi-trash me-1"></i> Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const proveedorSelect = document.getElementById('id_proveedor');
+        const productosContainer = document.getElementById('productos-container');
+        const addProductoBtn = document.getElementById('add-producto');
+        const totalForms = document.getElementById('id_detalles-TOTAL_FORMS');
+        const maxForms = document.getElementById('id_detalles-MAX_NUM_FORMS');
+        const productoTemplate = document.getElementById('producto-form-template').content;
+        
+        // Función para actualizar los productos disponibles según el proveedor seleccionado
+        function actualizarProductos() {
+            const proveedorId = proveedorSelect.value;
+            
+            if (!proveedorId) {
+                // Si no hay proveedor seleccionado, deshabilitar selección de productos
+                document.querySelectorAll('.producto-select').forEach(select => {
+                    select.innerHTML = '<option value="">Selecciona un proveedor primero</option>';
+                    select.disabled = true;
+                });
+                return;
+            }
+            
+            // Realizar petición AJAX para obtener productos del proveedor
+            fetch(`/products/inventario/api/productos-proveedor/${proveedorId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    const productosOptions = data.productos.map(p => 
+                        `<option value="${p.id}" data-precio="${p.precio}" data-stock="${p.stock}">${p.nombre} (Stock actual: ${p.stock})</option>`
+                    ).join('');
+                    
+                    const baseOption = '<option value="">Selecciona un producto</option>';
+                    
+                    // Actualizar todos los selectores de productos
+                    document.querySelectorAll('.producto-select').forEach(select => {
+                        // Guardar el valor seleccionado actualmente
+                        const currentValue = select.value;
+                        
+                        select.innerHTML = baseOption + productosOptions;
+                        select.disabled = false;
+                        
+                        // Restaurar el valor seleccionado si existe en las nuevas opciones
+                        if (currentValue) {
+                            const option = select.querySelector(`option[value="${currentValue}"]`);
+                            if (option) {
+                                select.value = currentValue;
+                            }
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al obtener productos:', error);
+                    showToast('Error al cargar productos del proveedor', 'error');
+                });
+        }
+        
+        // Función para agregar un nuevo formulario de producto
+        function addProductoForm() {
+            const formCount = parseInt(totalForms.value);
+            const maxCount = parseInt(maxForms.value || 1000);
+            
+            if (formCount < maxCount) {
+                // Clonar el template
+                const newForm = productoTemplate.cloneNode(true);
+                
+                // Reemplazar __prefix__ con el número de formulario actual
+                const regex = new RegExp('__prefix__', 'g');
+                newForm.innerHTML = newForm.innerHTML.replace(regex, formCount);
+                
+                // Agregar al contenedor
+                productosContainer.appendChild(newForm);
+                
+                // Incrementar contador
+                totalForms.value = formCount + 1;
+                
+                // Actualizar los productos disponibles
+                actualizarProductos();
+                
+                // Configurar event listeners para el nuevo formulario
+                setupProductoFormListeners(productosContainer.lastElementChild);
+            } else {
+                showToast('No se pueden agregar más productos', 'warning');
+            }
+        }
+        
+        // Función para eliminar un formulario de producto
+        function removeProductoForm(btn) {
+            const form = btn.closest('.producto-form');
+            
+            // Si solo hay un formulario, no permitir eliminarlo
+            if (parseInt(totalForms.value) > 1) {
+                // Verificar si es un formulario existente (tiene id)
+                const idInput = form.querySelector('input[name$="-id"]');
+                
+                if (idInput && idInput.value) {
+                    // Si tiene ID, es un formulario existente: marcar para eliminación
+                    const deleteInput = form.querySelector('input[name$="-DELETE"]');
+                    if (deleteInput) {
+                        deleteInput.value = 'on';
+                    }
+                    
+                    // Ocultar el formulario en lugar de eliminarlo
+                    form.style.display = 'none';
+                } else {
+                    // Si no tiene ID, es un formulario nuevo: eliminar directamente
+                    form.remove();
+                    
+                    // Actualizar contador
+                    totalForms.value = parseInt(totalForms.value) - 1;
+                    
+                    // Reordenar índices de formularios
+                    updateFormIndices();
+                }
+            } else {
+                showToast('Debe haber al menos un producto en el pedido', 'warning');
+            }
+        }
+        
+        // Función para actualizar los índices de los formularios visibles (no marcados para eliminación)
+        function updateFormIndices() {
+            const forms = Array.from(productosContainer.querySelectorAll('.producto-form')).filter(form => {
+                // Filtrar solo formularios visibles (no marcados para eliminación)
+                const deleteInput = form.querySelector('input[name$="-DELETE"]');
+                return !deleteInput || deleteInput.value !== 'on';
+            });
+            
+            forms.forEach((form, index) => {
+                form.querySelectorAll('input, select').forEach(field => {
+                    // Actualizar name e id pero solo para nuevos formularios (sin id)
+                    const idInput = form.querySelector('input[name$="-id"]');
+                    if (!idInput || !idInput.value) {
+                        if (field.name) {
+                            field.name = field.name.replace(/detalles-\d+-/, `detalles-${index}-`);
+                        }
+                        if (field.id) {
+                            field.id = field.id.replace(/detalles-\d+-/, `detalles-${index}-`);
+                        }
+                        
+                        // Actualizar labels
+                        const labels = form.querySelectorAll('label');
+                        labels.forEach(label => {
+                            if (label.htmlFor) {
+                                label.htmlFor = label.htmlFor.replace(/detalles-\d+-/, `detalles-${index}-`);
+                            }
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Función para configurar event listeners en un formulario de producto
+        function setupProductoFormListeners(form) {
+            // Event listener para el botón de eliminar
+            const removeBtn = form.querySelector('.remove-producto');
+            if (removeBtn) {
+                removeBtn.addEventListener('click', function() {
+                    removeProductoForm(this);
+                });
+            }
+            
+            // Event listener para actualizar precio automáticamente al seleccionar producto
+            const productoSelect = form.querySelector('.producto-select');
+            const precioInput = form.querySelector('[id$="-precio_unitario"]');
+            
+            if (productoSelect && precioInput) {
+                productoSelect.addEventListener('change', function() {
+                    const option = this.options[this.selectedIndex];
+                    if (option && option.dataset.precio) {
+                        precioInput.value = parseFloat(option.dataset.precio).toFixed(2);
+                    }
+                });
+            }
+        }
+        
+        // Configurar event listeners iniciales
+        if (proveedorSelect) {
+            proveedorSelect.addEventListener('change', actualizarProductos);
+        }
+        
+        if (addProductoBtn) {
+            addProductoBtn.addEventListener('click', addProductoForm);
+        }
+        
+        // Configurar event listeners para formularios existentes
+        document.querySelectorAll('.producto-form').forEach(form => {
+            setupProductoFormListeners(form);
+        });
+        
+        // Si ya hay un proveedor seleccionado, cargar sus productos
+        if (proveedorSelect && proveedorSelect.value) {
+            actualizarProductos();
+        }
+        
+        // Validación del formulario antes de enviar
+        const pedidoForm = document.getElementById('pedidoForm');
+        if (pedidoForm) {
+            pedidoForm.addEventListener('submit', function(e) {
+                let isValid = true;
+                
+                // Verificar que haya un proveedor seleccionado
+                if (!proveedorSelect.value) {
+                    e.preventDefault();
+                    showToast('Debes seleccionar un proveedor', 'error');
+                    isValid = false;
+                }
+                
+                // Verificar que todos los productos estén completos
+                const productForms = Array.from(document.querySelectorAll('.producto-form')).filter(form => {
+                    // Excluir formularios marcados para eliminación
+                    const deleteInput = form.querySelector('input[name$="-DELETE"]');
+                    return form.style.display !== 'none' && (!deleteInput || deleteInput.value !== 'on');
+                });
+                
+                // Verificar que haya al menos un producto no marcado para eliminación
+                if (productForms.length === 0) {
+                    e.preventDefault();
+                    showToast('Debes tener al menos un producto en el pedido', 'error');
+                    isValid = false;
+                }
+                
+                // Verificar que todos los productos seleccionados tengan valores válidos
+                productForms.forEach(form => {
+                    const productoSelect = form.querySelector('.producto-select');
+                    const cantidadInput = form.querySelector('[id$="-cantidad"]');
+                    const precioInput = form.querySelector('[id$="-precio_unitario"]');
+                    
+                    if (!productoSelect.value) {
+                        e.preventDefault();
+                        showToast('Debes seleccionar todos los productos', 'error');
+                        isValid = false;
+                    }
+                    
+                    if (!cantidadInput.value || parseInt(cantidadInput.value) < 1) {
+                        e.preventDefault();
+                        showToast('Las cantidades deben ser mayores a cero', 'error');
+                        isValid = false;
+                    }
+                    
+                    if (!precioInput.value || parseFloat(precioInput.value) <= 0) {
+                        e.preventDefault();
+                        showToast('Los precios deben ser mayores a cero', 'error');
+                        isValid = false;
+                    }
+                });
+                
+                if (!isValid) {
+                    e.preventDefault();
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

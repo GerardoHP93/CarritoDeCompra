@@ -255,3 +255,70 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+
+// Función para mostrar notificación de actualización de stock
+function showStockUpdateNotification(productName, oldStock, newStock) {
+    Swal.fire({
+        title: 'Stock Actualizado',
+        html: `
+            <div class="text-center">
+                <i class="bi bi-box-seam text-success" style="font-size: 3rem;"></i>
+                <p class="mt-3">El stock de <strong>${productName}</strong> ha sido actualizado:</p>
+                <div class="d-flex justify-content-center align-items-center gap-3 my-3">
+                    <span class="badge bg-secondary fs-5">${oldStock}</span>
+                    <i class="bi bi-arrow-right"></i>
+                    <span class="badge bg-success fs-5">${newStock}</span>
+                </div>
+                <p class="text-success">¡Actualización exitosa!</p>
+            </div>
+        `,
+        icon: 'success',
+        confirmButtonText: 'Entendido'
+    });
+}
+
+// Función para mostrar una notificación modal después de recibir un pedido
+function showPedidoRecibidoNotification(pedido, detalles) {
+    let detallesHtml = '';
+    
+    detalles.forEach(detalle => {
+        detallesHtml += `
+            <tr>
+                <td>${detalle.producto}</td>
+                <td>${detalle.stockAnterior}</td>
+                <td>+${detalle.cantidad}</td>
+                <td>${detalle.stockNuevo}</td>
+            </tr>
+        `;
+    });
+    
+    Swal.fire({
+        title: 'Pedido Recibido',
+        html: `
+            <div class="text-center mb-3">
+                <i class="bi bi-box-seam text-success" style="font-size: 3rem;"></i>
+                <h5 class="mt-3">El pedido #${pedido.numero} ha sido recibido correctamente</h5>
+                <p>El stock de los productos ha sido actualizado:</p>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-sm table-striped">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Stock Anterior</th>
+                            <th>Incremento</th>
+                            <th>Stock Actual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${detallesHtml}
+                    </tbody>
+                </table>
+            </div>
+        `,
+        icon: 'success',
+        confirmButtonText: 'Entendido',
+        width: '600px'
+    });
+}

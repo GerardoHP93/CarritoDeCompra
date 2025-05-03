@@ -59,6 +59,10 @@
                             <li><hr class="dropdown-divider"></li>
                             {% if user.is_staff %}
                                 <li><a class="dropdown-item" href="{% url 'admin:index' %}">Administración</a></li>
+                                <li><a class="dropdown-item" href="{% url 'products:dashboard_inventario' %}">
+                                    <i class="bi bi-box-seam me-1"></i> Gestión de Inventario
+                                </a></li>
+
                                 <li><hr class="dropdown-divider"></li>
                             {% endif %}
                             <li><a class="dropdown-item text-danger" href="{% url 'users:logout' %}">Cerrar sesión</a></li>

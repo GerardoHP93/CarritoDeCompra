@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cancelar Pedido | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Cancelar Pedido #{{ pedido.numero_pedido }}</h2>
+        <div>
+            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-1"></i> Volver al detalle
+            </a>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Confirmar Cancelación</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-warning mb-4">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> Estás a punto de <strong>cancelar</strong> este pedido. Esta acción no se puede deshacer.
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><strong>Número de Pedido:</strong> {{ pedido.numero_pedido }}</p>
+                            <p><strong>Proveedor:</strong> {{ pedido.proveedor.nombre }}</p>
+                            <p><strong>Fecha de Solicitud:</strong> {{ pedido.fecha_solicitud|date:"d/m/Y H:i" }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Estado Actual:</strong> <span class="badge bg-warning text-dark">Pendiente</span></p>
+                            <p><strong>Fecha Estimada de Llegada:</strong> {{ pedido.fecha_estimada_llegada|date:"d/m/Y" }}</p>
+                            <p><strong>Total del Pedido:</strong> <span class="text-primary fw-bold">${{ pedido.total }}</span></p>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <h5 class="mb-3">Productos del Pedido</h5>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unit.</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for detalle in pedido.detalles.all %}
+                                    <tr>
+                                        <td>{{ detalle.producto.nombre }}</td>
+                                        <td>{{ detalle.cantidad }}</td>
+                                        <td>${{ detalle.precio_unitario }}</td>
+                                        <td>${{ detalle.subtotal }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                            <tfoot>
+                                <tr class="table-light">
+                                    <td colspan="3" class="text-end fw-bold">Total:</td>
+                                    <td class="fw-bold">${{ pedido.total }}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <form method="post" id="cancelarForm" class="mt-4">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label for="motivo_cancelacion" class="form-label">Motivo de la cancelación (opcional)</label>
+                            <textarea id="motivo_cancelacion" name="motivo_cancelacion" class="form-control" rows="3" placeholder="Ingresa el motivo por el cual cancelas este pedido..."></textarea>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="confirmar_cancelacion" required>
+                            <label class="form-check-label" for="confirmar_cancelacion">
+                                Confirmo que deseo cancelar este pedido
+                            </label>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left me-1"></i> Volver
+                            </a>
+                            <button type="submit" class="btn btn-danger" id="btnCancelar">
+                                <i class="bi bi-x-circle me-1"></i> Cancelar Pedido
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cancelarForm = document.getElementById('cancelarForm');
+        const btnCancelar = document.getElementById('btnCancelar');
+        const confirmarCancelacion = document.getElementById('confirmar_cancelacion');
+        
+        if (cancelarForm) {
+            cancelarForm.addEventListener('submit', function(e) {
+                // Validar que se haya confirmado la cancelación
+                if (!confirmarCancelacion.checked) {
+                    e.preventDefault();
+                    showToast('Debes confirmar la cancelación', 'warning');
+                    return;
+                }
+                
+                // Deshabilitar el botón para evitar múltiples envíos
+                btnCancelar.disabled = true;
+                btnCancelar.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Procesando...';
+            });
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}

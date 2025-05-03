@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Recibir Pedido | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Recibir Pedido #{{ pedido.numero_pedido }}</h2>
+        <div>
+            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-1"></i> Volver al detalle
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card border-0 shadow mb-4">
+                <div class="card-header {% if pedido.estado == 'pagado' %}bg-info{% else %}bg-primary{% endif %} text-white">
+                    <h4 class="mb-0">
+                        {% if pedido.estado == 'pagado' %}
+                            Marcar Pedido como En Tránsito
+                        {% else %}
+                            Recibir Pedido y Actualizar Inventario
+                        {% endif %}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert {% if pedido.estado == 'pagado' %}alert-info{% else %}alert-warning{% endif %} mb-4">
+                        <i class="bi {% if pedido.estado == 'pagado' %}bi-info-circle-fill{% else %}bi-exclamation-triangle-fill{% endif %} me-2"></i>
+                        {% if pedido.estado == 'pagado' %}
+                            Este pedido está marcado como <strong>Pagado</strong>. El siguiente paso es marcarlo como <strong>En Tránsito</strong>.
+                        {% else %}
+                            Este pedido está marcado como <strong>En Tránsito</strong>. Al confirmar la recepción, se <strong>actualizará automáticamente el stock</strong> de los productos.
+                        {% endif %}
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><strong>Número de Pedido:</strong> {{ pedido.numero_pedido }}</p>
+                            <p><strong>Proveedor:</strong> {{ pedido.proveedor.nombre }}</p>
+                            <p><strong>Fecha de Solicitud:</strong> {{ pedido.fecha_solicitud|date:"d/m/Y H:i" }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Estado Actual:</strong> 
+                                {% if pedido.estado == 'pagado' %}
+                                    <span class="badge bg-info">Pagado</span>
+                                {% else %}
+                                    <span class="badge bg-primary">En tránsito</span>
+                                {% endif %}
+                            </p>
+                            <p><strong>Fecha Estimada de Llegada:</strong> {{ pedido.fecha_estimada_llegada|date:"d/m/Y" }}</p>
+                            <p><strong>Total del Pedido:</strong> <span class="text-primary fw-bold">${{ pedido.total }}</span></p>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <h5 class="mb-3">Productos del Pedido</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Stock Actual</th>
+                                    <th>Cantidad Pedida</th>
+                                    <th>Stock Después</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for detalle in detalles %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'products:product_detail' detalle.producto.slug %}" class="text-decoration-none">
+                                                {{ detalle.producto.nombre }}
+                                            </a>
+                                        </td>
+                                        <td>{{ detalle.producto.stock }}</td>
+                                        <td>{{ detalle.cantidad }}</td>
+                                        <td>
+                                            <span class="text-success fw-bold">{{ detalle.producto.stock|add:detalle.cantidad }}</span>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">
+                        {% if pedido.estado == 'pagado' %}
+                            Confirmar Tránsito
+                        {% else %}
+                            Confirmar Recepción
+                        {% endif %}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    {% if pedido.estado == 'pagado' %}
+                        <p class="mb-4">Estás a punto de marcar este pedido como <strong>En Tránsito</strong>. Esto indica que el pedido ha sido enviado por el proveedor y está en camino a tu almacén.</p>
+                    {% else %}
+                        <p class="mb-4">Estás a punto de marcar este pedido como <strong>Recibido</strong>. Esto actualizará automáticamente el stock de los productos en el sistema.</p>
+                        
+                        <div class="alert alert-success mb-4">
+                            <i class="bi bi-info-circle-fill me-2"></i> El inventario aumentará en:
+                            <ul class="mb-0 mt-2">
+                                {% for detalle in detalles %}
+                                    <li><strong>{{ detalle.producto.nombre }}:</strong> +{{ detalle.cantidad }} unidades</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                    
+                    <form method="post" id="recepcionForm">
+                        {% csrf_token %}
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="confirmar_recepcion" required>
+                            <label class="form-check-label" for="confirmar_recepcion">
+                                {% if pedido.estado == 'pagado' %}
+                                    Confirmo que el pedido ha sido enviado por el proveedor
+                                {% else %}
+                                    Confirmo que he recibido todos los productos del pedido
+                                {% endif %}
+                            </label>
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success" id="btnConfirmar">
+                                {% if pedido.estado == 'pagado' %}
+                                    <i class="bi bi-truck me-2"></i> Marcar como En Tránsito
+                                {% else %}
+                                    <i class="bi bi-box-seam me-2"></i> Confirmar Recepción
+                                {% endif %}
+                            </button>
+                            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-outline-secondary">
+                                Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const recepcionForm = document.getElementById('recepcionForm');
+        const btnConfirmar = document.getElementById('btnConfirmar');
+        const confirmarRecepcion = document.getElementById('confirmar_recepcion');
+        
+        if (recepcionForm) {
+            recepcionForm.addEventListener('submit', function(e) {
+                // Validar que se haya confirmado la recepción
+                if (!confirmarRecepcion.checked) {
+                    e.preventDefault();
+                    showToast('Debes confirmar la acción', 'warning');
+                    return;
+                }
+                
+                // Deshabilitar el botón para evitar múltiples envíos
+                btnConfirmar.disabled = true;
+                btnConfirmar.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Procesando...';
+            });
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}

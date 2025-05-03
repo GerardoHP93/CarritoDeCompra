@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pedidos a Proveedores | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Pedidos a Proveedores</h2>
+        <div>
+            <a href="{% url 'products:dashboard_inventario' %}" class="btn btn-outline-secondary me-2">
+                <i class="bi bi-speedometer2 me-1"></i> Dashboard
+            </a>
+            <a href="{% url 'products:crear_pedido_proveedor' %}" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i> Nuevo Pedido
+            </a>
+        </div>
+    </div>
+    
+    <div class="card border-0 shadow">
+        <div class="card-body">
+            {% if pedidos %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>No. Pedido</th>
+                                <th>Proveedor</th>
+                                <th>Fecha Solicitud</th>
+                                <th>Fecha Est. Llegada</th>
+                                <th>Estado</th>
+                                <th>Total</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for pedido in pedidos %}
+                                <tr>
+                                    <td>{{ pedido.numero_pedido }}</td>
+                                    <td>{{ pedido.proveedor.nombre }}</td>
+                                    <td>{{ pedido.fecha_solicitud|date:"d/m/Y H:i" }}</td>
+                                    <td>{{ pedido.fecha_estimada_llegada|date:"d/m/Y" }}</td>
+                                    <td>
+                                        {% if pedido.estado == 'pendiente' %}
+                                            <span class="badge bg-warning text-dark">Pendiente</span>
+                                        {% elif pedido.estado == 'pagado' %}
+                                            <span class="badge bg-info">Pagado</span>
+                                        {% elif pedido.estado == 'en_transito' %}
+                                            <span class="badge bg-primary">En tránsito</span>
+                                        {% elif pedido.estado == 'recibido' %}
+                                            <span class="badge bg-success">Recibido</span>
+                                        {% elif pedido.estado == 'cancelado' %}
+                                            <span class="badge bg-danger">Cancelado</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>${{ pedido.total }}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            {% if pedido.estado == 'pendiente' or pedido.estado == 'pagado' %}
+                                                <a href="{% url 'products:editar_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-secondary">
+                                                    <i class="bi bi-pencil"></i>
+                                                </a>
+                                            {% endif %}
+                                            {% if pedido.estado == 'pendiente' %}
+                                                <a href="{% url 'products:pagar_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-success">
+                                                    <i class="bi bi-credit-card"></i>
+                                                </a>
+                                            {% endif %}
+                                            {% if pedido.estado == 'pagado' %}
+                                                <a href="{% url 'products:recibir_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-info">
+                                                    <i class="bi bi-truck"></i>
+                                                </a>
+                                            {% endif %}
+                                            {% if pedido.estado == 'en_transito' %}
+                                                <a href="{% url 'products:recibir_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-success">
+                                                    <i class="bi bi-box-seam"></i>
+                                                </a>
+                                            {% endif %}
+                                            {% if pedido.estado == 'pendiente' %}
+                                                <a href="{% url 'products:cancelar_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-danger">
+                                                    <i class="bi bi-x-circle"></i>
+                                                </a>
+                                            {% endif %}
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="text-center py-5">
+                    <i class="bi bi-inbox display-1 text-muted"></i>
+                    <h4 class="mt-3">No hay pedidos registrados</h4>
+                    <p class="text-muted">Crea un nuevo pedido a proveedor para abastecer tu inventario.</p>
+                    <a href="{% url 'products:crear_pedido_proveedor' %}" class="btn btn-primary mt-2">
+                        <i class="bi bi-plus-lg me-1"></i> Crear nuevo pedido
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

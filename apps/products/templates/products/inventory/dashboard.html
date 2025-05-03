@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard de Inventario | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Dashboard de Inventario</h2>
+        <div>
+            <a href="{% url 'products:crear_pedido_proveedor' %}" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i> Nuevo Pedido a Proveedor
+            </a>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Panel de productos con stock bajo -->
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0"><i class="bi bi-exclamation-triangle me-2"></i> Productos con Stock Bajo</h4>
+                </div>
+                <div class="card-body">
+                    {% if productos_stock_bajo %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Stock Actual</th>
+                                        <th>Proveedor</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for producto in productos_stock_bajo %}
+                                        <tr class="{% if producto.stock == 0 %}table-danger{% elif producto.stock <= 5 %}table-warning{% endif %}">
+                                            <td>
+                                                <a href="{% url 'products:product_detail' producto.slug %}" class="text-decoration-none">
+                                                    {{ producto.nombre }}
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span class="badge {% if producto.stock == 0 %}bg-danger{% elif producto.stock <= 5 %}bg-warning text-dark{% else %}bg-success{% endif %}">
+                                                    {{ producto.stock }}
+                                                </span>
+                                            </td>
+                                            <td>{{ producto.proveedor.nombre }}</td>
+                                            <td>
+                                                <a href="{% url 'products:crear_pedido_proveedor' %}?proveedor={{ producto.proveedor.id }}&producto={{ producto.id }}" class="btn btn-sm btn-outline-primary">
+                                                    <i class="bi bi-cart-plus me-1"></i> Solicitar
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="bi bi-emoji-smile display-4 text-muted"></i>
+                            <p class="mt-3">No hay productos con stock bajo en este momento.</p>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-white">
+                    <a href="{% url 'products:product_list' %}" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-box-seam me-1"></i> Ver todos los productos
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Panel de pedidos pendientes -->
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="bi bi-truck me-2"></i> Pedidos en Proceso</h4>
+                </div>
+                <div class="card-body">
+                    {% if pedidos_pendientes %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>No. Pedido</th>
+                                        <th>Proveedor</th>
+                                        <th>Estado</th>
+                                        <th>Fecha Est.</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for pedido in pedidos_pendientes %}
+                                        <tr>
+                                            <td>{{ pedido.numero_pedido }}</td>
+                                            <td>{{ pedido.proveedor.nombre }}</td>
+                                            <td>
+                                                {% if pedido.estado == 'pendiente' %}
+                                                    <span class="badge bg-warning text-dark">Pendiente</span>
+                                                {% elif pedido.estado == 'pagado' %}
+                                                    <span class="badge bg-info">Pagado</span>
+                                                {% elif pedido.estado == 'en_transito' %}
+                                                    <span class="badge bg-primary">En tránsito</span>
+                                                {% endif %}
+                                            </td>
+                                            <td>{{ pedido.fecha_estimada_llegada|date:"d/m/Y" }}</td>
+                                            <td>
+                                                <a href="{% url 'products:detalle_pedido_proveedor' pedido.numero_pedido %}" class="btn btn-sm btn-outline-primary">
+                                                    <i class="bi bi-eye me-1"></i> Ver
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="bi bi-clipboard-check display-4 text-muted"></i>
+                            <p class="mt-3">No hay pedidos en proceso en este momento.</p>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-white">
+                    <a href="{% url 'products:lista_pedidos_proveedor' %}" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-list-check me-1"></i> Ver todos los pedidos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Estadísticas rápidas -->
+        <div class="col-12 mb-4">
+            <div class="card border-0 shadow">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="bi bi-graph-up me-2"></i> Estadísticas de Inventario</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border rounded">
+                                <h3 class="display-4 fw-bold text-primary">{{ productos_stock_bajo.count }}</h3>
+                                <p class="text-muted mb-0">Productos con stock bajo</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border rounded">
+                                <h3 class="display-4 fw-bold text-info">{{ pedidos_pendientes.count }}</h3>
+                                <p class="text-muted mb-0">Pedidos en proceso</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border rounded">
+                                <h3 class="display-4 fw-bold text-success">{{ pedidos_pendientes_count|default:"0" }}</h3>
+                                <p class="text-muted mb-0">Pedidos recibidos este mes</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="p-3 border rounded">
+                                <h3 class="display-4 fw-bold text-warning">{{ productos_agotados_count|default:"0" }}</h3>
+                                <p class="text-muted mb-0">Productos agotados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
