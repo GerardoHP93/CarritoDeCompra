@@ -11,4 +11,7 @@ urlpatterns = [
     path('checkout/confirmacion/', views.checkout_confirmacion, name='checkout_confirmacion'),
     path('historial/', views.historial_ordenes, name='historial_ordenes'),
     path('detalle/<str:numero_orden>/', views.detalle_orden, name='detalle_orden'),
+    # Nuevas rutas para confirmar recepción y valorar productos
+    path('confirmar-recepcion/<str:numero_orden>/', views.confirmar_recepcion, name='confirmar_recepcion'),
+    path('valorar-productos/<str:numero_orden>/', views.valorar_productos, name='valorar_productos'),
 ]

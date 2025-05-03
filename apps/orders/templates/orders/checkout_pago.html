@@ -153,18 +153,17 @@
                     <h4 class="mb-0">Resumen del Pedido</h4>
                 </div>
                 <div class="card-body">
+<!-- En apps/orders/templates/orders/checkout_pago.html -->
+<!-- Busca esta sección y reemplázala -->
+
                     <div class="mb-3">
                         <h5 class="border-bottom pb-2">Dirección de Envío</h5>
                         <p class="mb-0">
                             {{ request.session.direccion_completa.nombre_completo }}<br>
-                            {{ request.session.direccion_completa.calle }} {{
-                            request.session.direccion_completa.numero_exterior }}
-                            {% if request.session.direccion_completa.numero_interior %}, Int. {{
-                            request.session.direccion_completa.numero_interior }}{% endif %}<br>
-                            {{ request.session.direccion_completa.colonia }}, {{
-                            request.session.direccion_completa.ciudad }}<br>
-                            {{ request.session.direccion_completa.estado }}, {{ request.session.direccion_completa.pais
-                            }}<br>
+                            {{ request.session.direccion_completa.calle }} {{ request.session.direccion_completa.numero_exterior }}
+                            {% if request.session.direccion_completa.numero_interior %}, Int. {{ request.session.direccion_completa.numero_interior }}{% endif %}<br>
+                            {{ request.session.direccion_completa.colonia }}, {{ request.session.direccion_completa.ciudad }}<br>
+                            {{ request.session.direccion_completa.estado }}, {{ request.session.direccion_completa.pais }}<br>
                             C.P. {{ request.session.direccion_completa.codigo_postal }}<br>
                             Tel: {{ request.session.direccion_completa.telefono_contacto }}
                         </p>

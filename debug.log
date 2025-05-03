@@ -4177,3 +4177,672 @@ DEBUG 2025-04-28 09:16:21,659 views Detalle de producto: Bacardí ron sabor coco 
 INFO 2025-04-28 09:16:21,702 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27462
 DEBUG 2025-04-28 09:16:26,410 views Producto eliminado del carrito: Bacardí ron sabor coco 700mL
 INFO 2025-04-28 09:16:26,415 basehttp "POST /cart/remove-ajax/10/ HTTP/1.1" 200 128
+INFO 2025-04-28 09:59:59,713 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-28 10:00:03,089 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 10:00:03,248 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23410
+ERROR 2025-04-28 10:00:09,260 log Internal Server Error: /orders/historial/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: orders_orden.recibido
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 406, in historial_ordenes
+    return render(request, 'orders/historial_ordenes.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\defaulttags.py", line 326, in render
+    if match:
+       ^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 398, in __bool__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: orders_orden.recibido
+ERROR 2025-04-28 10:00:09,293 basehttp "GET /orders/historial/ HTTP/1.1" 500 226511
+DEBUG 2025-04-28 10:27:48,931 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-04-28 10:27:48,936 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:27:48,958 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-04-28 10:27:49,056 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 27439
+DEBUG 2025-04-28 10:27:51,670 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:27:51,723 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20758
+INFO 2025-04-28 10:27:53,953 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32080
+ERROR 2025-04-28 10:28:01,807 log Internal Server Error: /orders/checkout/direccion/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table orders_orden has no column named recibido
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 146, in checkout_direccion
+    orden = Orden.objects.create(
+        usuario=request.user,
+    ...<8 lines>...
+        telefono_envio=direccion_data['telefono_contacto']
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 663, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\models.py", line 59, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\base.py", line 902, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\base.py", line 1008, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\base.py", line 1169, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\base.py", line 1210, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\query.py", line 1854, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1881, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: table orders_orden has no column named recibido
+ERROR 2025-04-28 10:28:01,820 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 500 196633
+INFO 2025-04-28 10:28:39,127 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 10:28:43,984 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:28:44,133 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32768
+INFO 2025-04-28 10:28:55,300 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:28:55,381 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 25665
+INFO 2025-04-28 10:29:08,896 views Orden #ORD-5B40F6EBE9E7 completada exitosamente por el usuario Gerardo
+INFO 2025-04-28 10:29:08,917 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:29:09,000 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16345
+INFO 2025-04-28 10:29:15,582 basehttp "GET /orders/historial/ HTTP/1.1" 200 18858
+INFO 2025-04-28 10:29:22,967 basehttp "GET /orders/detalle/ORD-E4B9CEB8BFBB/ HTTP/1.1" 200 16313
+INFO 2025-04-28 10:29:39,992 basehttp "GET /orders/detalle/ORD-5B40F6EBE9E7/ HTTP/1.1" 200 16701
+INFO 2025-04-28 10:29:48,233 basehttp "GET /orders/historial/ HTTP/1.1" 200 18858
+INFO 2025-04-28 10:30:03,914 basehttp "GET /orders/detalle/ORD-5B40F6EBE9E7/ HTTP/1.1" 200 16701
+DEBUG 2025-04-28 10:30:13,075 views Listado de productos: 11 productos mostrados
+INFO 2025-04-28 10:30:13,127 basehttp "GET /products/ HTTP/1.1" 200 32312
+INFO 2025-04-28 10:30:16,261 basehttp "GET /orders/historial/ HTTP/1.1" 200 18858
+INFO 2025-04-28 10:30:19,143 basehttp "GET /orders/detalle/ORD-5B40F6EBE9E7/ HTTP/1.1" 200 16701
+INFO 2025-04-28 10:30:27,723 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 22835
+INFO 2025-04-28 10:30:30,434 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 18250
+DEBUG 2025-04-28 10:30:35,438 views Acceso a la página de inicio
+INFO 2025-04-28 10:30:35,498 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-28 10:30:43,066 views Listado de productos: 1 productos mostrados
+INFO 2025-04-28 10:30:43,106 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 14558
+DEBUG 2025-04-28 10:30:45,231 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-28 10:30:45,280 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 19471
+DEBUG 2025-04-28 10:30:46,619 views Producto agregado/actualizado en carrito: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad: 1
+INFO 2025-04-28 10:30:46,626 basehttp "POST /cart/add/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:30:46,679 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-28 10:30:46,775 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 23568
+DEBUG 2025-04-28 10:30:49,221 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:30:49,263 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20874
+DEBUG 2025-04-28 10:30:51,852 views Carrito actualizado: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad=2
+INFO 2025-04-28 10:30:51,855 basehttp "POST /cart/update/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:30:51,897 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:30:51,976 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20877
+DEBUG 2025-04-28 10:30:52,640 views Carrito actualizado: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad=3
+INFO 2025-04-28 10:30:52,645 basehttp "POST /cart/update/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:30:52,689 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:30:52,770 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20877
+DEBUG 2025-04-28 10:30:54,647 views Carrito actualizado: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad=4
+INFO 2025-04-28 10:30:54,650 basehttp "POST /cart/update/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:30:54,673 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:30:54,717 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20877
+DEBUG 2025-04-28 10:30:54,820 views Carrito actualizado: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad=5
+INFO 2025-04-28 10:30:54,821 basehttp "POST /cart/update/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:30:54,888 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:30:54,922 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20877
+DEBUG 2025-04-28 10:30:54,996 views Carrito actualizado: Consola Xbox Series S All Digital 512gb Color Blanco, cantidad=6
+INFO 2025-04-28 10:30:54,998 basehttp "POST /cart/update/5/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:30:55,014 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:30:55,052 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20877
+INFO 2025-04-28 10:30:56,613 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32154
+INFO 2025-04-28 10:31:00,770 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:31:00,860 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32843
+INFO 2025-04-28 10:31:50,944 basehttp "GET /orders/historial/ HTTP/1.1" 200 21700
+INFO 2025-04-28 10:31:58,105 basehttp "GET /orders/detalle/ORD-6CE842336849/ HTTP/1.1" 200 18061
+DEBUG 2025-04-28 10:32:13,736 views Acceso a la página de inicio
+INFO 2025-04-28 10:32:13,792 basehttp "GET / HTTP/1.1" 200 17472
+DEBUG 2025-04-28 10:32:19,102 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:32:19,162 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20877
+INFO 2025-04-28 10:32:20,437 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32154
+INFO 2025-04-28 10:32:25,664 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:32:25,726 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32843
+INFO 2025-04-28 10:32:29,549 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:32:29,616 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 25768
+INFO 2025-04-28 10:32:34,968 views Orden #ORD-6CE842336849 completada exitosamente por el usuario Gerardo
+INFO 2025-04-28 10:32:34,990 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:32:35,081 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16377
+INFO 2025-04-28 10:32:41,039 basehttp "GET /orders/historial/ HTTP/1.1" 200 19951
+INFO 2025-04-28 10:32:45,694 basehttp "GET /orders/detalle/ORD-6CE842336849/ HTTP/1.1" 200 16733
+DEBUG 2025-04-28 10:33:14,256 views Acceso a la página de inicio
+INFO 2025-04-28 10:33:14,299 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-28 10:33:16,767 views Listado de productos: 1 productos mostrados
+INFO 2025-04-28 10:33:16,805 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 14558
+DEBUG 2025-04-28 10:33:18,519 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-28 10:33:18,571 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 19469
+DEBUG 2025-04-28 10:33:25,386 views Acceso a la página de inicio
+INFO 2025-04-28 10:33:25,429 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-04-28 10:33:35,524 views Listado de productos: 1 productos mostrados
+INFO 2025-04-28 10:33:35,567 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14537
+DEBUG 2025-04-28 10:33:36,584 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-28 10:33:36,624 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19684
+DEBUG 2025-04-28 10:33:37,846 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-04-28 10:33:37,848 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 10:33:37,869 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-04-28 10:33:37,975 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 23763
+DEBUG 2025-04-28 10:33:40,647 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:33:40,689 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20838
+INFO 2025-04-28 10:33:41,717 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32127
+INFO 2025-04-28 10:33:43,910 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:33:43,996 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32816
+INFO 2025-04-28 10:39:37,880 basehttp "GET /admin/ HTTP/1.1" 200 16111
+INFO 2025-04-28 10:39:37,937 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:37,938 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:37,952 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:37,954 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:37,963 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:37,967 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:37,989 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:38,010 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:38,011 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,755 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 21430
+INFO 2025-04-28 10:39:41,824 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,832 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,834 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,834 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,835 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,837 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,837 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,838 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,845 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,864 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,911 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:41,938 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-28 10:39:42,002 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:42,005 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:42,011 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:51,168 basehttp "GET /admin/orders/orden/8/change/ HTTP/1.1" 200 28089
+INFO 2025-04-28 10:39:51,236 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:51,239 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:51,240 basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:51,247 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-28 10:39:51,268 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-04-28 10:39:51,268 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-04-28 10:40:07,819 basehttp "POST /admin/orders/orden/8/change/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:40:07,909 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 21647
+INFO 2025-04-28 10:40:07,969 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-04-28 10:40:08,022 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-04-28 10:40:11,074 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32816
+DEBUG 2025-04-28 10:40:13,113 views Acceso a la página de inicio
+INFO 2025-04-28 10:40:13,154 basehttp "GET / HTTP/1.1" 200 17455
+INFO 2025-04-28 10:40:15,527 basehttp "GET /orders/historial/ HTTP/1.1" 200 22776
+INFO 2025-04-28 10:40:20,743 basehttp "GET /orders/detalle/ORD-6CE842336849/ HTTP/1.1" 200 19187
+INFO 2025-04-28 10:40:25,841 views Usuario Gerardo confirmó la recepción del pedido #ORD-6CE842336849
+INFO 2025-04-28 10:40:25,843 basehttp "POST /orders/confirmar-recepcion/ORD-6CE842336849/ HTTP/1.1" 302 0
+ERROR 2025-04-28 10:40:25,927 log Internal Server Error: /orders/valorar-productos/ORD-6CE842336849/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 490, in valorar_productos
+    valoraciones_existentes = CalificacionProducto.objects.filter(
+                              ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'CalificacionProducto' is not defined
+ERROR 2025-04-28 10:40:25,950 basehttp "GET /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 500 82477
+INFO 2025-04-28 10:41:54,137 views Usuario Gerardo confirmó la recepción del pedido #ORD-6CE842336849
+INFO 2025-04-28 10:41:54,140 basehttp "POST /orders/confirmar-recepcion/ORD-6CE842336849/ HTTP/1.1" 302 0
+ERROR 2025-04-28 10:41:54,226 log Internal Server Error: /orders/valorar-productos/ORD-6CE842336849/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 490, in valorar_productos
+    valoraciones_existentes = CalificacionProducto.objects.filter(
+                              ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'CalificacionProducto' is not defined
+ERROR 2025-04-28 10:41:54,241 basehttp "GET /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 500 82485
+INFO 2025-04-28 10:42:20,001 views Usuario Gerardo confirmó la recepción del pedido #ORD-6CE842336849
+INFO 2025-04-28 10:42:20,004 basehttp "POST /orders/confirmar-recepcion/ORD-6CE842336849/ HTTP/1.1" 302 0
+ERROR 2025-04-28 10:42:20,109 log Internal Server Error: /orders/valorar-productos/ORD-6CE842336849/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 490, in valorar_productos
+    valoraciones_existentes = CalificacionProducto.objects.filter(
+                              ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'CalificacionProducto' is not defined
+ERROR 2025-04-28 10:42:20,121 basehttp "GET /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 500 82485
+INFO 2025-04-28 10:43:49,066 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\urls.py changed, reloading.
+INFO 2025-04-28 10:43:51,430 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 10:44:42,165 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 10:44:46,707 views Usuario Gerardo confirmó la recepción del pedido #ORD-6CE842336849
+INFO 2025-04-28 10:44:46,723 basehttp "POST /orders/confirmar-recepcion/ORD-6CE842336849/ HTTP/1.1" 302 0
+ERROR 2025-04-28 10:44:46,838 log Internal Server Error: /orders/valorar-productos/ORD-6CE842336849/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 490, in valorar_productos
+    valoraciones_existentes = CalificacionProducto.objects.filter(
+                              ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'CalificacionProducto' is not defined
+ERROR 2025-04-28 10:44:46,856 basehttp "GET /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 500 82489
+DEBUG 2025-04-28 10:45:04,288 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 10:45:04,333 basehttp "GET /cart/checkout/ HTTP/1.1" 200 24217
+INFO 2025-04-28 10:45:05,729 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32127
+INFO 2025-04-28 10:45:09,462 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:45:09,583 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32705
+INFO 2025-04-28 10:45:14,244 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:45:14,287 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 25725
+INFO 2025-04-28 10:46:29,793 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-04-28 10:46:30,956 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 10:46:53,974 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-04-28 10:46:55,183 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 10:47:00,146 basehttp "GET /orders/historial/ HTTP/1.1" 200 22782
+INFO 2025-04-28 10:47:05,698 basehttp "GET /orders/detalle/ORD-6CE842336849/ HTTP/1.1" 200 19081
+INFO 2025-04-28 10:47:08,512 basehttp "GET /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 200 15514
+INFO 2025-04-28 10:47:25,307 views Usuario Gerardo valoró el producto 5 con 5 estrellas
+INFO 2025-04-28 10:47:25,308 basehttp "POST /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 302 0
+INFO 2025-04-28 10:47:25,357 basehttp "GET /orders/valorar-productos/ORD-6CE842336849/ HTTP/1.1" 200 19449
+DEBUG 2025-04-28 10:47:32,459 views Acceso a la página de inicio
+INFO 2025-04-28 10:47:32,488 basehttp "GET / HTTP/1.1" 200 17455
+DEBUG 2025-04-28 10:47:34,776 views Listado de productos: 1 productos mostrados
+INFO 2025-04-28 10:47:34,796 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 16283
+DEBUG 2025-04-28 10:47:35,664 views Detalle de producto: Consola Xbox Series S All Digital 512gb Color Blanco
+INFO 2025-04-28 10:47:35,708 basehttp "GET /products/consola-xbox-series-s-all-digital-512gb-color-blanco/ HTTP/1.1" 200 23923
+WARNING 2025-04-28 10:47:35,771 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+DEBUG 2025-04-28 10:47:42,582 views Acceso a la página de inicio
+INFO 2025-04-28 10:47:42,609 basehttp "GET / HTTP/1.1" 200 17455
+INFO 2025-04-28 18:57:28,588 autoreload Watching for file changes with StatReloader
+INFO 2025-04-28 18:57:40,744 autoreload Watching for file changes with StatReloader
+DEBUG 2025-04-28 18:57:42,695 views Acceso a la página de inicio
+INFO 2025-04-28 18:57:43,070 basehttp "GET / HTTP/1.1" 200 17455
+WARNING 2025-04-28 18:57:43,514 log Not Found: /favicon.ico
+WARNING 2025-04-28 18:57:43,515 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+INFO 2025-04-28 19:30:43,392 basehttp "GET /admin/ HTTP/1.1" 200 16116
+DEBUG 2025-04-28 19:30:52,270 views Listado de productos: 7 productos mostrados
+INFO 2025-04-28 19:30:52,346 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27055
+DEBUG 2025-04-28 19:30:54,186 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-04-28 19:30:54,310 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 27169
+DEBUG 2025-04-28 19:30:59,342 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-28 19:30:59,387 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 25832
+DEBUG 2025-04-28 19:31:35,660 views Producto agregado/actualizado en carrito: Johnnie Walker Blue Label X750cc, cantidad: 6
+INFO 2025-04-28 19:31:35,663 basehttp "POST /cart/add/7/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 19:31:35,680 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-28 19:31:35,737 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 29587
+DEBUG 2025-04-28 19:34:47,421 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-28 19:34:47,479 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 27251
+INFO 2025-04-28 19:34:50,599 basehttp "GET /admin/ HTTP/1.1" 200 16116
+INFO 2025-04-28 19:34:52,963 basehttp "GET /admin/products/proveedor/ HTTP/1.1" 200 17968
+INFO 2025-04-28 19:34:53,183 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-04-28 19:37:46,039 views Producto agregado/actualizado en carrito: Johnnie Walker Blue Label X750cc, cantidad: 3
+INFO 2025-04-28 19:37:46,041 basehttp "POST /cart/add/7/ HTTP/1.1" 302 0
+DEBUG 2025-04-28 19:37:46,058 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-04-28 19:37:46,117 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 29611
+DEBUG 2025-04-28 19:37:49,696 views Vista del carrito para usuario: Gerardo
+INFO 2025-04-28 19:37:49,839 basehttp "GET /cart/checkout/ HTTP/1.1" 200 24902
+INFO 2025-04-28 19:37:58,154 views Carrito ha cambiado, limpiando sesión de checkout para usuario Gerardo
+INFO 2025-04-28 19:37:58,280 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 34000
+INFO 2025-04-28 19:38:43,689 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-04-28 19:38:43,822 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 34578
+INFO 2025-04-28 19:39:59,733 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-04-28 19:39:59,880 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 28030
+INFO 2025-04-28 19:40:30,490 views Orden #ORD-AA5C1160055D completada exitosamente por el usuario Gerardo
+INFO 2025-04-28 19:40:30,508 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-04-28 19:40:30,613 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16736
+INFO 2025-04-28 19:40:35,827 basehttp "GET /orders/historial/ HTTP/1.1" 200 22150
+INFO 2025-04-28 19:40:44,180 basehttp "GET /orders/detalle/ORD-AA5C1160055D/ HTTP/1.1" 200 17120
+INFO 2025-05-03 13:08:28,720 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 13:08:31,129 views Acceso a la página de inicio
+INFO 2025-05-03 13:08:31,483 basehttp "GET / HTTP/1.1" 200 15730
+INFO 2025-05-03 13:08:31,556 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-05-03 13:08:31,572 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+INFO 2025-05-03 13:08:31,630 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-05-03 13:08:31,630 basehttp "GET /media/categorias/Imagen_de_la_categoria.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:08:31,642 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:08:31,761 basehttp "GET /static/css/main.css HTTP/1.1" 200 10681
+INFO 2025-05-03 13:08:31,861 basehttp "GET /static/js/main.js HTTP/1.1" 200 10764
+WARNING 2025-05-03 13:08:32,083 log Not Found: /favicon.ico
+WARNING 2025-05-03 13:08:32,084 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+INFO 2025-05-03 13:08:44,945 basehttp "GET /orders/historial/ HTTP/1.1" 200 22150
+INFO 2025-05-03 13:08:48,373 basehttp "GET /orders/detalle/ORD-DE504BC58EBC/ HTTP/1.1" 200 16328
+DEBUG 2025-05-03 13:08:56,340 views Acceso a la página de inicio
+INFO 2025-05-03 13:08:56,392 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-05-03 13:09:02,434 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 13:09:02,508 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25330
+INFO 2025-05-03 13:09:02,586 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:09:02,587 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:09:02,618 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:09:02,622 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:09:02,625 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:09:02,629 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+INFO 2025-05-03 13:09:02,630 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+DEBUG 2025-05-03 13:09:04,170 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:09:04,324 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25444
+INFO 2025-05-03 13:09:04,400 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 304 0
+DEBUG 2025-05-03 13:09:13,791 views Acceso a la página de inicio
+INFO 2025-05-03 13:09:13,848 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-05-03 13:09:15,037 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 13:09:15,059 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14537
+INFO 2025-05-03 13:09:15,123 basehttp "GET /media/productos/principal.webp HTTP/1.1" 304 0
+DEBUG 2025-05-03 13:09:16,351 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-05-03 13:09:16,402 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19684
+INFO 2025-05-03 13:09:16,525 basehttp "GET /media/productos/adicionales/principal.webp HTTP/1.1" 200 51618
+INFO 2025-05-03 13:09:16,532 basehttp "GET /media/productos/adicionales/1.webp HTTP/1.1" 200 38538
+INFO 2025-05-03 13:09:16,552 basehttp "GET /media/productos/adicionales/2.webp HTTP/1.1" 200 20340
+DEBUG 2025-05-03 13:09:25,894 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 4
+INFO 2025-05-03 13:09:25,900 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:09:25,924 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-05-03 13:09:25,984 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 23764
+DEBUG 2025-05-03 13:09:32,671 views Producto eliminado del carrito: Carne de res Marketside congelada para hamburguesa
+INFO 2025-05-03 13:09:32,676 basehttp "POST /cart/remove-ajax/2/ HTTP/1.1" 200 145
+INFO 2025-05-03 13:09:36,485 views Usuario  cerró sesión
+INFO 2025-05-03 13:09:36,488 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:09:36,494 views Acceso a la página de inicio
+INFO 2025-05-03 13:09:36,522 basehttp "GET / HTTP/1.1" 200 17280
+INFO 2025-05-03 13:09:38,054 basehttp "GET /users/login/ HTTP/1.1" 200 12823
+INFO 2025-05-03 13:09:38,185 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 200 40342
+WARNING 2025-05-03 13:09:56,158 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:09:56,210 basehttp "POST /users/login/ HTTP/1.1" 200 13240
+WARNING 2025-05-03 13:10:03,679 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:10:03,688 basehttp "POST /users/login/ HTTP/1.1" 200 13240
+WARNING 2025-05-03 13:10:20,967 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:10:20,977 basehttp "POST /users/login/ HTTP/1.1" 200 13238
+INFO 2025-05-03 13:10:27,888 basehttp "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:10:28,138 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4248
+INFO 2025-05-03 13:10:28,188 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-05-03 13:10:28,195 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-05-03 13:10:28,199 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-05-03 13:10:28,201 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:10:28,202 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-05-03 13:10:28,221 basehttp "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-05-03 13:10:28,222 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:10:34,034 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4498
+INFO 2025-05-03 13:10:40,351 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4498
+INFO 2025-05-03 13:10:44,884 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4496
+INFO 2025-05-03 13:11:05,968 basehttp "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4496
+INFO 2025-05-03 13:11:11,133 basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4248
+DEBUG 2025-05-03 13:11:14,335 views Acceso a la página de inicio
+INFO 2025-05-03 13:11:14,383 basehttp "GET / HTTP/1.1" 200 14925
+DEBUG 2025-05-03 13:11:17,306 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 13:11:17,331 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24525
+DEBUG 2025-05-03 13:11:18,446 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:11:18,486 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24639
+INFO 2025-05-03 13:11:19,611 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:11:19,634 basehttp "GET /users/login/?next=/cart/add/11/ HTTP/1.1" 200 12823
+INFO 2025-05-03 13:11:29,321 basehttp "GET /users/login/ HTTP/1.1" 200 12823
+WARNING 2025-05-03 13:11:37,150 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:11:37,160 basehttp "POST /users/login/ HTTP/1.1" 200 13238
+WARNING 2025-05-03 13:11:50,854 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:11:50,864 basehttp "POST /users/login/ HTTP/1.1" 200 13238
+WARNING 2025-05-03 13:12:05,336 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:12:05,345 basehttp "POST /users/login/ HTTP/1.1" 200 13238
+WARNING 2025-05-03 13:15:18,568 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:15:18,572 basehttp "POST /users/login/ HTTP/1.1" 200 13238
+WARNING 2025-05-03 13:15:24,042 views Intento de inicio de sesión fallido
+INFO 2025-05-03 13:15:24,048 basehttp "POST /users/login/ HTTP/1.1" 200 13238
+INFO 2025-05-03 13:15:33,483 basehttp "GET /users/password-reset/ HTTP/1.1" 200 11072
+INFO 2025-05-03 13:15:37,397 views Solicitud de restablecimiento de contraseña para zurdoherrera10@gmail.com
+INFO 2025-05-03 13:15:43,414 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:15:43,473 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 10727
+INFO 2025-05-03 13:18:47,058 basehttp "GET /users/password-reset-confirm/Mg/cp8a61-67d03559faad70ba6206bc3aa2b7fbb5/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:18:47,248 basehttp "GET /users/password-reset-confirm/Mg/set-password/ HTTP/1.1" 200 11704
+DEBUG 2025-05-03 13:19:55,794 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-05-03 13:19:55,804 basehttp "POST /users/password-reset-confirm/Mg/set-password/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:19:55,876 basehttp "GET /users/password-reset-complete/ HTTP/1.1" 200 10354
+INFO 2025-05-03 13:19:57,383 basehttp "GET /users/login/ HTTP/1.1" 200 12823
+DEBUG 2025-05-03 13:20:03,534 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-05-03 13:20:03,535 views Usuario Gerry inició sesión
+INFO 2025-05-03 13:20:03,543 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:20:03,552 views Acceso a la página de inicio
+INFO 2025-05-03 13:20:03,582 basehttp "GET / HTTP/1.1" 200 17878
+DEBUG 2025-05-03 13:20:10,487 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 13:20:10,528 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25127
+DEBUG 2025-05-03 13:20:11,375 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:20:11,422 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25241
+DEBUG 2025-05-03 13:21:03,688 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 2
+INFO 2025-05-03 13:21:03,690 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:21:03,710 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:21:03,775 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 29288
+DEBUG 2025-05-03 13:21:08,192 views Vista del carrito para usuario: Gerry
+INFO 2025-05-03 13:21:08,291 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20751
+INFO 2025-05-03 13:21:13,070 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 28839
+INFO 2025-05-03 13:21:14,319 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:21:14,454 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32488
+INFO 2025-05-03 13:21:21,108 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:21:21,223 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 25580
+WARNING 2025-05-03 13:21:24,793 models Producto "Tequila Don Julio 70 Cristalino 700" con stock bajo: 5 unidades
+INFO 2025-05-03 13:21:24,795 views Orden #ORD-6A2A084F65CB completada exitosamente por el usuario Gerry
+INFO 2025-05-03 13:21:24,810 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:21:24,919 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16169
+INFO 2025-05-03 13:21:27,982 basehttp "GET /orders/historial/ HTTP/1.1" 200 12034
+INFO 2025-05-03 13:21:30,364 basehttp "GET /orders/detalle/ORD-6A2A084F65CB/ HTTP/1.1" 200 16522
+INFO 2025-05-03 13:21:48,039 basehttp "GET /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:21:48,047 views Acceso a la página de inicio
+INFO 2025-05-03 13:21:48,080 basehttp "GET / HTTP/1.1" 200 15527
+INFO 2025-05-03 13:21:59,251 views Usuario  cerró sesión
+INFO 2025-05-03 13:21:59,253 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:21:59,260 views Acceso a la página de inicio
+INFO 2025-05-03 13:21:59,278 basehttp "GET / HTTP/1.1" 200 17280
+INFO 2025-05-03 13:22:00,446 basehttp "GET /users/login/ HTTP/1.1" 200 12823
+DEBUG 2025-05-03 13:22:09,836 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-05-03 13:22:09,837 views Usuario Gerardo inició sesión
+INFO 2025-05-03 13:22:09,848 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:22:09,857 views Acceso a la página de inicio
+INFO 2025-05-03 13:22:09,890 basehttp "GET / HTTP/1.1" 200 18085
+INFO 2025-05-03 13:22:13,484 basehttp "GET /admin/ HTTP/1.1" 200 16116
+INFO 2025-05-03 13:22:13,573 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-05-03 13:22:13,586 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:13,591 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,195 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 28932
+INFO 2025-05-03 13:22:17,255 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,281 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,284 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,288 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,293 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,293 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+INFO 2025-05-03 13:22:17,327 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+INFO 2025-05-03 13:22:17,337 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,351 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,360 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,362 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,373 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,388 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,397 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-03 13:22:17,473 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:17,473 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-05-03 13:22:40,154 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 28932
+INFO 2025-05-03 13:22:44,694 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 28932
+INFO 2025-05-03 13:22:44,737 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-03 13:22:47,954 views Acceso a la página de inicio
+INFO 2025-05-03 13:22:47,988 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-05-03 13:22:51,080 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 13:22:51,105 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25330
+DEBUG 2025-05-03 13:22:53,808 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:22:53,860 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25444
+DEBUG 2025-05-03 13:23:00,133 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 5
+INFO 2025-05-03 13:23:00,135 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 13:23:00,152 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:23:00,216 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 29491
+DEBUG 2025-05-03 13:23:03,577 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 13:23:03,611 basehttp "GET /cart/checkout/ HTTP/1.1" 200 20954
+INFO 2025-05-03 13:23:06,166 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32100
+INFO 2025-05-03 13:23:08,964 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:23:09,033 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 32686
+INFO 2025-05-03 13:23:12,299 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:23:12,361 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 25778
+WARNING 2025-05-03 13:23:16,700 models Producto "Tequila Don Julio 70 Cristalino 700" AGOTADO
+INFO 2025-05-03 13:23:16,703 views Orden #ORD-F3AB9C36AB7B completada exitosamente por el usuario Gerardo
+INFO 2025-05-03 13:23:16,718 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-05-03 13:23:16,770 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16364
+INFO 2025-05-03 13:23:20,519 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 28932
+INFO 2025-05-03 13:23:20,612 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-03 13:23:26,726 views Acceso a la página de inicio
+INFO 2025-05-03 13:23:26,759 basehttp "GET / HTTP/1.1" 200 15730
+DEBUG 2025-05-03 13:23:28,392 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 13:23:28,412 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 24987
+DEBUG 2025-05-03 13:23:32,033 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 13:23:32,107 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 24330
+DEBUG 2025-05-03 13:23:36,362 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-05-03 13:23:36,402 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23410
+INFO 2025-05-03 13:23:36,478 basehttp "GET /media/productos/adicionales/1_FyQndjt.webp HTTP/1.1" 304 0
+DEBUG 2025-05-03 13:23:38,851 views Detalle de producto: Johnnie Walker black label blended scotch whisky 1 L
+INFO 2025-05-03 13:23:38,883 basehttp "GET /products/johnnie-walker-black-label-blended-scotch-whisky-1-l/ HTTP/1.1" 200 23157
+DEBUG 2025-05-03 13:23:45,890 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-05-03 13:23:45,934 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 23410

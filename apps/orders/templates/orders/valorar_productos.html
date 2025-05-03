@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}Valorar Productos | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Valorar Productos del Pedido #{{ orden.numero_orden }}</h2>
+        <div>
+            <a href="{% url 'orders:detalle_orden' orden.numero_orden %}" class="btn btn-outline-secondary me-2">
+                <i class="bi bi-arrow-left me-1"></i> Volver al detalle del pedido
+            </a>
+            <a href="{% url 'products:product_list' %}" class="btn btn-outline-primary">
+                <i class="bi bi-shop me-1"></i> Ir a la tienda
+            </a>
+        </div>
+    </div>
+    
+    <div class="alert alert-info">
+        <i class="bi bi-info-circle me-2"></i> Tu opinión es importante para nosotros y para otros compradores. Puedes valorar los productos que has recibido en este pedido o saltarte este paso.
+    </div>
+    
+    <div class="row">
+        {% for info in detalles_info %}
+        <div class="col-md-6 mb-4">
+            <div class="card border-0 shadow h-100">
+                <div class="card-header bg-light">
+                    <div class="d-flex align-items-center">
+                        {% if info.detalle.producto.imagen_principal %}
+                            <img src="{{ info.detalle.producto.imagen_principal.url }}" alt="{{ info.detalle.nombre_producto }}" class="img-thumbnail me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                        {% else %}
+                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                <i class="bi bi-image"></i>
+                            </div>
+                        {% endif %}
+                        <h5 class="card-title mb-0">{{ info.detalle.nombre_producto }}</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    {% if info.valorado %}
+                        <div class="text-center mb-3">
+                            <h6>Tu valoración:</h6>
+                            <div class="mb-2">
+                                {% for i in "12345"|make_list %}
+                                    {% if forloop.counter <= info.valoracion.puntuacion %}
+                                        <i class="bi bi-star-fill text-warning fs-4"></i>
+                                    {% else %}
+                                        <i class="bi bi-star text-warning fs-4"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <p class="mb-0">{{ info.valoracion.comentario|default:"Sin comentario" }}</p>
+                        </div>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="producto_id" value="{{ info.detalle.producto.id }}">
+                            <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="collapse" data-bs-target="#editRating{{ info.detalle.producto.id }}">
+                                <i class="bi bi-pencil me-1"></i> Editar valoración
+                            </button>
+                            
+                            <div class="collapse mt-3" id="editRating{{ info.detalle.producto.id }}">
+                                <div class="card card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Puntuación:</label>
+                                        {{ info.form.puntuacion }}
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Comentario (opcional):</label>
+                                        {{ info.form.comentario }}
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-save me-1"></i> Guardar cambios
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    {% else %}
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="producto_id" value="{{ info.detalle.producto.id }}">
+                            
+                            <div class="mb-3">
+                                <label class="form-label">¿Cómo valorarías este producto?</label>
+                                <div class="star-rating mb-2">
+                                    {{ info.form.puntuacion }}
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Escribe tu opinión (opcional):</label>
+                                {{ info.form.comentario }}
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-star me-1"></i> Enviar valoración
+                                </button>
+                            </div>
+                        </form>
+                    {% endif %}
+                </div>
+                <div class="card-footer bg-white">
+                    <a href="{% url 'products:product_detail' info.detalle.producto.slug %}" class="btn btn-sm btn-outline-secondary w-100">
+                        <i class="bi bi-box-arrow-up-right me-1"></i> Ver detalles del producto
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-warning">
+                No hay productos para valorar en este pedido.
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="mt-4 text-center">
+        <a href="{% url 'orders:historial_ordenes' %}" class="btn btn-primary">
+            <i class="bi bi-arrow-left me-1"></i> Volver a mis pedidos
+        </a>
+    </div>
+</div>
+{% endblock %}

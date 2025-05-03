@@ -14,6 +14,8 @@ from .models import Orden, DetalleOrden
 from .forms import DireccionEnvioForm, MetodoPagoForm
 from apps.cart.models import Carrito
 from apps.users.models import DireccionEnvio
+from apps.products.models import CalificacionProducto
+from apps.products.forms import CalificacionProductoForm
 
 # Configurar el logger
 logger = logging.getLogger('apps.orders')
@@ -443,3 +445,126 @@ def verificar_carrito_orden(carrito, orden):
     # Como no tenemos detalles en la orden hasta que se confirma, comparamos el total
     # Si el total es diferente, significa que el carrito ha cambiado
     return abs(carrito.total - orden.total) < 0.01  # Comparar con un pequeño margen de error para evitar problemas de redondeo
+
+# En apps/orders/views.py - agregar estas funciones
+@login_required
+def confirmar_recepcion(request, numero_orden):
+    """
+    Vista para confirmar que el usuario ha recibido el pedido.
+    """
+    orden = get_object_or_404(Orden, numero_orden=numero_orden, usuario=request.user)
+    
+    if orden.estado != 'entregado' and orden.estado != 'enviado':
+        messages.warning(request, "Solo puedes confirmar la recepción de pedidos que estén en estado 'Enviado' o 'Entregado'.", extra_tags='toast')
+        return redirect('orders:detalle_orden', numero_orden=numero_orden)
+    
+    if request.method == 'POST':
+        try:
+            orden.recibido = True
+            orden.fecha_recepcion = timezone.now()
+            # Actualizar estado a entregado si estaba en enviado
+            if orden.estado == 'enviado':
+                orden.estado = 'entregado'
+            orden.save()
+            
+            logger.info(f"Usuario {request.user.username} confirmó la recepción del pedido #{orden.numero_orden}")
+            messages.success(request, "¡Gracias! Has confirmado la recepción de tu pedido.", extra_tags='toast')
+            
+            # Redirigir a la página de valoraciones
+            return redirect('orders:valorar_productos', numero_orden=numero_orden)
+            
+        except Exception as e:
+            logger.error(f"Error al confirmar recepción: {str(e)}")
+            messages.error(request, "Ha ocurrido un error al confirmar la recepción.", extra_tags='toast')
+    
+    return redirect('orders:detalle_orden', numero_orden=numero_orden)
+
+@login_required
+def valorar_productos(request, numero_orden):
+    """
+    Vista para valorar los productos de una orden recibida.
+    """
+    orden = get_object_or_404(Orden, numero_orden=numero_orden, usuario=request.user, recibido=True)
+    detalles = orden.detalles.all().select_related('producto')
+    
+    # Verificar si el usuario ya ha valorado algún producto
+    productos_ids = [detalle.producto.id for detalle in detalles]
+    valoraciones_existentes = CalificacionProducto.objects.filter(
+        producto_id__in=productos_ids,
+        cliente=request.user.cliente
+    )
+    
+    # Mapear producto_id -> valoración para fácil acceso
+    valoraciones_map = {val.producto_id: val for val in valoraciones_existentes}
+    
+    # Preparar los detalles con información de valoración
+    detalles_info = []
+    for detalle in detalles:
+        # Aquí está el cambio importante: inicializar el formulario con los valores existentes
+        if detalle.producto.id in valoraciones_map:
+            valoracion = valoraciones_map[detalle.producto.id]
+            form = CalificacionProductoForm(
+                prefix=f'producto_{detalle.producto.id}',
+                initial={
+                    'puntuacion': valoracion.puntuacion,
+                    'comentario': valoracion.comentario
+                }
+            )
+        else:
+            form = CalificacionProductoForm(prefix=f'producto_{detalle.producto.id}')
+        
+        info = {
+            'detalle': detalle,
+            'valorado': detalle.producto.id in valoraciones_map,
+            'valoracion': valoraciones_map.get(detalle.producto.id, None),
+            'form': form
+        }
+        detalles_info.append(info)
+    
+    if request.method == 'POST':
+        producto_id = request.POST.get('producto_id')
+        if producto_id:
+            try:
+                producto_id = int(producto_id)
+                # Verificar que el producto pertenece a la orden
+                if producto_id in productos_ids:
+                    # Verificar si ya existe una valoración
+                    try:
+                        valoracion = CalificacionProducto.objects.get(
+                            producto_id=producto_id,
+                            cliente=request.user.cliente
+                        )
+                        form = CalificacionProductoForm(
+                            request.POST,
+                            prefix=f'producto_{producto_id}',
+                            instance=valoracion
+                        )
+                    except CalificacionProducto.DoesNotExist:
+                        form = CalificacionProductoForm(
+                            request.POST,
+                            prefix=f'producto_{producto_id}'
+                        )
+                    
+                    if form.is_valid():
+                        valoracion = form.save(commit=False)
+                        valoracion.producto_id = producto_id
+                        valoracion.cliente = request.user.cliente
+                        valoracion.save()
+                        
+                        logger.info(f"Usuario {request.user.username} valoró el producto {producto_id} con {valoracion.puntuacion} estrellas")
+                        messages.success(request, "¡Gracias por tu valoración!", extra_tags='toast')
+                        return redirect('orders:valorar_productos', numero_orden=numero_orden)
+                    else:
+                        messages.warning(request, "Por favor corrige los errores en el formulario.", extra_tags='toast')
+                else:
+                    messages.warning(request, "El producto seleccionado no pertenece a esta orden.", extra_tags='toast')
+            except ValueError:
+                messages.error(request, "ID de producto inválido.", extra_tags='toast')
+    
+    context = {
+        'orden': orden,
+        'detalles_info': detalles_info,
+        'titulo': 'Valorar Productos',
+    }
+    
+    return render(request, 'orders/valorar_productos.html', context)

@@ -49,6 +49,9 @@ class Orden(models.Model):
     # Datos adicionales
     notas = models.TextField(blank=True, null=True)
     
+    recibido = models.BooleanField(default=False, help_text="Indica si el cliente ha confirmado la recepción del pedido")
+    fecha_recepcion = models.DateTimeField(null=True, blank=True, help_text="Fecha en que el cliente confirmó la recepción")
+    
     def save(self, *args, **kwargs):
         # Generar número de orden único si es nuevo
         if not self.numero_orden:
@@ -63,6 +66,8 @@ class Orden(models.Model):
     
     def __str__(self):
         return f"Orden #{self.numero_orden}"
+    
+    
     
     class Meta:
         verbose_name = "Orden"
