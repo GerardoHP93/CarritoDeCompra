@@ -1,0 +1,120 @@
+<!-- templates/orders/stripe_includes.html -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    // Inicializar Stripe.js
+    const stripe = Stripe('{{ stripe_publishable_key }}');
+    const elements = stripe.elements();
+    
+    // Estilos para los elementos de Stripe
+    const style = {
+        base: {
+            color: '#32325d',
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+            fontSmoothing: 'antialiased',
+            fontSize: '16px',
+            '::placeholder': {
+                color: '#aab7c4'
+            }
+        },
+        invalid: {
+            color: '#fa755a',
+            iconColor: '#fa755a'
+        }
+    };
+    
+    // Crear instancia del elemento de tarjeta
+    const card = elements.create('card', {style: style});
+    
+    // Montar elemento de tarjeta en el DOM
+    card.mount('#card-element');
+    
+    // Manejar errores en tiempo real
+    card.on('change', function(event) {
+        const displayError = document.getElementById('card-errors');
+        if (event.error) {
+            displayError.textContent = event.error.message;
+        } else {
+            displayError.textContent = '';
+        }
+    });
+    
+    // Manejar envío del formulario
+    const paymentForm = document.getElementById('formPago');
+    
+    paymentForm.addEventListener('submit', async function(event) {
+        // Solo procesar si es tarjeta
+        const metodoPago = document.getElementById('id_metodo_pago');
+        if (metodoPago.value !== 'tarjeta') {
+            return; // Dejar que el formulario se envíe normalmente
+        }
+        
+        event.preventDefault();
+        
+        // Mostrar indicador de carga
+        document.getElementById('btnSubmitPago').disabled = true;
+        document.getElementById('btnSubmitPago').innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Procesando...';
+        
+        try {
+            // Confirmar el PaymentIntent con los datos de la tarjeta
+            const result = await stripe.confirmCardPayment('{{ stripe_client_secret }}', {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: document.getElementById('{{ form.titular_tarjeta.id_for_label }}')?.value || '{{ request.user.get_full_name }}',
+                        email: '{{ request.user.email }}'
+                    }
+                }
+            });
+            
+            if (result.error) {
+                // Mostrar error al usuario
+                const errorElement = document.getElementById('card-errors');
+                errorElement.textContent = result.error.message;
+                
+                // Reactivar botón de envío
+                document.getElementById('btnSubmitPago').disabled = false;
+                document.getElementById('btnSubmitPago').innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+            } else {
+                // El pago se ha procesado correctamente
+                if (result.paymentIntent.status === 'succeeded') {
+                    console.log('¡Pago exitoso!', result.paymentIntent);
+                    
+                    // Actualizar campos ocultos en el formulario
+                    document.getElementById('id_payment_intent_id').value = result.paymentIntent.id;
+                    document.getElementById('id_payment_method_id').value = result.paymentIntent.payment_method;
+                    
+                    // Enviar formulario
+                    paymentForm.submit();
+                } else {
+                    console.log('Estado inesperado:', result.paymentIntent.status);
+                    
+                    // Mostrar mensaje al usuario
+                    Swal.fire({
+                        title: 'Procesando pago',
+                        text: 'El pago está siendo procesado. Por favor, espera un momento.',
+                        icon: 'info',
+                        confirmButtonText: 'Aceptar'
+                    });
+                    
+                    // Reactivar botón de envío
+                    document.getElementById('btnSubmitPago').disabled = false;
+                    document.getElementById('btnSubmitPago').innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+                }
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            
+            // Mostrar error al usuario
+            Swal.fire({
+                title: 'Error',
+                text: 'Ha ocurrido un error al procesar el pago. Por favor, inténtalo de nuevo.',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            });
+            
+            // Reactivar botón de envío
+            document.getElementById('btnSubmitPago').disabled = false;
+            document.getElementById('btnSubmitPago').innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+        }
+    });
+</script>

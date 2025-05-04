@@ -2,6 +2,7 @@
 from django.urls import path
 from . import views
 
+
 app_name = 'orders'
 
 urlpatterns = [
@@ -14,4 +15,6 @@ urlpatterns = [
     # Nuevas rutas para confirmar recepción y valorar productos
     path('confirmar-recepcion/<str:numero_orden>/', views.confirmar_recepcion, name='confirmar_recepcion'),
     path('valorar-productos/<str:numero_orden>/', views.valorar_productos, name='valorar_productos'),
+    # path('webhook/stripe/', stripe_webhook, name='stripe_webhook'),
+
 ]

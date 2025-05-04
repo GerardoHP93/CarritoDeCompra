@@ -6006,3 +6006,101 @@ INFO 2025-05-03 17:35:05,488 inventory_views Lista de productos por stock genera
 INFO 2025-05-03 17:35:05,540 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 200 29908
 DEBUG 2025-05-03 17:35:13,923 views Acceso a la página de inicio
 INFO 2025-05-03 17:35:13,960 basehttp "GET / HTTP/1.1" 200 15959
+INFO 2025-05-03 19:44:30,948 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 19:51:16,370 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 19:51:27,255 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\urls.py changed, reloading.
+INFO 2025-05-03 19:51:29,551 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 19:51:38,565 views Acceso a la página de inicio
+INFO 2025-05-03 19:51:38,742 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 19:51:46,049 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 19:51:46,099 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25559
+DEBUG 2025-05-03 19:51:47,629 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 19:51:47,689 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25675
+DEBUG 2025-05-03 19:51:49,376 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-05-03 19:51:49,379 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 19:51:49,392 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 19:51:49,449 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 29722
+DEBUG 2025-05-03 19:51:52,996 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 19:51:53,042 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21183
+INFO 2025-05-03 19:51:54,653 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32327
+INFO 2025-05-03 19:51:59,305 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 19:52:00,980 stripe_utils PaymentIntent creado: pi_3RKrinR91ZTxFEoQ02yXP34i
+INFO 2025-05-03 19:52:01,191 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 33128
+INFO 2025-05-03 19:53:53,737 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:53:53,817 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 23059
+INFO 2025-05-03 19:54:12,153 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:54:12,213 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 23059
+INFO 2025-05-03 19:54:34,025 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32327
+INFO 2025-05-03 19:54:35,821 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 19:54:36,054 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:54:36,097 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 22948
+INFO 2025-05-03 19:55:56,604 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:55:56,653 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 22948
+INFO 2025-05-03 19:56:06,825 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:56:06,862 basehttp - Broken pipe from ('127.0.0.1', 59849)
+INFO 2025-05-03 19:56:07,662 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:56:07,704 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 22987
+INFO 2025-05-03 19:56:10,844 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:56:10,871 basehttp - Broken pipe from ('127.0.0.1', 59899)
+INFO 2025-05-03 19:56:11,555 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:56:11,589 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-03 19:56:11,730 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 25920
+INFO 2025-05-03 19:56:19,823 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:56:19,874 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 22948
+DEBUG 2025-05-03 19:56:57,255 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 19:56:57,287 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21183
+INFO 2025-05-03 19:56:58,444 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32327
+INFO 2025-05-03 19:57:00,676 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 19:57:00,973 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:57:01,030 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 22948
+INFO 2025-05-03 19:57:35,550 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 19:57:43,353 stripe_utils PaymentIntent recuperado: pi_3RKrinR91ZTxFEoQ02yXP34i, status: succeeded
+INFO 2025-05-03 19:57:43,559 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 22948
+DEBUG 2025-05-03 20:01:14,418 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:01:14,422 basehttp "POST /cart/remove-ajax/11/ HTTP/1.1" 200 130
+DEBUG 2025-05-03 20:01:16,263 views Acceso a la página de inicio
+INFO 2025-05-03 20:01:16,306 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 20:01:18,227 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 20:01:18,265 basehttp "GET /products/category/electrodomesticos/ HTTP/1.1" 200 14803
+DEBUG 2025-05-03 20:01:18,959 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-05-03 20:01:19,002 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 18767
+INFO 2025-05-03 20:01:19,179 basehttp "GET /media/productos/adicionales/1_zPOOeZh.webp HTTP/1.1" 200 35470
+DEBUG 2025-05-03 20:01:20,662 views Producto agregado/actualizado en carrito: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco, cantidad: 1
+INFO 2025-05-03 20:01:20,666 basehttp "POST /cart/add/3/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 20:01:20,695 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-05-03 20:01:20,810 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 22872
+DEBUG 2025-05-03 20:01:23,389 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 20:01:23,429 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21105
+INFO 2025-05-03 20:01:25,012 views Carrito ha cambiado, limpiando sesión de checkout para usuario Gerardo
+INFO 2025-05-03 20:01:25,090 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32380
+INFO 2025-05-03 20:01:50,628 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 20:01:51,486 stripe_utils PaymentIntent creado: pi_3RKrsKR91ZTxFEoQ2eOAGkaG
+INFO 2025-05-03 20:01:51,541 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 33181
+INFO 2025-05-03 20:03:04,778 stripe_utils PaymentIntent recuperado: pi_3RKrsKR91ZTxFEoQ2eOAGkaG, status: succeeded
+INFO 2025-05-03 20:03:04,838 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 23112
+INFO 2025-05-03 20:25:13,424 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 20:25:15,451 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:28:35,349 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:28:41,542 stripe_utils PaymentIntent creado: pi_3RKsIIR91ZTxFEoQ0if6MlFp
+INFO 2025-05-03 20:28:41,705 stripe_utils PaymentIntent recuperado: pi_3RKsIIR91ZTxFEoQ0if6MlFp, status: requires_payment_method
+INFO 2025-05-03 20:28:41,810 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 23082
+DEBUG 2025-05-03 20:28:58,569 views Producto eliminado del carrito: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
+INFO 2025-05-03 20:28:58,572 basehttp "POST /cart/remove-ajax/3/ HTTP/1.1" 200 149
+DEBUG 2025-05-03 20:28:59,672 views Acceso a la página de inicio
+INFO 2025-05-03 20:28:59,698 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 20:29:03,603 views Listado de productos: 11 productos mostrados
+INFO 2025-05-03 20:29:03,628 basehttp "GET /products/ HTTP/1.1" 200 32541
+DEBUG 2025-05-03 20:29:04,579 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:29:04,614 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25675
+DEBUG 2025-05-03 20:29:05,540 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-05-03 20:29:05,541 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 20:29:05,554 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:29:05,592 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 29722
+DEBUG 2025-05-03 20:29:07,958 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 20:29:07,990 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21183
+INFO 2025-05-03 20:29:09,199 views Carrito ha cambiado, limpiando sesión de checkout para usuario Gerardo
+INFO 2025-05-03 20:29:09,239 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32327
+INFO 2025-05-03 20:29:12,281 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 20:29:12,489 stripe_utils PaymentIntent creado: pi_3RKsInR91ZTxFEoQ0qixLnix
+INFO 2025-05-03 20:29:12,648 stripe_utils PaymentIntent recuperado: pi_3RKsInR91ZTxFEoQ0qixLnix, status: requires_payment_method
+INFO 2025-05-03 20:29:12,708 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 23029

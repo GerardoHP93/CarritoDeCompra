@@ -130,3 +130,12 @@ class MetodoPagoForm(forms.Form):
                     self.add_error(campo, 'Este campo es obligatorio.')
 
         return cleaned_data
+
+
+class StripePaymentForm(forms.Form):
+    """
+    Formulario para procesar pagos con Stripe.
+    """
+    stripe_token = forms.CharField(widget=forms.HiddenInput(), required=False)
+    payment_method_id = forms.CharField(widget=forms.HiddenInput(), required=False)
+    payment_intent_id = forms.CharField(widget=forms.HiddenInput(), required=False)
