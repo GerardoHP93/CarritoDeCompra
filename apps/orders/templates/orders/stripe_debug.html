@@ -1,0 +1,208 @@
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    stripeLog("DOM cargado, iniciando Stripe...");
+    
+    // Verificamos que las claves estén disponibles
+    const publishableKey = '{{ stripe_publishable_key }}';
+    stripeLog("Clave publicable: " + (publishableKey ? "configurada" : "NO CONFIGURADA"));
+    
+    try {
+        // Inicializar Stripe con un bloque try-catch
+        const stripe = Stripe(publishableKey);
+        stripeLog("Stripe inicializado correctamente");
+        
+        // Inicializar los elementos
+        const elements = stripe.elements();
+        stripeLog("Elementos creados correctamente");
+        
+        // Mostrar el contenedor del elemento de tarjeta
+        const cardContainer = document.getElementById('card-element');
+        if (cardContainer) {
+            stripeLog("Contenedor de tarjeta encontrado");
+            cardContainer.style.border = "1px solid #ddd";
+            cardContainer.style.padding = "10px";
+            cardContainer.style.backgroundColor = "#fff";
+        } else {
+            stripeLog("ERROR: No se encontró el contenedor #card-element");
+            return;
+        }
+        
+        // Crear el elemento de tarjeta
+        const cardElement = elements.create('card', {
+            style: {
+                base: {
+                    color: '#32325d',
+                    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                    fontSmoothing: 'antialiased',
+                    fontSize: '16px',
+                    '::placeholder': {
+                        color: '#aab7c4'
+                    }
+                },
+                invalid: {
+                    color: '#fa755a',
+                    iconColor: '#fa755a'
+                }
+            }
+        });
+        stripeLog("Elemento de tarjeta creado correctamente");
+        
+        // Intentar montar el elemento
+        try {
+            cardElement.mount('#card-element');
+            stripeLog("Elemento de tarjeta montado correctamente");
+        } catch (mountError) {
+            stripeLog("ERROR al montar el elemento de tarjeta: " + mountError.message);
+            const cardErrors = document.getElementById('card-errors');
+            if (cardErrors) {
+                cardErrors.textContent = "Error al cargar el formulario de tarjeta. Por favor, recarga la página.";
+            }
+        }
+        
+        // Manejar errores en tiempo real
+        cardElement.on('change', function(event) {
+            const displayError = document.getElementById('card-errors');
+            if (displayError) {
+                if (event.error) {
+                    displayError.textContent = event.error.message;
+                    stripeLog("Error en la tarjeta: " + event.error.message);
+                } else {
+                    displayError.textContent = '';
+                }
+            }
+        });
+        
+        // Manejar el envío del formulario
+        const form = document.getElementById('formPago');
+        if (form) {
+            stripeLog("Formulario de pago encontrado, configurando listener");
+            
+            form.addEventListener('submit', async function(event) {
+                const metodoPago = document.getElementById('id_metodo_pago');
+                if (metodoPago && metodoPago.value === 'tarjeta') {
+                    stripeLog("Formulario enviado con método de pago: tarjeta");
+                    event.preventDefault();
+                    
+                    const submitButton = document.getElementById('btnSubmitPago');
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Procesando...';
+                        stripeLog("Botón de envío deshabilitado");
+                    }
+                    
+                    const clientSecret = '{{ stripe_client_secret }}';
+                    stripeLog("Secret del cliente: " + (clientSecret ? "configurado" : "NO CONFIGURADO"));
+                    
+                    if (!clientSecret) {
+                        stripeLog("ERROR: No hay client_secret disponible");
+                        alert("Error de configuración: No se puede procesar el pago sin un client_secret");
+                        if (submitButton) {
+                            submitButton.disabled = false;
+                            submitButton.innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+                        }
+                        return;
+                    }
+                    
+                    try {
+                        stripeLog("Confirmando pago con Stripe...");
+                        const result = await stripe.confirmCardPayment(clientSecret, {
+                            payment_method: {
+                                card: cardElement,
+                                billing_details: {
+                                    name: document.getElementById('id_titular_tarjeta').value || '{{ request.user.get_full_name }}'
+                                }
+                            }
+                        });
+                        
+                        if (result.error) {
+                            stripeLog("ERROR en el pago: " + result.error.message);
+                            const errorElement = document.getElementById('card-errors');
+                            if (errorElement) {
+                                errorElement.textContent = result.error.message;
+                            }
+                            
+                            if (submitButton) {
+                                submitButton.disabled = false;
+                                submitButton.innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+                            }
+                        } else {
+                            if (result.paymentIntent.status === 'succeeded') {
+                                stripeLog("Pago exitoso! ID: " + result.paymentIntent.id);
+                                
+                                // Establecer los campos ocultos
+                                const paymentIntentField = document.getElementById('id_payment_intent_id');
+                                const paymentMethodField = document.getElementById('id_payment_method_id');
+
+                                
+                                if (paymentIntentField) {
+                                    paymentIntentField.value = result.paymentIntent.id;
+                                    stripeLog("Campo payment_intent_id actualizado: " + result.paymentIntent.id);
+                                } else {
+                                    stripeLog("ERROR: No se encontró el campo id_payment_intent_id");
+                                    // Crear el campo si no existe
+                                    const hiddenInput = document.createElement('input');
+                                    hiddenInput.type = 'hidden';
+                                    hiddenInput.name = 'payment_intent_id';
+                                    hiddenInput.id = 'id_payment_intent_id';
+                                    hiddenInput.value = result.paymentIntent.id;
+                                    form.appendChild(hiddenInput);
+                                    stripeLog("Campo payment_intent_id creado y agregado al formulario");
+}
+                                
+                                
+                                if (paymentMethodField) {
+                                    paymentMethodField.value = result.paymentIntent.payment_method;
+                                    stripeLog("Campo payment_method_id actualizado: " + result.paymentIntent.payment_method);
+                                } else {
+                                    stripeLog("ERROR: No se encontró el campo id_payment_method_id");
+                                    // Crear el campo si no existe
+                                    const hiddenInput = document.createElement('input');
+                                    hiddenInput.type = 'hidden';
+                                    hiddenInput.name = 'payment_method_id';
+                                    hiddenInput.id = 'id_payment_method_id';
+                                    hiddenInput.value = result.paymentIntent.payment_method;
+                                    form.appendChild(hiddenInput);
+                                    stripeLog("Campo payment_method_id creado y agregado al formulario");
+}
+                                
+                                // Verificar visualmente los valores de los campos
+                                stripeLog("Formulario antes de enviar: " + 
+                                        "payment_intent_id=" + (paymentIntentField ? paymentIntentField.value : "no encontrado") + 
+                                        ", payment_method_id=" + (paymentMethodField ? paymentMethodField.value : "no encontrado"));
+                                
+                                // Enviar el formulario
+                                stripeLog("Enviando formulario para continuar...");
+                                form.submit();
+                            } else {
+                                stripeLog("Estado del pago inesperado: " + result.paymentIntent.status);
+                                alert("El pago está siendo procesado. Por favor, espera un momento.");
+                                
+                                if (submitButton) {
+                                    submitButton.disabled = false;
+                                    submitButton.innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+                                }
+                            }
+                        }
+                    } catch (error) {
+                        stripeLog("ERROR en confirmCardPayment: " + error.message);
+                        alert("Ha ocurrido un error al procesar el pago. Por favor, inténtalo de nuevo.");
+                        
+                        if (submitButton) {
+                            submitButton.disabled = false;
+                            submitButton.innerHTML = 'Continuar al resumen <i class="bi bi-arrow-right ms-1"></i>';
+                        }
+                    }
+                } else {
+                    stripeLog("Formulario enviado con otro método de pago, procesando normalmente");
+                }
+            });
+        } else {
+            stripeLog("ERROR: No se encontró el formulario #formPago");
+        }
+    } catch (stripeError) {
+        stripeLog("ERROR al inicializar Stripe: " + stripeError.message);
+        alert("Error al inicializar el sistema de pagos. Por favor, recarga la página o contacta a soporte.");
+    }
+});
+</script>

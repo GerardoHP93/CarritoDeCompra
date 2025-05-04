@@ -222,11 +222,8 @@ def checkout_pago(request):
         messages.warning(request, "Tu carrito está vacío. Agrega productos antes de continuar.", extra_tags='toast')
         return redirect('cart:cart_detail')
     
-    # Obtener o crear PaymentIntent para Stripe
-    stripe_payment_intent = None
-    
     # Siempre crear un nuevo PaymentIntent en cada carga de la página
-    # Esto evita problemas con PaymentIntents en estados inválidos
+    logger.info(f"Creando PaymentIntent para orden #{orden.id} por ${carrito.total}")
     stripe_payment_intent = create_payment_intent(
         amount=float(carrito.total),
         metadata={
@@ -236,94 +233,99 @@ def checkout_pago(request):
         }
     )
     
-    if 'error' not in stripe_payment_intent:
+    if 'error' in stripe_payment_intent:
+        logger.error(f"Error al crear PaymentIntent: {stripe_payment_intent['error']}")
+        messages.error(request, "Error al inicializar el sistema de pagos. Por favor, intenta de nuevo más tarde.", extra_tags='toast')
+    else:
+        logger.info(f"PaymentIntent creado exitosamente: {stripe_payment_intent['id']}")
         request.session['stripe_payment_intent_id'] = stripe_payment_intent['id']
     
-    # Comprobar si ya existe un payment_intent_id en la sesión
-    payment_intent_id = request.session.get('stripe_payment_intent_id')
-    if payment_intent_id:
-        # Recuperar el PaymentIntent existente
-        stripe_payment_intent = retrieve_payment_intent(payment_intent_id)
-        if 'error' in stripe_payment_intent:
-            # Si hay error, crear uno nuevo
-            payment_intent_id = None
-    
-    if not payment_intent_id:
-        # Crear un nuevo PaymentIntent
-        stripe_payment_intent = create_payment_intent(
-            amount=float(carrito.total),
-            metadata={
-                'order_id': orden.id,
-                'customer_id': request.user.id,
-                'customer_email': request.user.email
-            }
-        )
-        
-        if 'error' not in stripe_payment_intent:
-            request.session['stripe_payment_intent_id'] = stripe_payment_intent['id']
-    
-    # Inicializar formularios
-    form = MetodoPagoForm(request.POST or None)
-    stripe_form = StripePaymentForm(request.POST or None)
-    
     if request.method == 'POST':
-        if form.is_valid() and stripe_form.is_valid():
-            # Guardar el método de pago en la sesión
-            metodo_pago = form.cleaned_data['metodo_pago']
-            pago_data = {
-                'metodo_pago': metodo_pago
-            }
+        logger.debug(f"POST recibido para checkout_pago: {request.POST}")
+        
+        # Cuando usamos Stripe Elements, no necesitamos validar los campos de tarjeta normales
+        if 'metodo_pago' in request.POST and request.POST['metodo_pago'] == 'tarjeta':
+            # Para tarjetas, solo necesitamos que el método de pago sea válido y los datos de Stripe
+            # Obtener los valores no vacíos de los campos de payment_intent_id y payment_method_id
+            payment_intent_ids = [pid for pid in request.POST.getlist('payment_intent_id') if pid.strip()]
+            payment_method_ids = [pmid for pmid in request.POST.getlist('payment_method_id') if pmid.strip()]
             
-            # Procesar según el método de pago
-            if metodo_pago == 'tarjeta':
-                # Datos de Stripe
-                payment_intent_id = stripe_form.cleaned_data.get('payment_intent_id')
-                payment_method_id = stripe_form.cleaned_data.get('payment_method_id')
+            payment_intent_id = payment_intent_ids[0] if payment_intent_ids else None
+            payment_method_id = payment_method_ids[0] if payment_method_ids else None
+            
+            logger.info(f"Payment Intent ID: {payment_intent_id}, Payment Method ID: {payment_method_id}")
+            
+            if payment_intent_id and payment_method_id:
+                logger.info(f"Procesando pago con tarjeta: {payment_intent_id}")
                 
-                if payment_intent_id:
-                    # Verificar estado del pago
-                    payment_result = retrieve_payment_intent(payment_intent_id)
-                    if 'error' not in payment_result and payment_result.get('status') == 'succeeded':
-                        # Pago exitoso con Stripe
-                        pago_data['tipo_tarjeta'] = form.cleaned_data.get('tipo_tarjeta', 'visa')
-                        pago_data['numero_tarjeta'] = '•••• •••• •••• ' + form.cleaned_data.get('numero_tarjeta', '')[-4:]
-                        pago_data['titular_tarjeta'] = form.cleaned_data.get('titular_tarjeta', request.user.get_full_name())
-                        pago_data['referencia_pago'] = payment_intent_id
-                        
-                        # Guardar en la sesión
-                        request.session['pago_completo'] = pago_data
-                        
-                        # Actualizar la orden en la base de datos
-                        orden.metodo_pago = metodo_pago
-                        orden.referencia_pago = payment_intent_id
-                        orden.save()
-                        
-                        # Redirigir al siguiente paso
-                        return redirect('orders:checkout_resumen')
-                    else:
-                        # Error en el pago
-                        error_msg = payment_result.get('error', 'Error en el procesamiento del pago')
-                        messages.error(request, f"Error en el pago: {error_msg}", extra_tags='toast')
-                else:
-                    messages.error(request, "No se recibió confirmación del pago.", extra_tags='toast')
+                # Verificar estado del pago
+                payment_result = retrieve_payment_intent(payment_intent_id)
+                if 'error' not in payment_result and payment_result.get('status') == 'succeeded':
+                    # Pago exitoso con Stripe
+                    logger.info(f"Pago exitoso con tarjeta: {payment_intent_id}")
                     
-            elif metodo_pago == 'paypal':
+                    # Datos para la sesión
+                    pago_data = {
+                        'metodo_pago': 'tarjeta',
+                        'tipo_tarjeta': 'visa',  # Valor por defecto
+                        'numero_tarjeta': '•••• •••• •••• 4242',  # Por defecto para pruebas
+                        'titular_tarjeta': request.POST.get('titular_tarjeta', request.user.get_full_name()),
+                        'referencia_pago': payment_intent_id
+                    }
+                    
+                    # Guardar en la sesión
+                    request.session['pago_completo'] = pago_data
+                    
+                    # Actualizar la orden en la base de datos
+                    orden.metodo_pago = 'tarjeta'
+                    orden.referencia_pago = payment_intent_id
+                    orden.save()
+                    
+                    # Redirigir al siguiente paso
+                    return redirect('orders:checkout_resumen')
+                else:
+                    # Error en el pago
+                    error_msg = payment_result.get('error', 'Error en el procesamiento del pago')
+                    logger.error(f"Error en pago con tarjeta: {error_msg}")
+                    messages.error(request, f"Error en el pago: {error_msg}", extra_tags='toast')
+            else:
+                logger.warning(f"Datos de Stripe incompletos: payment_intent_id={payment_intent_id}, payment_method_id={payment_method_id}")
+                messages.error(request, "Datos de pago incompletos. Por favor, intenta de nuevo con otra tarjeta.", extra_tags='toast')
+        
+        # Validación normal del formulario para otros métodos de pago
+        form = MetodoPagoForm(request.POST)
+        stripe_form = StripePaymentForm(request.POST)
+        
+        if form.is_valid():
+            metodo_pago = form.cleaned_data['metodo_pago']
+            
+            # Para PayPal
+            if metodo_pago == 'paypal':
                 # Simulación de pago con PayPal
-                # Simular una referencia de pago para PayPal
                 paypal_reference = f"PP-{uuid.uuid4().hex[:10].upper()}"
-                pago_data['referencia_pago'] = paypal_reference
+                logger.info(f"Pago simulado con PayPal: {paypal_reference}")
+                
+                pago_data = {
+                    'metodo_pago': 'paypal',
+                    'referencia_pago': paypal_reference
+                }
                 
                 # Guardar en la sesión
                 request.session['pago_completo'] = pago_data
                 
                 # Actualizar la orden en la base de datos
-                orden.metodo_pago = metodo_pago
+                orden.metodo_pago = 'paypal'
                 orden.referencia_pago = paypal_reference
                 orden.save()
                 
                 # Redirigir al siguiente paso
                 return redirect('orders:checkout_resumen')
-            
+        else:
+            logger.warning(f"Formulario inválido: {form.errors}")
+    else:
+        form = MetodoPagoForm()
+        stripe_form = StripePaymentForm()
+    
     context = {
         'form': form,
         'stripe_form': stripe_form,
@@ -334,6 +336,8 @@ def checkout_pago(request):
         'stripe_client_secret': stripe_payment_intent.get('client_secret') if stripe_payment_intent else None,
         'stripe_payment_intent_id': stripe_payment_intent.get('id') if stripe_payment_intent else None,
     }
+    
+    logger.debug(f"Renderizando checkout_pago con context: stripe_client_secret={bool(context['stripe_client_secret'])}, stripe_publishable_key={bool(context['stripe_publishable_key'])}")
     
     return render(request, 'orders/checkout_pago.html', context)
 

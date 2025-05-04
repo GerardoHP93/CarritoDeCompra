@@ -6104,3 +6104,325 @@ INFO 2025-05-03 20:29:12,281 basehttp "POST /orders/checkout/direccion/ HTTP/1.1
 INFO 2025-05-03 20:29:12,489 stripe_utils PaymentIntent creado: pi_3RKsInR91ZTxFEoQ0qixLnix
 INFO 2025-05-03 20:29:12,648 stripe_utils PaymentIntent recuperado: pi_3RKsInR91ZTxFEoQ0qixLnix, status: requires_payment_method
 INFO 2025-05-03 20:29:12,708 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 23029
+INFO 2025-05-03 20:50:02,920 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:50:32,461 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:50:41,428 stripe_utils PaymentIntent creado: pi_3RKsdaR91ZTxFEoQ2PzpWF2c
+INFO 2025-05-03 20:50:41,579 stripe_utils PaymentIntent recuperado: pi_3RKsdaR91ZTxFEoQ2PzpWF2c, status: requires_payment_method
+INFO 2025-05-03 20:50:41,789 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 23029
+DEBUG 2025-05-03 20:50:50,890 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:50:50,893 basehttp "POST /cart/remove-ajax/11/ HTTP/1.1" 200 130
+DEBUG 2025-05-03 20:50:52,018 views Acceso a la página de inicio
+INFO 2025-05-03 20:50:52,043 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 20:50:53,524 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 20:50:53,545 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25559
+DEBUG 2025-05-03 20:50:54,381 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:50:54,417 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 25675
+DEBUG 2025-05-03 20:50:55,549 views Producto agregado/actualizado en carrito: Tequila Don Julio 70 Cristalino 700, cantidad: 1
+INFO 2025-05-03 20:50:55,550 basehttp "POST /cart/add/11/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 20:50:55,563 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:50:55,602 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 29722
+DEBUG 2025-05-03 20:50:57,363 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 20:50:57,384 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21183
+INFO 2025-05-03 20:50:58,457 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32327
+INFO 2025-05-03 20:51:00,463 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 20:51:00,692 stripe_utils PaymentIntent creado: pi_3RKsdtR91ZTxFEoQ254usIPN
+INFO 2025-05-03 20:51:00,858 stripe_utils PaymentIntent recuperado: pi_3RKsdtR91ZTxFEoQ254usIPN, status: requires_payment_method
+INFO 2025-05-03 20:51:00,892 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 23029
+INFO 2025-05-03 20:52:05,014 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\carritoCompras_project\settings.py changed, reloading.
+INFO 2025-05-03 20:52:07,604 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:52:12,786 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\carritoCompras_project\settings.py changed, reloading.
+INFO 2025-05-03 20:52:14,756 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:52:34,110 stripe_utils PaymentIntent creado: pi_3RKsfOR91ZTxFEoQ2QPQwXYO
+INFO 2025-05-03 20:52:34,282 stripe_utils PaymentIntent recuperado: pi_3RKsfOR91ZTxFEoQ2QPQwXYO, status: requires_payment_method
+INFO 2025-05-03 20:52:34,394 basehttp - Broken pipe from ('127.0.0.1', 60292)
+INFO 2025-05-03 20:52:36,195 stripe_utils PaymentIntent creado: pi_3RKsfQR91ZTxFEoQ0TnvZFFV
+INFO 2025-05-03 20:52:36,366 stripe_utils PaymentIntent recuperado: pi_3RKsfQR91ZTxFEoQ0TnvZFFV, status: requires_payment_method
+INFO 2025-05-03 20:52:36,396 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 23029
+INFO 2025-05-03 20:59:01,516 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 20:59:03,349 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:59:21,943 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 20:59:23,778 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 20:59:36,570 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 20:59:39,903 views Producto eliminado del carrito: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-03 20:59:39,906 basehttp "POST /cart/remove-ajax/11/ HTTP/1.1" 200 130
+DEBUG 2025-05-03 20:59:40,792 views Acceso a la página de inicio
+INFO 2025-05-03 20:59:40,880 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 20:59:43,001 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 20:59:43,021 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 14766
+DEBUG 2025-05-03 20:59:43,876 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-05-03 20:59:43,939 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 19913
+DEBUG 2025-05-03 20:59:44,884 views Producto agregado/actualizado en carrito: Carne de res Marketside congelada para hamburguesa, cantidad: 1
+INFO 2025-05-03 20:59:44,886 basehttp "POST /cart/add/2/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 20:59:44,898 views Detalle de producto: Carne de res Marketside congelada para hamburguesa
+INFO 2025-05-03 20:59:44,931 basehttp "GET /products/carne-de-res-marketside-congelada-para-hamburguesa/ HTTP/1.1" 200 23992
+DEBUG 2025-05-03 20:59:46,611 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 20:59:46,637 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21067
+INFO 2025-05-03 20:59:48,048 views Carrito ha cambiado, limpiando sesión de checkout para usuario Gerardo
+INFO 2025-05-03 20:59:48,105 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32356
+INFO 2025-05-03 20:59:49,626 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 20:59:49,652 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 20:59:50,867 stripe_utils PaymentIntent creado: pi_3RKsmRR91ZTxFEoQ1QK16T7S
+INFO 2025-05-03 20:59:50,867 views PaymentIntent creado exitosamente: pi_3RKsmRR91ZTxFEoQ1QK16T7S
+DEBUG 2025-05-03 20:59:50,868 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+ERROR 2025-05-03 20:59:51,012 log Internal Server Error: /orders/checkout/pago/
+Traceback (most recent call last):
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py", line 326, in checkout_pago
+    return render(request, 'orders/checkout_pago.html', context)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\venv\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 28: 'block'. Looking for one of: endblock.
+ERROR 2025-05-03 20:59:51,022 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 500 205197
+INFO 2025-05-03 21:00:42,202 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:00:47,080 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:00:47,798 stripe_utils PaymentIntent creado: pi_3RKsnMR91ZTxFEoQ0fsB11jl
+INFO 2025-05-03 21:00:47,799 views PaymentIntent creado exitosamente: pi_3RKsnMR91ZTxFEoQ0fsB11jl
+DEBUG 2025-05-03 21:00:47,800 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:00:47,976 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 40555
+INFO 2025-05-03 21:00:54,604 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:00:54,782 stripe_utils PaymentIntent creado: pi_3RKsnTR91ZTxFEoQ1uxazOEO
+INFO 2025-05-03 21:00:54,783 views PaymentIntent creado exitosamente: pi_3RKsnTR91ZTxFEoQ1uxazOEO
+DEBUG 2025-05-03 21:00:54,784 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['azoDWsOc4Prm0zJ3ZBe0LbdUkzcy8xhzlb7FrJZdtDeYb6EqI8yd26Pipl27cUHx'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': [''], 'payment_method_id': [''], 'titular_tarjeta': ['']}>
+WARNING 2025-05-03 21:00:54,835 views Formulario inválido: form=<ul class="errorlist"><li>numero_tarjeta<ul class="errorlist" id="id_numero_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li><li>titular_tarjeta<ul class="errorlist" id="id_titular_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li><li>fecha_expiracion<ul class="errorlist" id="id_fecha_expiracion_error"><li>Este campo es obligatorio.</li></ul></li><li>cvv<ul class="errorlist" id="id_cvv_error"><li>Este campo es obligatorio.</li></ul></li><li>tipo_tarjeta<ul class="errorlist" id="id_tipo_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li></ul>, stripe_form=
+DEBUG 2025-05-03 21:00:54,836 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:00:54,877 basehttp - Broken pipe from ('127.0.0.1', 60376)
+INFO 2025-05-03 21:00:54,898 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:00:55,647 stripe_utils PaymentIntent creado: pi_3RKsnUR91ZTxFEoQ0KykAl8o
+INFO 2025-05-03 21:00:55,648 views PaymentIntent creado exitosamente: pi_3RKsnUR91ZTxFEoQ0KykAl8o
+DEBUG 2025-05-03 21:00:55,648 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['azoDWsOc4Prm0zJ3ZBe0LbdUkzcy8xhzlb7FrJZdtDeYb6EqI8yd26Pipl27cUHx'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': [''], 'payment_method_id': [''], 'titular_tarjeta': ['']}>
+WARNING 2025-05-03 21:00:55,650 views Formulario inválido: form=<ul class="errorlist"><li>numero_tarjeta<ul class="errorlist" id="id_numero_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li><li>titular_tarjeta<ul class="errorlist" id="id_titular_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li><li>fecha_expiracion<ul class="errorlist" id="id_fecha_expiracion_error"><li>Este campo es obligatorio.</li></ul></li><li>cvv<ul class="errorlist" id="id_cvv_error"><li>Este campo es obligatorio.</li></ul></li><li>tipo_tarjeta<ul class="errorlist" id="id_tipo_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li></ul>, stripe_form=
+DEBUG 2025-05-03 21:00:55,650 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:00:55,686 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 40821
+DEBUG 2025-05-03 21:00:59,029 views Acceso a la página de inicio
+INFO 2025-05-03 21:00:59,056 basehttp "GET / HTTP/1.1" 200 17684
+DEBUG 2025-05-03 21:01:01,386 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 21:01:01,409 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21067
+INFO 2025-05-03 21:01:02,796 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32356
+INFO 2025-05-03 21:01:04,686 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:01:04,705 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:01:04,904 stripe_utils PaymentIntent creado: pi_3RKsndR91ZTxFEoQ1phzI8mW
+INFO 2025-05-03 21:01:04,904 views PaymentIntent creado exitosamente: pi_3RKsndR91ZTxFEoQ1phzI8mW
+DEBUG 2025-05-03 21:01:04,905 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:01:04,944 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 40555
+INFO 2025-05-03 21:01:55,312 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:01:57,901 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:01:58,749 stripe_utils PaymentIntent creado: pi_3RKsoVR91ZTxFEoQ1EQ2sGoC
+INFO 2025-05-03 21:01:58,749 views PaymentIntent creado exitosamente: pi_3RKsoVR91ZTxFEoQ1EQ2sGoC
+DEBUG 2025-05-03 21:01:58,750 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:01:58,922 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 40579
+INFO 2025-05-03 21:02:57,890 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:02:58,065 stripe_utils PaymentIntent creado: pi_3RKspSR91ZTxFEoQ19gSzQ9c
+INFO 2025-05-03 21:02:58,065 views PaymentIntent creado exitosamente: pi_3RKspSR91ZTxFEoQ19gSzQ9c
+DEBUG 2025-05-03 21:02:58,068 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:02:58,181 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 40958
+INFO 2025-05-03 21:03:48,866 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:03:49,059 stripe_utils PaymentIntent creado: pi_3RKsqHR91ZTxFEoQ2PFvJ8W6
+INFO 2025-05-03 21:03:49,059 views PaymentIntent creado exitosamente: pi_3RKsqHR91ZTxFEoQ2PFvJ8W6
+DEBUG 2025-05-03 21:03:49,060 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['iEu5Ln3p8a1A6B52Lkd3GgsRIuuWPfrltgd7gEeqxYOch80puRxgXb4fNgkvTCRj'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKspSR91ZTxFEoQ19gSzQ9c'], 'payment_method_id': ['pm_1RKsqGR91ZTxFEoQ4iORI7sQ'], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco']}>
+WARNING 2025-05-03 21:03:49,067 views Formulario inválido: form=<ul class="errorlist"><li>numero_tarjeta<ul class="errorlist" id="id_numero_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li><li>fecha_expiracion<ul class="errorlist" id="id_fecha_expiracion_error"><li>Este campo es obligatorio.</li></ul></li><li>cvv<ul class="errorlist" id="id_cvv_error"><li>Este campo es obligatorio.</li></ul></li><li>tipo_tarjeta<ul class="errorlist" id="id_tipo_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li></ul>, stripe_form=
+DEBUG 2025-05-03 21:03:49,068 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:03:49,094 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 41069
+INFO 2025-05-03 21:05:20,891 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:05:52,215 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:05:53,215 stripe_utils PaymentIntent creado: pi_3RKssHR91ZTxFEoQ11opYPzJ
+INFO 2025-05-03 21:05:53,216 views PaymentIntent creado exitosamente: pi_3RKssHR91ZTxFEoQ11opYPzJ
+DEBUG 2025-05-03 21:05:53,218 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['SJgrLRLuacMmM5Mfq4m5ZSr14GT6MmSe3lZtg8Wvz0zYXCHC9BGigN3p9sJFQJic'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKsqHR91ZTxFEoQ2PFvJ8W6'], 'payment_method_id': ['pm_1RKssGR91ZTxFEoQBP3xN4PU'], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco']}>
+WARNING 2025-05-03 21:05:53,236 views Formulario inválido: form=<ul class="errorlist"><li>numero_tarjeta<ul class="errorlist" id="id_numero_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li><li>fecha_expiracion<ul class="errorlist" id="id_fecha_expiracion_error"><li>Este campo es obligatorio.</li></ul></li><li>cvv<ul class="errorlist" id="id_cvv_error"><li>Este campo es obligatorio.</li></ul></li><li>tipo_tarjeta<ul class="errorlist" id="id_tipo_tarjeta_error"><li>Este campo es obligatorio.</li></ul></li></ul>, stripe_form=
+DEBUG 2025-05-03 21:05:53,238 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:05:53,405 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 41141
+INFO 2025-05-03 21:09:07,471 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\forms.py changed, reloading.
+INFO 2025-05-03 21:09:10,128 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:12:10,197 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:12:11,729 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:14:13,883 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:14:15,993 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:14:38,828 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:14:39,770 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:27:29,617 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:27:31,928 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:28:09,273 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\forms.py changed, reloading.
+INFO 2025-05-03 21:28:11,937 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:29:22,020 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:29:37,913 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32356
+INFO 2025-05-03 21:29:39,970 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:29:40,011 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:29:41,854 stripe_utils PaymentIntent creado: pi_3RKtFKR91ZTxFEoQ0GzS42rZ
+INFO 2025-05-03 21:29:41,857 views PaymentIntent creado exitosamente: pi_3RKtFKR91ZTxFEoQ0GzS42rZ
+DEBUG 2025-05-03 21:29:41,860 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:29:42,061 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42178
+INFO 2025-05-03 21:30:06,117 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:30:06,395 stripe_utils PaymentIntent creado: pi_3RKtFiR91ZTxFEoQ2a1c8Hsw
+INFO 2025-05-03 21:30:06,397 views PaymentIntent creado exitosamente: pi_3RKtFiR91ZTxFEoQ2a1c8Hsw
+DEBUG 2025-05-03 21:30:06,398 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['2Qgrm03p0OEUEZAxPhNeXGJsnIPFKWeidsZtRheqpCrwPwvUyO7reBlQsuFeOjEg'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKtFKR91ZTxFEoQ0GzS42rZ', ''], 'payment_method_id': ['pm_1RKtFhR91ZTxFEoQcjKGVPTP', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+WARNING 2025-05-03 21:30:06,401 views Datos de Stripe incompletos
+DEBUG 2025-05-03 21:30:06,411 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:30:06,532 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 44549
+INFO 2025-05-03 21:30:52,318 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:31:01,564 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:31:02,810 stripe_utils PaymentIntent creado: pi_3RKtGdR91ZTxFEoQ0REzHt3N
+INFO 2025-05-03 21:31:02,811 views PaymentIntent creado exitosamente: pi_3RKtGdR91ZTxFEoQ0REzHt3N
+DEBUG 2025-05-03 21:31:02,812 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['2Qgrm03p0OEUEZAxPhNeXGJsnIPFKWeidsZtRheqpCrwPwvUyO7reBlQsuFeOjEg'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKtFKR91ZTxFEoQ0GzS42rZ', ''], 'payment_method_id': ['pm_1RKtFhR91ZTxFEoQcjKGVPTP', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+WARNING 2025-05-03 21:31:02,813 views Datos de Stripe incompletos
+DEBUG 2025-05-03 21:31:02,815 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:31:03,018 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 44549
+INFO 2025-05-03 21:31:18,573 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 21:31:22,562 views Acceso a la página de inicio
+INFO 2025-05-03 21:31:22,815 basehttp "GET / HTTP/1.1" 200 17684
+DEBUG 2025-05-03 21:31:27,040 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 21:31:27,094 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21067
+INFO 2025-05-03 21:31:29,579 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32356
+INFO 2025-05-03 21:31:31,949 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:31:31,976 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:31:33,727 stripe_utils PaymentIntent creado: pi_3RKtH8R91ZTxFEoQ04JUwcKo
+INFO 2025-05-03 21:31:33,728 views PaymentIntent creado exitosamente: pi_3RKtH8R91ZTxFEoQ04JUwcKo
+DEBUG 2025-05-03 21:31:33,730 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:31:33,827 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42178
+INFO 2025-05-03 21:32:08,691 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:32:09,050 stripe_utils PaymentIntent creado: pi_3RKtHhR91ZTxFEoQ2zEM6zUr
+INFO 2025-05-03 21:32:09,051 views PaymentIntent creado exitosamente: pi_3RKtHhR91ZTxFEoQ2zEM6zUr
+DEBUG 2025-05-03 21:32:09,051 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['relpn88ChQtQkF4HKfJUSqmCqRnMJ0VACQ4rSpjDGEgsvcZ4tM379lY0vDdlNnly'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKtH8R91ZTxFEoQ04JUwcKo', ''], 'payment_method_id': ['pm_1RKtHgR91ZTxFEoQj2vADjGN', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+WARNING 2025-05-03 21:32:09,052 views Datos de Stripe incompletos
+DEBUG 2025-05-03 21:32:09,053 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:32:09,115 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 200 44549
+INFO 2025-05-03 21:36:48,891 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:36:51,152 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:38:29,031 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:38:31,321 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:38:43,471 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\orders\views.py changed, reloading.
+INFO 2025-05-03 21:38:45,508 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:43:20,051 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 21:43:58,068 views Creando PaymentIntent para orden #16 por $88.00
+INFO 2025-05-03 21:43:59,481 stripe_utils PaymentIntent creado: pi_3RKtTAR91ZTxFEoQ1xzySl76
+INFO 2025-05-03 21:43:59,483 views PaymentIntent creado exitosamente: pi_3RKtTAR91ZTxFEoQ1xzySl76
+DEBUG 2025-05-03 21:43:59,484 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['nJieEWdUYIPgvJYCZKRhQtwbK1iQm1zsyl1g9doVnwCSGgTZIhbu7o8zPN8pqoZq'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKtHhR91ZTxFEoQ2zEM6zUr', ''], 'payment_method_id': ['pm_1RKtT8R91ZTxFEoQ596peIFm', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+INFO 2025-05-03 21:43:59,485 views Payment Intent ID: pi_3RKtHhR91ZTxFEoQ2zEM6zUr, Payment Method ID: pm_1RKtT8R91ZTxFEoQ596peIFm
+INFO 2025-05-03 21:43:59,486 views Procesando pago con tarjeta: pi_3RKtHhR91ZTxFEoQ2zEM6zUr
+INFO 2025-05-03 21:43:59,657 stripe_utils PaymentIntent recuperado: pi_3RKtHhR91ZTxFEoQ2zEM6zUr, status: succeeded
+INFO 2025-05-03 21:43:59,658 views Pago exitoso con tarjeta: pi_3RKtHhR91ZTxFEoQ2zEM6zUr
+INFO 2025-05-03 21:43:59,744 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:43:59,908 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26273
+INFO 2025-05-03 21:44:24,765 views Orden #ORD-140C93C8ABD9 completada exitosamente por el usuario Gerardo
+INFO 2025-05-03 21:44:24,779 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:44:24,873 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16614
+DEBUG 2025-05-03 21:46:54,729 views Acceso a la página de inicio
+INFO 2025-05-03 21:46:54,773 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 21:46:57,747 views Listado de productos: 1 productos mostrados
+INFO 2025-05-03 21:46:57,782 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 14692
+DEBUG 2025-05-03 21:46:59,139 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-05-03 21:46:59,171 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 19234
+DEBUG 2025-05-03 21:47:00,397 views Producto agregado/actualizado en carrito: Papas Fritas Chip's Fuego 240g, cantidad: 1
+INFO 2025-05-03 21:47:00,399 basehttp "POST /cart/add/1/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 21:47:00,417 views Detalle de producto: Papas Fritas Chip's Fuego 240g
+INFO 2025-05-03 21:47:00,465 basehttp "GET /products/papas-fritas-chips-fuego-240g/ HTTP/1.1" 200 23280
+DEBUG 2025-05-03 21:47:02,993 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 21:47:03,040 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21011
+INFO 2025-05-03 21:47:04,051 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32323
+INFO 2025-05-03 21:47:05,873 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:47:05,901 views Creando PaymentIntent para orden #17 por $20.00
+INFO 2025-05-03 21:47:07,291 stripe_utils PaymentIntent creado: pi_3RKtWBR91ZTxFEoQ2zR51ktx
+INFO 2025-05-03 21:47:07,292 views PaymentIntent creado exitosamente: pi_3RKtWBR91ZTxFEoQ2zR51ktx
+DEBUG 2025-05-03 21:47:07,293 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:47:07,512 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42450
+INFO 2025-05-03 21:47:27,723 views Creando PaymentIntent para orden #17 por $20.00
+INFO 2025-05-03 21:47:28,510 stripe_utils PaymentIntent creado: pi_3RKtWXR91ZTxFEoQ0vA2894b
+INFO 2025-05-03 21:47:28,511 views PaymentIntent creado exitosamente: pi_3RKtWXR91ZTxFEoQ0vA2894b
+DEBUG 2025-05-03 21:47:28,512 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['IBihbGM2OpEjgxKDsQYqQJRiJHfz7PVcTd1jGXX3ddrVr4F0bniD7EtGOt58bcla'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RKtWBR91ZTxFEoQ2zR51ktx', ''], 'payment_method_id': ['pm_1RKtWVR91ZTxFEoQtTMSq8ve', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+INFO 2025-05-03 21:47:28,513 views Payment Intent ID: pi_3RKtWBR91ZTxFEoQ2zR51ktx, Payment Method ID: pm_1RKtWVR91ZTxFEoQtTMSq8ve
+INFO 2025-05-03 21:47:28,514 views Procesando pago con tarjeta: pi_3RKtWBR91ZTxFEoQ2zR51ktx
+INFO 2025-05-03 21:47:28,691 stripe_utils PaymentIntent recuperado: pi_3RKtWBR91ZTxFEoQ2zR51ktx, status: succeeded
+INFO 2025-05-03 21:47:28,692 views Pago exitoso con tarjeta: pi_3RKtWBR91ZTxFEoQ2zR51ktx
+INFO 2025-05-03 21:47:28,732 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:47:28,842 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 26236
+INFO 2025-05-03 21:47:33,043 views Orden #ORD-4EA9FD9D3030 completada exitosamente por el usuario Gerardo
+INFO 2025-05-03 21:47:33,058 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:47:33,108 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 16599
+DEBUG 2025-05-03 21:48:47,323 views Acceso a la página de inicio
+INFO 2025-05-03 21:48:47,356 basehttp "GET / HTTP/1.1" 200 15959
+DEBUG 2025-05-03 21:48:49,111 views Listado de productos: 7 productos mostrados
+INFO 2025-05-03 21:48:49,142 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 25559
+DEBUG 2025-05-03 21:48:50,955 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-05-03 21:48:50,989 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 24336
+DEBUG 2025-05-03 21:48:52,334 views Producto agregado/actualizado en carrito: Johnnie Walker Blue Label X750cc, cantidad: 1
+INFO 2025-05-03 21:48:52,338 basehttp "POST /cart/add/7/ HTTP/1.1" 302 0
+DEBUG 2025-05-03 21:48:52,370 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-05-03 21:48:52,455 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 28373
+DEBUG 2025-05-03 21:48:55,135 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-03 21:48:55,170 basehttp "GET /cart/checkout/ HTTP/1.1" 200 21003
+INFO 2025-05-03 21:48:56,262 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32320
+INFO 2025-05-03 21:48:57,583 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-03 21:48:57,617 views Creando PaymentIntent para orden #18 por $3526.00
+INFO 2025-05-03 21:48:58,807 stripe_utils PaymentIntent creado: pi_3RKtXzR91ZTxFEoQ1loLIyjA
+INFO 2025-05-03 21:48:58,808 views PaymentIntent creado exitosamente: pi_3RKtXzR91ZTxFEoQ1loLIyjA
+DEBUG 2025-05-03 21:48:58,810 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:48:58,900 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42447
+INFO 2025-05-03 21:54:02,887 views Creando PaymentIntent para orden #18 por $3526.00
+INFO 2025-05-03 21:54:04,102 stripe_utils PaymentIntent creado: pi_3RKtcuR91ZTxFEoQ0NLpVGve
+INFO 2025-05-03 21:54:04,105 views PaymentIntent creado exitosamente: pi_3RKtcuR91ZTxFEoQ0NLpVGve
+DEBUG 2025-05-03 21:54:04,108 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-03 21:54:04,494 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42230
+INFO 2025-05-04 01:31:57,172 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 01:32:30,861 autoreload Watching for file changes with StatReloader
+INFO 2025-05-04 01:32:36,707 views Creando PaymentIntent para orden #18 por $3526.00
+INFO 2025-05-04 01:32:38,031 stripe_utils PaymentIntent creado: pi_3RKx2QR91ZTxFEoQ2cE2qmOZ
+INFO 2025-05-04 01:32:38,033 views PaymentIntent creado exitosamente: pi_3RKx2QR91ZTxFEoQ2cE2qmOZ
+DEBUG 2025-05-04 01:32:38,034 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-04 01:32:38,237 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42230
+INFO 2025-05-04 01:32:38,301 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-05-04 01:32:38,554 basehttp "GET /static/js/main.js HTTP/1.1" 200 13301
+WARNING 2025-05-04 01:32:40,198 log Not Found: /favicon.ico
+WARNING 2025-05-04 01:32:40,201 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+INFO 2025-05-04 01:34:28,823 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 32320
+INFO 2025-05-04 01:34:30,765 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-04 01:34:30,797 views Creando PaymentIntent para orden #18 por $3526.00
+INFO 2025-05-04 01:34:31,932 stripe_utils PaymentIntent creado: pi_3RKx4GR91ZTxFEoQ1Zwlztgu
+INFO 2025-05-04 01:34:31,933 views PaymentIntent creado exitosamente: pi_3RKx4GR91ZTxFEoQ1Zwlztgu
+DEBUG 2025-05-04 01:34:31,934 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-04 01:34:32,007 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42230

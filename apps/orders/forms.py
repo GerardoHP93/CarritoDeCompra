@@ -99,7 +99,8 @@ class MetodoPagoForm(forms.Form):
     metodo_pago = forms.ChoiceField(label='Método de pago', choices=METODO_CHOICES,
                                     widget=forms.Select(attrs={'class': 'form-select'}))
 
-    # Para tarjetas
+    # Para tarjetas - estos campos sólo se utilizan si no estamos usando Stripe Elements
+    # y están marcados como no requeridos
     numero_tarjeta = forms.CharField(label='Número de tarjeta', max_length=19, required=False,
                                      widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '0000 0000 0000 0000'}))
     titular_tarjeta = forms.CharField(label='Titular de la tarjeta', max_length=100, required=False,
@@ -121,8 +122,12 @@ class MetodoPagoForm(forms.Form):
     def clean(self):
         cleaned_data = super().clean()
         metodo_pago = cleaned_data.get('metodo_pago')
-
-        if metodo_pago == 'tarjeta':
+        
+        # Si estamos usando Stripe Elements, no necesitamos validar los campos de tarjeta
+        use_stripe_elements = True  # Cambia esto a False si no estás usando Stripe Elements
+        
+        if metodo_pago == 'tarjeta' and not use_stripe_elements:
+            # Sólo validamos estos campos si no estamos usando Stripe Elements
             campos_requeridos = [
                 'numero_tarjeta', 'titular_tarjeta', 'fecha_expiracion', 'cvv', 'tipo_tarjeta']
             for campo in campos_requeridos:
@@ -136,6 +141,5 @@ class StripePaymentForm(forms.Form):
     """
     Formulario para procesar pagos con Stripe.
     """
-    stripe_token = forms.CharField(widget=forms.HiddenInput(), required=False)
-    payment_method_id = forms.CharField(widget=forms.HiddenInput(), required=False)
-    payment_intent_id = forms.CharField(widget=forms.HiddenInput(), required=False)
+    payment_intent_id = forms.CharField(required=False, widget=forms.HiddenInput())
+    payment_method_id = forms.CharField(required=False, widget=forms.HiddenInput())

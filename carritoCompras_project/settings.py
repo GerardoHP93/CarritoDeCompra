@@ -195,5 +195,5 @@ LOGGING = {
 }
 
 # Configuración de Stripe (añadir al final del archivo)
-STRIPE_PUBLISHABLE_KEY = 'mi clave publica'
-STRIPE_SECRET_KEY = 'mi clave secreta'
+STRIPE_PUBLISHABLE_KEY = 'mi clave'
+STRIPE_SECRET_KEY = 'mi clave'

@@ -2,6 +2,29 @@
 
 {% block title %}Método de Pago | Market Digital{% endblock %}
 
+<!-- Justo después del bloque de título -->
+<div id="stripe-debug" class="alert alert-info" style="display:none;">
+    <strong>Información de diagnóstico:</strong>
+    <pre id="stripe-debug-log"></pre>
+</div>
+
+<script>
+// Función para agregar logs
+function stripeLog(message) {
+    console.log("STRIPE DEBUG: " + message);
+    const debugElement = document.getElementById('stripe-debug-log');
+    const debugContainer = document.getElementById('stripe-debug');
+    
+    if (debugElement && debugContainer) {
+        debugElement.textContent += message + "\n";
+        debugContainer.style.display = 'block';
+    }
+}
+
+// Ejecutar inmediatamente para verificar que esta parte del código funciona
+stripeLog("Script de diagnóstico cargado correctamente");
+</script>
+
 {% block content %}
 <div class="container py-4">
     <h2 class="mb-4">Proceso de Compra</h2>
@@ -71,21 +94,31 @@
                         <div id="seccionTarjeta" style="display: none;">
                             <h5 class="mb-3">Información de la Tarjeta</h5>
 
-                        <!-- En checkout_pago.html -->
-                        <div class="mb-3">
-                            <label for="card-element" class="form-label">Datos de la tarjeta</label>
-                            <div id="card-element" class="form-control" style="height: 40px; padding-top: 10px; background-color: #fff;"></div>
-                            <div id="card-errors" role="alert" class="text-danger mt-2 small"></div>
-                            <small class="text-muted d-block mt-2">Para pruebas, puedes usar el número 4242 4242 4242 4242, cualquier fecha futura, cualquier CVC de 3 dígitos y cualquier código postal.</small>
-                        </div>
+                            <div class="mb-3">
+                                <label for="card-element" class="form-label">Datos de la tarjeta</label>
+                                <div id="card-element" class="form-control" style="height: 40px; padding-top: 10px; background-color: #fff;"></div>
+                                <div id="card-errors" role="alert" class="text-danger mt-2 small"></div>
+                            </div>
 
                             <div class="mb-3">
-                                <label for="{{ form.titular_tarjeta.id_for_label }}" class="form-label">Nombre del
-                                    titular</label>
+                                <label for="{{ form.titular_tarjeta.id_for_label }}" class="form-label">Nombre del titular</label>
                                 {{ form.titular_tarjeta }}
-                                {% if form.titular_tarjeta.errors %}
-                                <div class="invalid-feedback d-block">{{ form.titular_tarjeta.errors }}</div>
-                                {% endif %}
+                            </div>
+                            
+                            <!-- IMPORTANTE: Asegúrate de que estos campos solo aparezcan una vez -->
+                            <input type="hidden" name="payment_intent_id" id="id_payment_intent_id">
+                            <input type="hidden" name="payment_method_id" id="id_payment_method_id">
+                            
+                            <!-- Ocultar completamente estos campos, no renderizarlos -->
+                            <!-- {{ stripe_form.payment_intent_id }} -->
+                            <!-- {{ stripe_form.payment_method_id }} -->
+                            
+                            <!-- Campos ocultos innecesarios -->
+                            <div style="display: none;">
+                                {{ form.numero_tarjeta }}
+                                {{ form.fecha_expiracion }}
+                                {{ form.cvv }}
+                                {{ form.tipo_tarjeta }}
                             </div>
                         </div>
 
