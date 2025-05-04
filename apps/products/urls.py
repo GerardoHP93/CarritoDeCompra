@@ -12,6 +12,7 @@ urlpatterns = [
     path('search/', views.product_search, name='product_search'),
     
     # URLs de gestión de inventario (ANTES de la URL con slug)
+    path('inventario/productos/stock/', inventory_views.lista_productos_stock, name='lista_productos_stock'),
     path('inventario/', inventory_views.dashboard_inventario, name='dashboard_inventario'),
     path('inventario/pedidos/', inventory_views.lista_pedidos_proveedor, name='lista_pedidos_proveedor'),
     path('inventario/pedidos/crear/', inventory_views.crear_pedido_proveedor, name='crear_pedido_proveedor'),
@@ -21,7 +22,7 @@ urlpatterns = [
     path('inventario/pedidos/<str:numero_pedido>/pagar/', inventory_views.pagar_pedido_proveedor, name='pagar_pedido_proveedor'),
     path('inventario/pedidos/<str:numero_pedido>/recibir/', inventory_views.recibir_pedido_proveedor, name='recibir_pedido_proveedor'),
     path('inventario/api/productos-proveedor/<int:proveedor_id>/', inventory_views.obtener_productos_proveedor, name='obtener_productos_proveedor'),
-    
+
     # URL con slug para detalle de producto (DEBE IR AL FINAL)
     path('<slug:slug>/', views.product_detail, name='product_detail'),
 ]

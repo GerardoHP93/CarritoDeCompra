@@ -5960,3 +5960,49 @@ INFO 2025-05-03 17:04:21,772 basehttp "GET /products/inventario/api/productos-pr
 DEBUG 2025-05-03 17:04:29,462 views Detalle de producto: Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco
 INFO 2025-05-03 17:04:29,480 basehttp "GET /products/ventilador-de-mesa-atvio-home-16-pulgadas-rt-40-blanco/ HTTP/1.1" 200 18767
 INFO 2025-05-03 17:04:29,559 basehttp "GET /media/productos/adicionales/1_zPOOeZh.webp HTTP/1.1" 200 35470
+INFO 2025-05-03 17:19:48,775 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-03 17:19:49,308 views Listado de productos: 11 productos mostrados
+INFO 2025-05-03 17:19:49,430 basehttp "GET /products/ HTTP/1.1" 200 32541
+DEBUG 2025-05-03 17:20:12,118 views Listado de productos: 11 productos mostrados
+INFO 2025-05-03 17:20:12,149 basehttp "GET /products/ HTTP/1.1" 200 32541
+INFO 2025-05-03 17:30:55,756 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py changed, reloading.
+INFO 2025-05-03 17:30:59,212 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 17:31:35,201 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\urls.py changed, reloading.
+INFO 2025-05-03 17:31:37,237 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 17:32:37,845 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 17:32:49,249 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 17:32:54,812 basehttp "GET /products/inventario/ HTTP/1.1" 200 18969
+ERROR 2025-05-03 17:32:55,995 inventory_views Error al generar lista de productos por stock: name 'Categoria' is not defined
+INFO 2025-05-03 17:32:55,998 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:32:56,051 basehttp "GET /products/inventario/ HTTP/1.1" 200 21318
+ERROR 2025-05-03 17:32:58,418 inventory_views Error al generar lista de productos por stock: name 'Categoria' is not defined
+INFO 2025-05-03 17:32:58,424 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:32:58,478 basehttp "GET /products/inventario/ HTTP/1.1" 200 21318
+ERROR 2025-05-03 17:33:01,555 inventory_views Error al generar lista de productos por stock: name 'Categoria' is not defined
+INFO 2025-05-03 17:33:01,558 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:33:01,633 basehttp "GET /products/inventario/ HTTP/1.1" 200 21318
+ERROR 2025-05-03 17:33:02,508 inventory_views Error al generar lista de productos por stock: name 'Categoria' is not defined
+INFO 2025-05-03 17:33:02,510 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:33:02,563 basehttp "GET /products/inventario/ HTTP/1.1" 200 21318
+ERROR 2025-05-03 17:33:06,507 inventory_views Error al generar lista de productos por stock: name 'Categoria' is not defined
+INFO 2025-05-03 17:33:06,509 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:33:06,558 basehttp "GET /products/inventario/ HTTP/1.1" 200 21318
+ERROR 2025-05-03 17:33:20,080 inventory_views Error al generar lista de productos por stock: name 'Categoria' is not defined
+INFO 2025-05-03 17:33:20,082 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 302 0
+INFO 2025-05-03 17:33:20,132 basehttp "GET /products/inventario/ HTTP/1.1" 200 21318
+INFO 2025-05-03 17:34:21,856 autoreload C:\Users\Gerardo Herrera\Desktop\SISTEMAS DISTRIBUIDOS\SEGUNDO PARCIAL\ProyectoCarritoCompras\Proyecto\apps\products\inventory_views.py changed, reloading.
+INFO 2025-05-03 17:34:24,216 autoreload Watching for file changes with StatReloader
+INFO 2025-05-03 17:34:32,855 basehttp "GET /products/inventario/ HTTP/1.1" 200 18969
+INFO 2025-05-03 17:34:33,884 basehttp "GET /products/inventario/ HTTP/1.1" 200 18969
+INFO 2025-05-03 17:34:34,165 basehttp "GET /products/inventario/ HTTP/1.1" 200 18969
+INFO 2025-05-03 17:34:34,376 basehttp "GET /products/inventario/ HTTP/1.1" 200 18969
+INFO 2025-05-03 17:34:35,658 inventory_views Lista de productos por stock generada. Total de categorías: 5
+INFO 2025-05-03 17:34:35,710 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 200 29908
+INFO 2025-05-03 17:34:45,185 basehttp "GET /products/inventario/pedidos/crear/?proveedor=2&producto=2 HTTP/1.1" 200 30945
+INFO 2025-05-03 17:34:45,294 basehttp "GET /products/inventario/api/productos-proveedor/2/ HTTP/1.1" 200 122
+INFO 2025-05-03 17:35:01,753 basehttp "GET /products/inventario/pedidos/crear/ HTTP/1.1" 200 30921
+INFO 2025-05-03 17:35:04,626 basehttp "GET /products/inventario/ HTTP/1.1" 200 18969
+INFO 2025-05-03 17:35:05,488 inventory_views Lista de productos por stock generada. Total de categorías: 5
+INFO 2025-05-03 17:35:05,540 basehttp "GET /products/inventario/productos/stock/ HTTP/1.1" 200 29908
+DEBUG 2025-05-03 17:35:13,923 views Acceso a la página de inicio
+INFO 2025-05-03 17:35:13,960 basehttp "GET / HTTP/1.1" 200 15959

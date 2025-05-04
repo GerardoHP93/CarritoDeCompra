@@ -12,7 +12,7 @@ from django.urls import reverse
 from django.db.models import Sum, F
 from django.http import JsonResponse
 
-from .models import Producto, Proveedor, PedidoProveedor, DetallePedidoProveedor
+from .models import Categoria, Producto, Proveedor, PedidoProveedor, DetallePedidoProveedor
 from .forms import PedidoProveedorForm, DetallePedidoProveedorFormSet
 
 # Configurar el logger
@@ -370,3 +370,41 @@ def obtener_productos_proveedor(request, proveedor_id):
     except Exception as e:
         logger.error(f"Error al obtener productos del proveedor: {str(e)}")
         return JsonResponse({'error': str(e)}, status=400)
+    
+@login_required
+@user_passes_test(is_admin)
+def lista_productos_stock(request):
+    """
+    Vista para mostrar todos los productos ordenados por stock (de menor a mayor)
+    y agrupados por categoría.
+    """
+    try:
+        # Obtener todas las categorías activas
+        categorias = Categoria.objects.filter(activa=True)
+        
+        # Diccionario para almacenar productos por categoría
+        productos_por_categoria = {}
+        
+        # Para cada categoría, obtener sus productos ordenados por stock
+        for categoria in categorias:
+            productos = Producto.objects.filter(
+                categoria=categoria,
+                activo=True
+            ).order_by('stock')  # Ordenar de menor a mayor stock
+            
+            if productos.exists():
+                productos_por_categoria[categoria] = productos
+        
+        logger.info(f"Lista de productos por stock generada. Total de categorías: {len(productos_por_categoria)}")
+        
+        context = {
+            'productos_por_categoria': productos_por_categoria,
+            'title': 'Productos por Stock'
+        }
+        
+        return render(request, 'products/inventory/lista_productos_stock.html', context)
+    
+    except Exception as e:
+        logger.error(f"Error al generar lista de productos por stock: {str(e)}")
+        messages.error(request, f'Error al cargar los productos: {str(e)}', extra_tags='toast')
+        return redirect('products:dashboard_inventario')

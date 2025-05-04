@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Productos por Stock | Market Digital{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Productos por Stock</h2>
+        <div>
+            <a href="{% url 'products:dashboard_inventario' %}" class="btn btn-outline-secondary me-2">
+                <i class="bi bi-speedometer2 me-1"></i> Dashboard
+            </a>
+            <a href="{% url 'products:crear_pedido_proveedor' %}" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i> Nuevo Pedido
+            </a>
+        </div>
+    </div>
+    
+    {% if productos_por_categoria %}
+        {% for categoria, productos in productos_por_categoria.items %}
+            <div class="card border-0 shadow mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">{{ categoria.nombre }}</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Stock</th>
+                                    <th>Precio</th>
+                                    <th>Proveedor</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for producto in productos %}
+                                    <tr class="{% if producto.stock == 0 %}table-danger{% elif producto.stock <= 5 %}table-warning{% endif %}">
+                                        <td>
+                                            <a href="{% url 'products:product_detail' producto.slug %}" class="text-decoration-none">
+                                                {{ producto.nombre }}
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <span class="badge {% if producto.stock == 0 %}bg-danger{% elif producto.stock <= 5 %}bg-warning text-dark{% else %}bg-success{% endif %}">
+                                                {{ producto.stock }}
+                                            </span>
+                                        </td>
+                                        <td>${{ producto.precio }}</td>
+                                        <td>{{ producto.proveedor.nombre }}</td>
+                                        <td>
+                                            <a href="{% url 'products:crear_pedido_proveedor' %}?proveedor={{ producto.proveedor.id }}&producto={{ producto.id }}" class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-cart-plus me-1"></i> Solicitar
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle-fill me-2"></i> No hay productos disponibles.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
