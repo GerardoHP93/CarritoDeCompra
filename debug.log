@@ -6426,3 +6426,554 @@ INFO 2025-05-04 01:34:31,932 stripe_utils PaymentIntent creado: pi_3RKx4GR91ZTxF
 INFO 2025-05-04 01:34:31,933 views PaymentIntent creado exitosamente: pi_3RKx4GR91ZTxFEoQ1Zwlztgu
 DEBUG 2025-05-04 01:34:31,934 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
 INFO 2025-05-04 01:34:32,007 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 42230
+INFO 2025-05-06 11:53:56,542 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-06 11:54:04,539 views Acceso a la página de inicio
+INFO 2025-05-06 11:54:04,799 basehttp "GET / HTTP/1.1" 200 17650
+INFO 2025-05-06 11:54:04,879 basehttp "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:04,880 basehttp "GET /media/categorias/portada.jpeg HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:04,890 basehttp "GET /media/categorias/portada_categoria_congelados.png HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:04,930 basehttp "GET /media/categorias/portada.jpg HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:04,933 basehttp "GET /media/categorias/Imagen_de_la_categoria.webp HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:04,933 basehttp "GET /media/categorias/portada.webp HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:05,168 basehttp "GET /static/js/main.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:05,205 basehttp "GET /media/productos/principal_LiPAJl5.webp HTTP/1.1" 304 0
+WARNING 2025-05-06 11:54:05,373 log Not Found: /favicon.ico
+WARNING 2025-05-06 11:54:05,374 basehttp "GET /favicon.ico HTTP/1.1" 404 3918
+INFO 2025-05-06 11:54:16,626 basehttp "GET /admin/ HTTP/1.1" 200 16849
+INFO 2025-05-06 11:54:16,709 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,712 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,713 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,714 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,714 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,767 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,767 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,785 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-05-06 11:54:16,786 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:15,448 basehttp "GET /admin/ HTTP/1.1" 200 16849
+INFO 2025-05-06 11:55:27,343 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29422
+INFO 2025-05-06 11:55:27,466 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,468 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,468 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,470 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,471 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,472 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,490 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,491 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,493 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,494 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,531 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,536 basehttp "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,562 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,630 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:55:27,726 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:27,733 basehttp "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:30,407 basehttp "GET /admin/products/producto/11/change/ HTTP/1.1" 200 26762
+INFO 2025-05-06 11:55:30,474 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:30,477 basehttp "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:30,478 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:55:30,492 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:30,742 basehttp "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 537
+INFO 2025-05-06 11:55:35,579 basehttp "POST /admin/products/producto/11/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 11:55:35,697 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29665
+INFO 2025-05-06 11:55:35,775 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:55:35,807 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+DEBUG 2025-05-06 11:55:42,362 views Acceso a la página de inicio
+INFO 2025-05-06 11:55:42,401 basehttp "GET / HTTP/1.1" 200 19415
+INFO 2025-05-06 11:55:42,463 basehttp "GET /media/productos/principal_co0i70C.webp HTTP/1.1" 304 0
+INFO 2025-05-06 11:55:47,733 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29430
+INFO 2025-05-06 11:55:47,796 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:55:51,170 basehttp "GET /admin/products/producto/2/change/ HTTP/1.1" 200 30916
+INFO 2025-05-06 11:55:51,235 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:55:55,530 basehttp "POST /admin/products/producto/2/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 11:55:55,686 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29687
+INFO 2025-05-06 11:55:55,784 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:55:57,637 basehttp "GET /admin/products/producto/5/change/ HTTP/1.1" 200 29836
+INFO 2025-05-06 11:55:57,703 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:56:00,901 basehttp "POST /admin/products/producto/5/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 11:56:01,041 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29697
+INFO 2025-05-06 11:56:01,116 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:56:02,497 basehttp "GET /admin/products/producto/10/change/ HTTP/1.1" 200 27786
+INFO 2025-05-06 11:56:02,560 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:56:05,776 basehttp "POST /admin/products/producto/10/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 11:56:05,915 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 29683
+INFO 2025-05-06 11:56:06,018 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-06 11:56:07,290 views Acceso a la página de inicio
+INFO 2025-05-06 11:56:07,323 basehttp "GET / HTTP/1.1" 200 24295
+INFO 2025-05-06 11:56:07,376 basehttp "GET /media/productos/principal_ygJ91bU.webp HTTP/1.1" 304 0
+INFO 2025-05-06 11:56:07,383 basehttp "GET /media/productos/principal_cIifKU5.webp HTTP/1.1" 304 0
+INFO 2025-05-06 11:56:07,397 basehttp "GET /media/productos/principal.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 11:56:12,646 views Listado de productos: 1 productos mostrados
+INFO 2025-05-06 11:56:12,704 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 16385
+INFO 2025-05-06 11:56:12,765 basehttp "GET /media/productos/Sabrita_chips_fuegos.webp HTTP/1.1" 304 0
+INFO 2025-05-06 11:56:59,853 basehttp "GET /admin/products/producto/add/ HTTP/1.1" 200 25581
+INFO 2025-05-06 11:56:59,915 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 11:58:41,423 basehttp "POST /admin/products/producto/add/ HTTP/1.1" 302 0
+INFO 2025-05-06 11:58:41,495 basehttp "GET /admin/products/producto/add/ HTTP/1.1" 200 25839
+INFO 2025-05-06 11:58:41,622 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:01:28,572 basehttp "GET /admin/products/proveedor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 8375
+INFO 2025-05-06 12:01:28,747 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:02:39,607 basehttp "POST /admin/products/proveedor/add/?_to_field=id&_popup=1 HTTP/1.1" 200 339
+INFO 2025-05-06 12:02:39,683 basehttp "GET /static/admin/js/popup_response.js HTTP/1.1" 200 532
+INFO 2025-05-06 12:02:49,238 basehttp "POST /admin/products/producto/add/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:02:49,384 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 31764
+INFO 2025-05-06 12:02:49,481 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-06 12:02:56,439 views Listado de productos: 3 productos mostrados
+INFO 2025-05-06 12:02:56,467 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 19646
+INFO 2025-05-06 12:02:56,545 basehttp "GET /media/productos/principal_5L0jQpi.webp HTTP/1.1" 200 29500
+INFO 2025-05-06 12:02:56,545 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 200 32268
+DEBUG 2025-05-06 12:02:56,806 views Listado de productos: 3 productos mostrados
+INFO 2025-05-06 12:02:56,845 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 19646
+INFO 2025-05-06 12:02:56,889 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:02:59,672 views Acceso a la página de inicio
+INFO 2025-05-06 12:02:59,714 basehttp "GET / HTTP/1.1" 200 25888
+INFO 2025-05-06 12:02:59,796 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:03:06,738 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:03:06,794 basehttp "GET /products/ HTTP/1.1" 200 37068
+INFO 2025-05-06 12:03:06,900 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:03:06,902 basehttp "GET /media/productos/principal_b1YvAhH.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:03:06,916 basehttp "GET /media/productos/principal_H2slQnI.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:03:06,916 basehttp "GET /media/productos/principal_xZKgqdY.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:03:06,933 basehttp "GET /media/productos/principal_XyaX6Eo.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:03:06,975 basehttp "GET /media/productos/principal_QeYiZT6.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:03:10,544 views Listado de productos: 1 productos mostrados
+INFO 2025-05-06 12:03:10,576 basehttp "GET /products/?page=2 HTTP/1.1" 200 17631
+DEBUG 2025-05-06 12:03:12,545 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:03:12,606 basehttp "GET /products/?page=1 HTTP/1.1" 200 37068
+INFO 2025-05-06 12:03:12,698 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:03:18,508 basehttp "GET /admin/products/producto/add/ HTTP/1.1" 200 25618
+INFO 2025-05-06 12:03:18,582 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-06 12:03:22,827 views Listado de productos: 1 productos mostrados
+INFO 2025-05-06 12:03:22,876 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 16459
+INFO 2025-05-06 12:05:14,361 basehttp "POST /admin/products/producto/add/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:05:14,504 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 32836
+INFO 2025-05-06 12:05:14,613 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+DEBUG 2025-05-06 12:05:16,358 views Listado de productos: 2 productos mostrados
+INFO 2025-05-06 12:05:16,381 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 18196
+INFO 2025-05-06 12:05:16,456 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 200 47298
+DEBUG 2025-05-06 12:05:22,330 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:05:22,375 basehttp "GET /products/ HTTP/1.1" 200 37051
+INFO 2025-05-06 12:05:22,434 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:05:22,445 basehttp "GET /media/productos/principal_5L0jQpi.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:05:22,445 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:05:24,602 views Listado de productos: 2 productos mostrados
+INFO 2025-05-06 12:05:24,639 basehttp "GET /products/?page=2 HTTP/1.1" 200 19385
+DEBUG 2025-05-06 12:05:27,250 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:05:27,310 basehttp "GET /products/?page=1 HTTP/1.1" 200 37051
+INFO 2025-05-06 12:05:27,408 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:05:30,435 views Acceso a la página de inicio
+INFO 2025-05-06 12:05:30,472 basehttp "GET / HTTP/1.1" 200 25888
+DEBUG 2025-05-06 12:05:31,213 views Acceso a la página de inicio
+INFO 2025-05-06 12:05:31,255 basehttp "GET / HTTP/1.1" 200 25888
+DEBUG 2025-05-06 12:05:55,565 views Acceso a la página "Quiénes somos"
+INFO 2025-05-06 12:05:55,600 basehttp "GET /about/ HTTP/1.1" 200 15063
+DEBUG 2025-05-06 12:06:07,306 views Acceso a la página "Quiénes somos"
+INFO 2025-05-06 12:06:07,338 basehttp "GET /about/ HTTP/1.1" 200 15063
+DEBUG 2025-05-06 12:06:08,404 views Acceso a la página de contacto
+INFO 2025-05-06 12:06:08,433 basehttp "GET /contact/ HTTP/1.1" 200 17378
+DEBUG 2025-05-06 12:07:30,987 views Acceso a la página "Quiénes somos"
+INFO 2025-05-06 12:07:31,034 basehttp "GET /about/ HTTP/1.1" 200 15063
+DEBUG 2025-05-06 12:07:39,940 views Acceso a la página "Quiénes somos"
+INFO 2025-05-06 12:07:39,971 basehttp "GET /about/ HTTP/1.1" 200 15063
+DEBUG 2025-05-06 12:07:40,962 views Acceso a la página "Quiénes somos"
+INFO 2025-05-06 12:07:41,014 basehttp "GET /about/ HTTP/1.1" 200 15063
+DEBUG 2025-05-06 12:07:41,442 views Acceso a la página de contacto
+INFO 2025-05-06 12:07:41,536 basehttp "GET /contact/ HTTP/1.1" 200 17388
+DEBUG 2025-05-06 12:07:59,447 views Acceso a la página de inicio
+INFO 2025-05-06 12:07:59,493 basehttp "GET / HTTP/1.1" 200 25888
+INFO 2025-05-06 12:07:59,578 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:08:01,218 views Listado de productos: 3 productos mostrados
+INFO 2025-05-06 12:08:01,268 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 19646
+INFO 2025-05-06 12:08:01,380 basehttp "GET /media/productos/principal_5L0jQpi.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:08:04,053 views Listado de productos: 1 productos mostrados
+INFO 2025-05-06 12:08:04,094 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 16480
+DEBUG 2025-05-06 12:08:05,602 views Listado de productos: 2 productos mostrados
+INFO 2025-05-06 12:08:05,632 basehttp "GET /products/category/congelados/ HTTP/1.1" 200 18196
+INFO 2025-05-06 12:08:05,697 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:08:07,328 views Listado de productos: 1 productos mostrados
+INFO 2025-05-06 12:08:07,431 basehttp "GET /products/category/electrodomesticos/ HTTP/1.1" 200 16496
+DEBUG 2025-05-06 12:08:09,241 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:08:09,303 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:08:11,792 views Acceso a la página de inicio
+INFO 2025-05-06 12:08:11,835 basehttp "GET / HTTP/1.1" 200 25888
+INFO 2025-05-06 12:08:41,336 views Usuario  cerró sesión
+INFO 2025-05-06 12:08:41,342 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:08:41,365 views Acceso a la página de inicio
+INFO 2025-05-06 12:08:41,428 basehttp "GET / HTTP/1.1" 200 25508
+INFO 2025-05-06 12:08:41,504 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:08:42,541 basehttp "GET /users/login/ HTTP/1.1" 200 12815
+INFO 2025-05-06 12:08:42,617 basehttp "GET /static/images/market_background.jpg HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:09:18,422 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-05-06 12:09:18,423 views Usuario Gerardo inició sesión
+INFO 2025-05-06 12:09:18,430 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:09:18,439 views Acceso a la página de inicio
+INFO 2025-05-06 12:09:18,477 basehttp "GET / HTTP/1.1" 200 28243
+INFO 2025-05-06 12:09:18,597 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:09:21,120 views Usuario  cerró sesión
+INFO 2025-05-06 12:09:21,123 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:09:21,142 views Acceso a la página de inicio
+INFO 2025-05-06 12:09:21,181 basehttp "GET / HTTP/1.1" 200 25508
+INFO 2025-05-06 12:09:22,074 basehttp "GET /users/login/ HTTP/1.1" 200 12815
+DEBUG 2025-05-06 12:09:27,414 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-05-06 12:09:27,414 views Usuario Gerry inició sesión
+INFO 2025-05-06 12:09:27,422 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:09:27,429 views Acceso a la página de inicio
+INFO 2025-05-06 12:09:27,460 basehttp "GET / HTTP/1.1" 200 26106
+INFO 2025-05-06 12:09:30,791 views Usuario  cerró sesión
+INFO 2025-05-06 12:09:30,793 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:09:30,802 views Acceso a la página de inicio
+INFO 2025-05-06 12:09:30,821 basehttp "GET / HTTP/1.1" 200 25508
+INFO 2025-05-06 12:09:51,054 basehttp "GET /users/login/ HTTP/1.1" 200 12815
+INFO 2025-05-06 12:14:08,281 basehttp "GET /users/login/ HTTP/1.1" 200 12873
+INFO 2025-05-06 12:14:27,235 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:14:28,975 basehttp "GET /users/register/ HTTP/1.1" 200 13397
+INFO 2025-05-06 12:14:48,716 basehttp "GET /users/register/ HTTP/1.1" 200 13098
+INFO 2025-05-06 12:15:01,742 basehttp "GET /users/register/ HTTP/1.1" 200 13100
+INFO 2025-05-06 12:18:09,437 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:18:11,718 basehttp "GET /users/register/ HTTP/1.1" 200 13100
+INFO 2025-05-06 12:18:13,530 basehttp "GET /users/register/ HTTP/1.1" 200 13100
+INFO 2025-05-06 12:18:14,446 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:18:14,832 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:19:57,120 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:20:00,271 basehttp "GET /users/register/ HTTP/1.1" 200 13437
+INFO 2025-05-06 12:20:02,281 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:20:04,951 basehttp "GET /users/register/ HTTP/1.1" 200 13437
+INFO 2025-05-06 12:20:28,310 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+INFO 2025-05-06 12:21:04,985 basehttp "GET /users/password-reset/ HTTP/1.1" 200 11064
+INFO 2025-05-06 12:21:52,753 views Solicitud de restablecimiento de contraseña para gerardohp93@gmail.com
+INFO 2025-05-06 12:21:57,311 basehttp "POST /users/password-reset/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:21:57,388 basehttp "GET /users/password-reset/done/ HTTP/1.1" 200 10719
+INFO 2025-05-06 12:22:58,467 basehttp "GET /users/password-reset-confirm/MQ/cpdrog-f95dad38f58da36f78eeb8ddec50094c/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:22:58,561 basehttp "GET /users/password-reset-confirm/MQ/set-password/ HTTP/1.1" 200 11696
+DEBUG 2025-05-06 12:24:01,718 views Acceso a la página de inicio
+INFO 2025-05-06 12:24:01,747 basehttp "GET / HTTP/1.1" 200 23153
+INFO 2025-05-06 12:24:01,832 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:24:02,861 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+WARNING 2025-05-06 12:24:09,719 views Intento de inicio de sesión fallido
+INFO 2025-05-06 12:24:09,729 basehttp "POST /users/login/ HTTP/1.1" 200 13285
+DEBUG 2025-05-06 12:24:40,851 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-05-06 12:24:40,852 views Usuario Gerry inició sesión
+INFO 2025-05-06 12:24:40,860 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:24:40,870 views Acceso a la página de inicio
+INFO 2025-05-06 12:24:40,902 basehttp "GET / HTTP/1.1" 200 26106
+INFO 2025-05-06 12:24:54,930 basehttp "GET /users/profile/ HTTP/1.1" 200 15574
+INFO 2025-05-06 12:24:54,993 basehttp "GET /media/usuarios/perfiles/gerardo.jpg HTTP/1.1" 304 0
+INFO 2025-05-06 12:25:58,733 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 12:26:02,934 views Usuario  cerró sesión
+INFO 2025-05-06 12:26:02,937 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:26:02,944 views Acceso a la página de inicio
+INFO 2025-05-06 12:26:02,972 basehttp "GET / HTTP/1.1" 200 25508
+INFO 2025-05-06 12:26:04,238 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+WARNING 2025-05-06 12:26:09,407 views Intento de inicio de sesión fallido
+INFO 2025-05-06 12:26:09,415 basehttp "POST /users/login/ HTTP/1.1" 200 13287
+WARNING 2025-05-06 12:26:15,037 views Intento de inicio de sesión fallido
+INFO 2025-05-06 12:26:15,044 basehttp "POST /users/login/ HTTP/1.1" 200 13287
+DEBUG 2025-05-06 12:26:19,680 signals Perfil de cliente actualizado para el usuario Gerardo
+INFO 2025-05-06 12:26:19,681 views Usuario Gerardo inició sesión
+INFO 2025-05-06 12:26:19,688 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:26:19,695 views Acceso a la página de inicio
+INFO 2025-05-06 12:26:19,734 basehttp "GET / HTTP/1.1" 200 28243
+INFO 2025-05-06 12:26:19,887 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:26:21,843 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 24757
+INFO 2025-05-06 12:27:23,355 basehttp "GET /users/profile/addresses/add/ HTTP/1.1" 200 20172
+DEBUG 2025-05-06 12:27:45,539 views Acceso a la página de inicio
+INFO 2025-05-06 12:27:45,594 basehttp "GET / HTTP/1.1" 200 25888
+DEBUG 2025-05-06 12:29:44,115 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:29:44,182 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:29:58,378 views Listado de productos: 1 productos mostrados
+INFO 2025-05-06 12:29:58,420 basehttp "GET /products/category/videojuegos/ HTTP/1.1" 200 16480
+DEBUG 2025-05-06 12:29:59,953 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:30:00,001 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:30:00,521 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:30:00,577 basehttp "GET /products/ HTTP/1.1" 200 37051
+INFO 2025-05-06 12:30:00,650 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:30:00,658 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:30:00,662 basehttp "GET /media/productos/principal_5L0jQpi.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:30:02,123 views Acceso a la página de inicio
+INFO 2025-05-06 12:30:02,181 basehttp "GET / HTTP/1.1" 200 25888
+DEBUG 2025-05-06 12:30:06,407 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:30:06,460 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:30:07,830 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:30:07,937 basehttp "GET /products/ HTTP/1.1" 200 37051
+DEBUG 2025-05-06 12:30:19,130 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:30:19,191 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:31:03,702 views Detalle de producto: Tequila Don Julio 70 Cristalino 700
+INFO 2025-05-06 12:31:03,807 basehttp "GET /products/tequila-don-julio-70-cristalino-700-mltequila-don-julio-70-cristalino-700-ml-clip-icon-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700-ml-tequila-don-julio-70-cristalino-700/ HTTP/1.1" 200 27368
+DEBUG 2025-05-06 12:31:54,747 views Acceso a la página de inicio
+INFO 2025-05-06 12:31:54,797 basehttp "GET / HTTP/1.1" 200 25888
+DEBUG 2025-05-06 12:31:56,532 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:31:56,582 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:31:57,924 views Detalle de producto: Johnnie Walker Blue Label X750cc
+INFO 2025-05-06 12:31:57,980 basehttp "GET /products/johnnie-walker-blue-label-x750cc/ HTTP/1.1" 200 26029
+INFO 2025-05-06 12:31:58,074 basehttp "GET /media/productos/adicionales/2_dm4BNQ3.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:31:58,074 basehttp "GET /media/productos/adicionales/1_IuAipSt.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:32:36,200 views Listado de productos: 7 productos mostrados
+INFO 2025-05-06 12:32:36,245 basehttp "GET /products/category/bebidas-alcoholicas/ HTTP/1.1" 200 27252
+DEBUG 2025-05-06 12:32:43,109 views Búsqueda de productos por "bacardi": 0 resultados
+INFO 2025-05-06 12:32:43,184 basehttp "GET /products/search/?q=bacardi HTTP/1.1" 200 12398
+DEBUG 2025-05-06 12:32:45,857 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:32:45,911 basehttp "GET /products/ HTTP/1.1" 200 37051
+INFO 2025-05-06 12:32:46,022 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:32:46,024 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:32:53,791 views Búsqueda de productos por "bACAR": 2 resultados
+INFO 2025-05-06 12:32:53,827 basehttp "GET /products/search/?q=bACAR HTTP/1.1" 200 15123
+DEBUG 2025-05-06 12:33:00,372 views Búsqueda de productos por "Bacardí": 2 resultados
+INFO 2025-05-06 12:33:00,406 basehttp "GET /products/search/?q=Bacard%C3%AD HTTP/1.1" 200 15126
+DEBUG 2025-05-06 12:33:04,370 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 12:33:04,437 basehttp "GET /products/ HTTP/1.1" 200 37051
+DEBUG 2025-05-06 12:33:09,174 views Búsqueda de productos por "bacardí": 2 resultados
+INFO 2025-05-06 12:33:09,225 basehttp "GET /products/search/?q=bacard%C3%AD HTTP/1.1" 200 15126
+DEBUG 2025-05-06 12:33:48,674 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-05-06 12:33:48,733 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 25332
+INFO 2025-05-06 12:33:48,829 basehttp "GET /media/productos/adicionales/1_FyQndjt.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:33:51,539 views Producto agregado/actualizado en carrito: Bacardí ron sabor coco 700mL, cantidad: 1
+INFO 2025-05-06 12:33:51,541 basehttp "POST /cart/add/10/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:33:51,558 views Detalle de producto: Bacardí ron sabor coco 700mL
+INFO 2025-05-06 12:33:51,637 basehttp "GET /products/bacardi-ron-sabor-coco-700ml/ HTTP/1.1" 200 29077
+DEBUG 2025-05-06 12:33:53,085 views Acceso a la página de inicio
+INFO 2025-05-06 12:33:53,143 basehttp "GET / HTTP/1.1" 200 27300
+DEBUG 2025-05-06 12:34:00,726 views Listado de productos: 3 productos mostrados
+INFO 2025-05-06 12:34:00,771 basehttp "GET /products/category/snacks-y-galletas/ HTTP/1.1" 200 21058
+INFO 2025-05-06 12:34:00,874 basehttp "GET /media/productos/principal_5L0jQpi.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 12:34:02,578 views Detalle de producto: Galletas Arcoíris malvavisco 185 g
+INFO 2025-05-06 12:34:02,634 basehttp "GET /products/galletas-arcoiris-malvavisco-185-g/ HTTP/1.1" 200 23512
+DEBUG 2025-05-06 12:34:06,428 views Producto agregado/actualizado en carrito: Galletas Arcoíris malvavisco 185 g, cantidad: 1
+INFO 2025-05-06 12:34:06,431 basehttp "POST /cart/add/13/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:34:06,453 views Detalle de producto: Galletas Arcoíris malvavisco 185 g
+INFO 2025-05-06 12:34:06,546 basehttp "GET /products/galletas-arcoiris-malvavisco-185-g/ HTTP/1.1" 200 27274
+DEBUG 2025-05-06 12:34:48,747 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-06 12:34:48,932 basehttp "GET /cart/checkout/ HTTP/1.1" 200 29106
+INFO 2025-05-06 12:35:18,666 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 36039
+INFO 2025-05-06 12:35:49,404 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 27592
+INFO 2025-05-06 12:35:49,504 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:35:54,002 views Usuario Gerardo eliminó una dirección
+INFO 2025-05-06 12:35:54,004 basehttp "GET /users/profile/addresses/delete/4/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:35:54,119 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 26269
+DEBUG 2025-05-06 12:35:55,608 views Vista del carrito para usuario: Gerardo
+INFO 2025-05-06 12:35:55,677 basehttp "GET /cart/checkout/ HTTP/1.1" 200 29106
+INFO 2025-05-06 12:35:56,984 basehttp "GET /orders/checkout/direccion/ HTTP/1.1" 200 34501
+INFO 2025-05-06 12:36:26,160 basehttp "POST /orders/checkout/direccion/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:36:26,204 views Creando PaymentIntent para orden #19 por $3851.00
+INFO 2025-05-06 12:36:27,737 stripe_utils PaymentIntent creado: pi_3RLqLwR91ZTxFEoQ1o1Hxc5o
+INFO 2025-05-06 12:36:27,738 views PaymentIntent creado exitosamente: pi_3RLqLwR91ZTxFEoQ1o1Hxc5o
+DEBUG 2025-05-06 12:36:27,739 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-06 12:36:27,940 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 45949
+INFO 2025-05-06 12:37:37,108 views Creando PaymentIntent para orden #19 por $3851.00
+INFO 2025-05-06 12:37:37,337 stripe_utils PaymentIntent creado: pi_3RLqN3R91ZTxFEoQ2D3FgCkO
+INFO 2025-05-06 12:37:37,338 views PaymentIntent creado exitosamente: pi_3RLqN3R91ZTxFEoQ2D3FgCkO
+DEBUG 2025-05-06 12:37:37,340 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['F7mPjrzPwyUwPzbCrZBr3t0VqFjnqBtgJKX8vywn0V3w1lIxxOhiOg0KwWxDqklX'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RLqLwR91ZTxFEoQ1o1Hxc5o', ''], 'payment_method_id': ['pm_1RLqN2R91ZTxFEoQptuiYpUP', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+INFO 2025-05-06 12:37:37,341 views Payment Intent ID: pi_3RLqLwR91ZTxFEoQ1o1Hxc5o, Payment Method ID: pm_1RLqN2R91ZTxFEoQptuiYpUP
+INFO 2025-05-06 12:37:37,341 views Procesando pago con tarjeta: pi_3RLqLwR91ZTxFEoQ1o1Hxc5o
+INFO 2025-05-06 12:37:37,539 stripe_utils PaymentIntent recuperado: pi_3RLqLwR91ZTxFEoQ1o1Hxc5o, status: succeeded
+INFO 2025-05-06 12:37:37,541 views Pago exitoso con tarjeta: pi_3RLqLwR91ZTxFEoQ1o1Hxc5o
+INFO 2025-05-06 12:37:37,590 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:37:37,823 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 30798
+INFO 2025-05-06 12:37:52,063 views Creando PaymentIntent para orden #19 por $3851.00
+INFO 2025-05-06 12:37:52,505 stripe_utils PaymentIntent creado: pi_3RLqNIR91ZTxFEoQ0tGngJ7h
+INFO 2025-05-06 12:37:52,510 views PaymentIntent creado exitosamente: pi_3RLqNIR91ZTxFEoQ0tGngJ7h
+DEBUG 2025-05-06 12:37:52,512 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-06 12:37:52,697 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 45949
+INFO 2025-05-06 12:40:39,169 views Creando PaymentIntent para orden #19 por $3851.00
+INFO 2025-05-06 12:40:40,552 stripe_utils PaymentIntent creado: pi_3RLqQ1R91ZTxFEoQ1yTFVh8b
+INFO 2025-05-06 12:40:40,553 views PaymentIntent creado exitosamente: pi_3RLqQ1R91ZTxFEoQ1yTFVh8b
+DEBUG 2025-05-06 12:40:40,556 views Renderizando checkout_pago con context: stripe_client_secret=True, stripe_publishable_key=True
+INFO 2025-05-06 12:40:40,804 basehttp "GET /orders/checkout/pago/ HTTP/1.1" 200 45792
+INFO 2025-05-06 12:40:40,934 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:41:15,310 views Creando PaymentIntent para orden #19 por $3851.00
+INFO 2025-05-06 12:41:15,570 stripe_utils PaymentIntent creado: pi_3RLqQaR91ZTxFEoQ2z8YM1Zr
+INFO 2025-05-06 12:41:15,571 views PaymentIntent creado exitosamente: pi_3RLqQaR91ZTxFEoQ2z8YM1Zr
+DEBUG 2025-05-06 12:41:15,571 views POST recibido para checkout_pago: <QueryDict: {'csrfmiddlewaretoken': ['LqYvbF46mmu4EQzlnWE6b0GNEl905AsOP3zOnM1EQJD4QC6gtLkXWNGCKCng5jkv'], 'metodo_pago': ['tarjeta'], 'payment_intent_id': ['pi_3RLqQ1R91ZTxFEoQ1yTFVh8b', ''], 'payment_method_id': ['pm_1RLqQZR91ZTxFEoQboZRZUkC', ''], 'titular_tarjeta': ['Gerardo Isidro Herrera Pacheco'], 'numero_tarjeta': [''], 'fecha_expiracion': [''], 'cvv': [''], 'tipo_tarjeta': ['']}>
+INFO 2025-05-06 12:41:15,574 views Payment Intent ID: pi_3RLqQ1R91ZTxFEoQ1yTFVh8b, Payment Method ID: pm_1RLqQZR91ZTxFEoQboZRZUkC
+INFO 2025-05-06 12:41:15,576 views Procesando pago con tarjeta: pi_3RLqQ1R91ZTxFEoQ1yTFVh8b
+INFO 2025-05-06 12:41:16,007 stripe_utils PaymentIntent recuperado: pi_3RLqQ1R91ZTxFEoQ1yTFVh8b, status: succeeded
+INFO 2025-05-06 12:41:16,010 views Pago exitoso con tarjeta: pi_3RLqQ1R91ZTxFEoQ1yTFVh8b
+INFO 2025-05-06 12:41:16,048 basehttp "POST /orders/checkout/pago/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:41:16,194 basehttp "GET /orders/checkout/resumen/ HTTP/1.1" 200 30798
+INFO 2025-05-06 12:42:31,665 views Orden #ORD-1F33AC466421 completada exitosamente por el usuario Gerardo
+INFO 2025-05-06 12:42:31,682 basehttp "POST /orders/checkout/resumen/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:42:31,754 basehttp "GET /orders/checkout/confirmacion/ HTTP/1.1" 200 17320
+INFO 2025-05-06 12:43:25,770 basehttp "GET /orders/historial/ HTTP/1.1" 200 31197
+INFO 2025-05-06 12:44:08,075 basehttp "GET /orders/detalle/ORD-4EA9FD9D3030/ HTTP/1.1" 200 16961
+INFO 2025-05-06 12:44:20,301 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27346
+INFO 2025-05-06 12:44:20,423 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:44:20,462 basehttp "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-05-06 12:44:24,606 basehttp "GET /admin/orders/orden/17/change/ HTTP/1.1" 200 28555
+INFO 2025-05-06 12:44:24,705 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:44:33,468 basehttp "POST /admin/orders/orden/17/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:44:33,545 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27564
+INFO 2025-05-06 12:44:33,693 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:44:50,248 basehttp "GET /orders/historial/ HTTP/1.1" 200 31200
+INFO 2025-05-06 12:45:01,554 basehttp "GET /admin/orders/orden/16/change/ HTTP/1.1" 200 28600
+INFO 2025-05-06 12:45:01,714 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:45:06,947 basehttp "POST /admin/orders/orden/16/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:45:07,035 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27575
+INFO 2025-05-06 12:45:07,102 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:45:09,264 basehttp "GET /orders/historial/ HTTP/1.1" 200 31201
+INFO 2025-05-06 12:45:22,941 basehttp "GET /admin/orders/orden/15/change/ HTTP/1.1" 200 26974
+INFO 2025-05-06 12:45:23,034 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:45:28,233 basehttp "POST /admin/orders/orden/15/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:45:28,337 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27567
+INFO 2025-05-06 12:45:28,470 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:45:43,363 basehttp "GET /admin/orders/orden/9/change/ HTTP/1.1" 200 26991
+INFO 2025-05-06 12:45:43,439 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:45:47,218 basehttp "POST /admin/orders/orden/9/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:45:47,331 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27558
+INFO 2025-05-06 12:45:47,408 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:45:53,708 basehttp "GET /admin/orders/orden/9/change/ HTTP/1.1" 200 26989
+INFO 2025-05-06 12:45:53,789 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:46:05,519 basehttp "POST /admin/orders/orden/9/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:46:05,613 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27558
+INFO 2025-05-06 12:46:05,721 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:46:08,166 basehttp "GET /orders/historial/ HTTP/1.1" 200 31181
+INFO 2025-05-06 12:46:36,690 basehttp "GET /orders/detalle/ORD-1F33AC466421/ HTTP/1.1" 200 17746
+DEBUG 2025-05-06 12:47:21,842 views Acceso a la página de inicio
+INFO 2025-05-06 12:47:21,912 basehttp "GET / HTTP/1.1" 200 24187
+INFO 2025-05-06 12:47:21,992 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:47:26,478 basehttp "GET /orders/historial/ HTTP/1.1" 200 31181
+INFO 2025-05-06 12:47:28,423 basehttp "GET /orders/detalle/ORD-1F33AC466421/ HTTP/1.1" 200 17746
+INFO 2025-05-06 12:47:41,662 basehttp "GET /orders/historial/ HTTP/1.1" 200 31181
+INFO 2025-05-06 12:47:51,541 basehttp "GET /admin/orders/orden/19/change/ HTTP/1.1" 200 31598
+INFO 2025-05-06 12:47:51,716 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:47:56,262 basehttp "POST /admin/orders/orden/19/change/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:47:56,329 basehttp "GET /admin/orders/orden/ HTTP/1.1" 200 27562
+INFO 2025-05-06 12:47:56,477 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:47:58,258 basehttp "GET /orders/historial/ HTTP/1.1" 200 31184
+INFO 2025-05-06 12:48:00,662 basehttp "GET /orders/detalle/ORD-1F33AC466421/ HTTP/1.1" 200 18475
+INFO 2025-05-06 12:48:19,875 views Usuario Gerardo confirmó la recepción del pedido #ORD-1F33AC466421
+INFO 2025-05-06 12:48:19,877 basehttp "POST /orders/confirmar-recepcion/ORD-1F33AC466421/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:48:19,983 basehttp "GET /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 200 21716
+INFO 2025-05-06 12:49:31,107 views Usuario Gerardo valoró el producto 13 con 2 estrellas
+INFO 2025-05-06 12:49:31,108 basehttp "POST /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:49:31,175 basehttp "GET /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 200 23290
+INFO 2025-05-06 12:49:32,353 views Usuario Gerardo valoró el producto 10 con 1 estrellas
+INFO 2025-05-06 12:49:32,355 basehttp "POST /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:49:32,409 basehttp "GET /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 200 24853
+INFO 2025-05-06 12:49:33,612 views Usuario Gerardo valoró el producto 7 con 1 estrellas
+INFO 2025-05-06 12:49:33,615 basehttp "POST /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:49:33,679 basehttp "GET /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 200 26414
+INFO 2025-05-06 12:49:48,068 views Usuario Gerardo valoró el producto 7 con 5 estrellas
+INFO 2025-05-06 12:49:48,070 basehttp "POST /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:49:48,128 basehttp "GET /orders/valorar-productos/ORD-1F33AC466421/ HTTP/1.1" 200 26444
+INFO 2025-05-06 12:50:10,118 basehttp "GET /admin/ HTTP/1.1" 200 16457
+INFO 2025-05-06 12:50:38,347 basehttp "GET /admin/products/producto/ HTTP/1.1" 200 32595
+INFO 2025-05-06 12:50:38,423 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 9208
+INFO 2025-05-06 12:51:21,486 basehttp "GET /admin/ HTTP/1.1" 200 16457
+INFO 2025-05-06 12:51:25,667 basehttp "GET /products/inventario/ HTTP/1.1" 200 18961
+INFO 2025-05-06 12:51:31,501 basehttp "GET /products/inventario/pedidos/crear/ HTTP/1.1" 200 31328
+INFO 2025-05-06 12:51:36,862 basehttp "GET /products/inventario/pedidos/crear/?proveedor=3&producto=3 HTTP/1.1" 200 31353
+INFO 2025-05-06 12:51:36,930 basehttp "GET /products/inventario/api/productos-proveedor/3/ HTTP/1.1" 200 126
+INFO 2025-05-06 12:52:30,101 inventory_views Pedido a proveedor #PED-3032DDAD creado
+INFO 2025-05-06 12:52:30,108 basehttp "POST /products/inventario/pedidos/crear/?proveedor=3&producto=3 HTTP/1.1" 302 0
+INFO 2025-05-06 12:52:30,208 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 22925
+INFO 2025-05-06 12:52:56,585 basehttp "GET /products/inventario/ HTTP/1.1" 200 20481
+INFO 2025-05-06 12:53:19,624 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/ HTTP/1.1" 200 18141
+INFO 2025-05-06 12:53:22,517 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/cancelar/ HTTP/1.1" 200 17244
+INFO 2025-05-06 12:53:40,032 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/ HTTP/1.1" 200 18141
+INFO 2025-05-06 12:53:40,905 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/pagar/ HTTP/1.1" 200 18008
+INFO 2025-05-06 12:53:43,797 inventory_views Pedido a proveedor #PED-3032DDAD pagado
+INFO 2025-05-06 12:53:43,799 basehttp "POST /products/inventario/pedidos/PED-3032DDAD/pagar/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:53:43,842 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/ HTTP/1.1" 200 20109
+INFO 2025-05-06 12:53:46,246 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/recibir/ HTTP/1.1" 200 17972
+INFO 2025-05-06 12:53:49,911 inventory_views Pedido a proveedor #PED-3032DDAD marcado en tránsito
+INFO 2025-05-06 12:53:49,916 basehttp "POST /products/inventario/pedidos/PED-3032DDAD/recibir/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:53:49,944 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/ HTTP/1.1" 200 20130
+INFO 2025-05-06 12:53:51,174 basehttp "GET /products/inventario/pedidos/PED-3032DDAD/recibir/ HTTP/1.1" 200 18530
+INFO 2025-05-06 12:54:11,010 inventory_views Stock actualizado para Ventilador de Mesa Atvio Home 16 Pulgadas RT-40 Blanco: 9 + 10 = 19 unidades
+INFO 2025-05-06 12:54:11,010 inventory_views Pedido a proveedor #PED-3032DDAD recibido y stock actualizado
+INFO 2025-05-06 12:54:11,191 basehttp "POST /products/inventario/pedidos/PED-3032DDAD/recibir/ HTTP/1.1" 302 0
+INFO 2025-05-06 12:54:11,229 basehttp "GET /products/inventario/pedidos/ HTTP/1.1" 200 21968
+DEBUG 2025-05-06 12:55:09,212 views Acceso a la página "Quiénes somos"
+INFO 2025-05-06 12:55:09,246 basehttp "GET /about/ HTTP/1.1" 200 13362
+DEBUG 2025-05-06 12:55:17,529 views Acceso a la página de contacto
+INFO 2025-05-06 12:55:17,576 basehttp "GET /contact/ HTTP/1.1" 200 15687
+DEBUG 2025-05-06 12:55:33,320 views Acceso a la página de inicio
+INFO 2025-05-06 12:55:33,338 basehttp "GET / HTTP/1.1" 200 24187
+INFO 2025-05-06 12:55:33,399 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 12:55:36,635 basehttp "GET /users/profile/ HTTP/1.1" 200 16036
+WARNING 2025-05-06 12:55:36,720 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-05-06 12:55:39,911 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 19370
+INFO 2025-05-06 12:55:47,943 basehttp "GET /users/profile/ HTTP/1.1" 200 16036
+WARNING 2025-05-06 12:55:47,993 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-05-06 12:55:48,225 basehttp "GET /users/profile/ HTTP/1.1" 200 16036
+WARNING 2025-05-06 12:55:48,264 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-05-06 12:55:53,551 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 19370
+INFO 2025-05-06 12:55:53,787 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 19370
+INFO 2025-05-06 12:55:57,457 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 19370
+INFO 2025-05-06 12:55:59,629 basehttp "GET /users/profile/ HTTP/1.1" 200 16036
+WARNING 2025-05-06 12:55:59,683 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+INFO 2025-05-06 12:56:01,141 views Usuario  cerró sesión
+INFO 2025-05-06 12:56:01,142 basehttp "GET /users/logout/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:56:01,150 views Acceso a la página de inicio
+INFO 2025-05-06 12:56:01,162 basehttp "GET / HTTP/1.1" 200 25508
+INFO 2025-05-06 12:56:02,252 basehttp "GET /users/login/ HTTP/1.1" 200 12870
+DEBUG 2025-05-06 12:56:08,120 signals Perfil de cliente actualizado para el usuario Gerry
+INFO 2025-05-06 12:56:08,121 views Usuario Gerry inició sesión
+INFO 2025-05-06 12:56:08,127 basehttp "POST /users/login/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 12:56:08,139 views Acceso a la página de inicio
+INFO 2025-05-06 12:56:08,165 basehttp "GET / HTTP/1.1" 200 26106
+INFO 2025-05-06 12:56:11,722 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+INFO 2025-05-06 12:56:16,070 basehttp "GET /users/profile/ HTTP/1.1" 200 15574
+INFO 2025-05-06 13:01:45,975 basehttp "GET /users/profile/ HTTP/1.1" 200 15574
+DEBUG 2025-05-06 13:01:48,544 views Acceso a la página de inicio
+INFO 2025-05-06 13:01:48,568 basehttp "GET / HTTP/1.1" 200 23755
+INFO 2025-05-06 13:01:48,609 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 13:01:48,784 views Acceso a la página de inicio
+INFO 2025-05-06 13:01:48,806 basehttp "GET / HTTP/1.1" 200 23755
+INFO 2025-05-06 13:02:09,269 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-06 13:02:13,848 views Acceso a la página de inicio
+INFO 2025-05-06 13:02:14,051 basehttp "GET / HTTP/1.1" 200 23755
+INFO 2025-05-06 13:52:23,659 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+INFO 2025-05-06 13:52:28,286 basehttp "GET /users/profile/ HTTP/1.1" 200 15574
+INFO 2025-05-06 13:53:47,802 basehttp "GET /users/profile/ HTTP/1.1" 200 15630
+INFO 2025-05-06 13:53:48,965 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+INFO 2025-05-06 13:53:54,977 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:02,275 basehttp "GET /users/profile/ HTTP/1.1" 200 15630
+INFO 2025-05-06 13:54:02,825 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:04,160 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:05,799 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:05,945 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:06,066 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:06,321 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:54:06,472 basehttp "GET /users/profile/addresses/ HTTP/1.1" 200 15255
+INFO 2025-05-06 13:55:33,931 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+INFO 2025-05-06 13:56:20,223 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-06 13:56:23,748 views Acceso a la página de inicio
+INFO 2025-05-06 13:56:23,882 basehttp "GET / HTTP/1.1" 200 23755
+INFO 2025-05-06 13:56:23,944 basehttp "GET /media/productos/principal_aoa0fjZ.webp HTTP/1.1" 304 0
+INFO 2025-05-06 13:56:27,264 basehttp "GET /users/profile/ HTTP/1.1" 200 15591
+INFO 2025-05-06 13:56:28,817 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+DEBUG 2025-05-06 13:56:30,949 views Acceso a la página de inicio
+INFO 2025-05-06 13:56:30,971 basehttp "GET / HTTP/1.1" 200 23755
+INFO 2025-05-06 13:56:32,404 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+INFO 2025-05-06 13:56:35,046 basehttp "GET /users/profile/ HTTP/1.1" 200 15591
+INFO 2025-05-06 13:56:35,836 basehttp "GET /orders/historial/ HTTP/1.1" 200 12026
+DEBUG 2025-05-06 13:56:37,430 views Acceso a la página de inicio
+INFO 2025-05-06 13:56:37,446 basehttp "GET / HTTP/1.1" 200 23755
+INFO 2025-05-06 13:58:29,238 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-06 13:58:31,543 views Acceso a la página de inicio
+INFO 2025-05-06 13:58:31,674 basehttp "GET / HTTP/1.1" 200 23772
+DEBUG 2025-05-06 14:00:09,439 views Acceso a la página de inicio
+INFO 2025-05-06 14:00:09,464 basehttp "GET / HTTP/1.1" 200 23772
+INFO 2025-05-06 14:01:48,472 autoreload Watching for file changes with StatReloader
+DEBUG 2025-05-06 14:01:51,143 views Acceso a la página de inicio
+INFO 2025-05-06 14:01:51,382 basehttp "GET / HTTP/1.1" 200 24393
+DEBUG 2025-05-06 14:01:55,463 views Acceso a la página de inicio
+INFO 2025-05-06 14:01:55,485 basehttp "GET / HTTP/1.1" 200 24393
+DEBUG 2025-05-06 14:02:07,465 views Listado de productos: 12 productos mostrados
+INFO 2025-05-06 14:02:07,510 basehttp "GET /products/ HTTP/1.1" 200 35556
+INFO 2025-05-06 14:02:07,552 basehttp "GET /media/productos/principal_FNKduEX.webp HTTP/1.1" 304 0
+INFO 2025-05-06 14:02:07,556 basehttp "GET /media/productos/principal_5L0jQpi.webp HTTP/1.1" 304 0
+DEBUG 2025-05-06 14:02:10,969 views Detalle de producto: Doritos Nacho
+INFO 2025-05-06 14:02:11,036 basehttp "GET /products/doritos-nacho/ HTTP/1.1" 200 21194
+INFO 2025-05-06 14:02:11,326 basehttp "GET /media/productos/adicionales/1_FJkf9gC.webp HTTP/1.1" 200 50454
+DEBUG 2025-05-06 14:02:12,112 views Producto agregado/actualizado en carrito: Doritos Nacho, cantidad: 1
+INFO 2025-05-06 14:02:12,113 basehttp "POST /cart/add/12/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 14:02:12,125 views Detalle de producto: Doritos Nacho
+INFO 2025-05-06 14:02:12,159 basehttp "GET /products/doritos-nacho/ HTTP/1.1" 200 25173
+DEBUG 2025-05-06 14:02:32,265 views Detalle de producto: Galletas Arcoíris malvavisco 185 g
+INFO 2025-05-06 14:02:32,297 basehttp "GET /products/galletas-arcoiris-malvavisco-185-g/ HTTP/1.1" 200 24973
+WARNING 2025-05-06 14:02:32,357 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005
+DEBUG 2025-05-06 14:02:33,371 views Producto agregado/actualizado en carrito: Galletas Arcoíris malvavisco 185 g, cantidad: 1
+INFO 2025-05-06 14:02:33,373 basehttp "POST /cart/add/13/ HTTP/1.1" 302 0
+DEBUG 2025-05-06 14:02:33,381 views Detalle de producto: Galletas Arcoíris malvavisco 185 g
+INFO 2025-05-06 14:02:33,427 basehttp "GET /products/galletas-arcoiris-malvavisco-185-g/ HTTP/1.1" 200 28735
+WARNING 2025-05-06 14:02:33,516 basehttp "GET /static/images/default_profile.png HTTP/1.1" 404 2005

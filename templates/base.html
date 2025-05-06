@@ -121,5 +121,22 @@
 {% endif %}
     
     {% block extra_js %}{% endblock %}
+
+    <!-- Añade este script al final de tu archivo base.html, justo antes de cerrar el body -->
+<script>
+    // Aplicar la posición fija al navbar
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbar = document.querySelector('.navbar');
+        navbar.style.position = 'fixed';
+        navbar.style.top = '0';
+        navbar.style.left = '0';
+        navbar.style.right = '0';
+        navbar.style.width = '100%';
+        navbar.style.zIndex = '9999';
+        
+        // Ajustar el padding del body
+        document.body.style.paddingTop = (navbar.offsetHeight + 5) + 'px';
+    });
+</script>
 </body>
 </html>
